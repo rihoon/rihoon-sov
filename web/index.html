@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>리훈 AEO · AI 추천 현황</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --ink:#18181b; --sub:#71717a; --line:#ececef; --soft:#fafafa;
+    --green:#15803d; --green-bg:#f0fdf4; --amber:#b45309; --amber-bg:#fffbeb;
+    --red:#be123c; --red-bg:#fff1f3; --gray:#a1a1aa;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  body{font-family:"Noto Sans KR",-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);
+    color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;padding:env(safe-area-inset-top) 0 64px}
+  .wrap{max-width:680px;margin:0 auto;padding:0 16px}
+  header{padding:24px 0 8px}
+  h1{font-size:21px;font-weight:900;letter-spacing:-.02em}
+  .tagline{color:var(--sub);font-size:13px;margin-top:3px}
+  .updated{color:var(--gray);font-size:12px;margin-top:8px}
+  .hero{font-size:18px;font-weight:700;line-height:1.45;margin:18px 0 16px;letter-spacing:-.01em}
+  .hero b.g{color:var(--green)} .hero b.r{color:var(--red)}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px}
+  .kpi{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center}
+  .kpi .n{font-size:26px;font-weight:900;letter-spacing:-.03em}
+  .kpi .l{font-size:11.5px;color:var(--sub);margin-top:2px}
+  .kpi.g .n{color:var(--green)} .kpi.a .n{color:var(--amber)} .kpi.r .n{color:var(--red)}
+  .section-t{font-size:14px;font-weight:700;margin:26px 0 10px;display:flex;align-items:center;gap:6px}
+  .section-d{font-size:12.5px;color:var(--sub);margin:-6px 0 12px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px}
+  .chip{font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:#fff;
+    display:flex;align-items:center;gap:5px;color:var(--ink)}
+  .dot{width:7px;height:7px;border-radius:50%}
+  .chip.on{background:var(--soft)} .chip.off{color:var(--gray)}
+  .qcard{border:1px solid var(--line);border-radius:14px;padding:13px 14px;margin-bottom:9px;background:#fff;
+    border-left-width:4px}
+  .qcard.win1{border-left-color:var(--green)} .qcard.win{border-left-color:var(--amber)}
+  .qcard.hole{border-left-color:var(--red)} .qcard.none{border-left-color:var(--line)}
+  .qhead{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .qtext{font-size:15px;font-weight:500;letter-spacing:-.01em}
+  .qline{font-size:11.5px;color:var(--gray);margin-top:2px}
+  .badge{flex-shrink:0;font-size:11.5px;font-weight:700;padding:4px 9px;border-radius:999px;white-space:nowrap}
+  .badge.win1{color:var(--green);background:var(--green-bg)} .badge.win{color:var(--amber);background:var(--amber-bg)}
+  .badge.hole{color:var(--red);background:var(--red-bg)} .badge.none{color:var(--gray);background:var(--soft)}
+  .engs{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+  .eng{font-size:11px;padding:3px 8px;border-radius:7px;background:var(--soft);border:1px solid var(--line);
+    display:flex;align-items:center;gap:4px;color:var(--sub)}
+  .eng .er{font-weight:700}
+  .eng.m1 .er{color:var(--green)} .eng.m .er{color:var(--amber)} .eng.x{color:var(--gray)}
+  .comp{font-size:12px;color:var(--sub);margin-top:9px}
+  .comp b{color:var(--ink);font-weight:500}
+  .todo{background:var(--red-bg);border:1px solid #fbdce2;border-radius:14px;padding:14px 16px}
+  .todo li{font-size:13.5px;margin:6px 0 0 2px;list-style:none;padding-left:16px;position:relative}
+  .todo li:before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--red)}
+  .trend{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff}
+  .trend .big{font-size:32px;font-weight:900;letter-spacing:-.03em}
+  .trend .cap{font-size:12.5px;color:var(--sub);margin-top:4px}
+  footer{color:var(--gray);font-size:11.5px;text-align:center;margin-top:30px;line-height:1.7}
+  .loading{text-align:center;color:var(--sub);padding:60px 0;font-size:14px}
+  @media(min-width:600px){ h1{font-size:24px} .hero{font-size:20px} .kpi .n{font-size:30px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>리훈 AEO</h1>
+    <div class="tagline">AI(제미나이·Perplexity·Claude·ChatGPT·네이버)가 리훈을 추천하는가</div>
+    <div class="updated" id="updated"></div>
+  </header>
+  <div id="app"><div class="loading">불러오는 중…</div></div>
+  <footer>
+    리훈 AEO SOV 추적 · 측정할수록 추세가 쌓입니다<br>
+    🟢 1위 추천 &nbsp; 🟡 언급됨 &nbsp; 🔴 안 나옴
+  </footer>
+</div>
+<script>
+const EABBR = {'Gemini':'제미나이','Perplexity':'Perplexity','Claude':'Claude','ChatGPT':'ChatGPT','네이버Cue':'네이버'};
+function engCell(name, v){
+  if(!v) return `<span class="eng x"><span class="dot" style="background:var(--gray)"></span>${EABBR[name]} —</span>`;
+  let cls='x', txt='✗';
+  if(v.m && v.rank===1){cls='m1';txt='1위';}
+  else if(v.m && v.rank){cls='m';txt=v.rank+'위';}
+  else if(v.m){cls='m';txt='언급';}
+  const dc = cls==='m1'?'var(--green)':cls==='m'?'var(--amber)':'var(--gray)';
+  return `<span class="eng ${cls}"><span class="dot" style="background:${dc}"></span>${EABBR[name]} <span class="er">${txt}</span></span>`;
+}
+const VB={win1:'badge win1',win:'badge win',hole:'badge hole',none:'badge none'};
+const VT={win1:'🟢 1위',win:'🟡 언급',hole:'🔴 안 나옴',none:'— 미측정'};
+const VRANK={win1:0,win:1,hole:2,none:3};
+function render(d){
+  document.getElementById('updated').textContent = '최근 측정 '+(d.updated||'-')+' · 자동 '+(d.measuredEngines||[]).length+'개 엔진 + 네이버(수기)';
+  const s=d.summary;
+  const hero = `측정한 <b>${s.measuredQuestions}개</b> 질문 중 <b class="g">${s.won}개</b>에서 AI가 리훈을 추천<span style="color:var(--sub);font-weight:500">(1위 ${s.top1}개)</span>. <b class="r">${s.holes}개</b>는 아직 안 나옴.`;
+  const kpis = `<div class="kpis">
+    <div class="kpi g"><div class="n">${s.won}</div><div class="l">추천되는 질문</div></div>
+    <div class="kpi a"><div class="n">${s.top1}</div><div class="l">1위 차지</div></div>
+    <div class="kpi r"><div class="n">${s.holes}</div><div class="l">비어있는 질문</div></div></div>`;
+  // 엔진 칩
+  const chips = d.engines.map(e=>{
+    const on = (d.measuredEngines||[]).includes(e);
+    const note = d.engineNote&&d.engineNote[e] ? ' ('+d.engineNote[e]+')' : '';
+    return `<span class="chip ${on?'on':'off'}"><span class="dot" style="background:${on?'var(--green)':'var(--gray)'}"></span>${EABBR[e]}${on?'':note}</span>`;
+  }).join('');
+  // 추세
+  const last=d.trend[d.trend.length-1];
+  let trend = `<div class="trend"><div class="big">${last?last.rate:0}%</div>
+    <div class="cap">${d.trend.length<=1?'오늘이 첫 측정(기준선)이에요. 콘텐츠를 깔고 다시 측정하면 이 숫자가 올라가는 게 보입니다 — 그게 핵심.':'직전 대비 '+(last.rate-d.trend[d.trend.length-2].rate>=0?'+':'')+(last.rate-d.trend[d.trend.length-2].rate)+'%p'}</div></div>`;
+  // 질문 카드 (공백 먼저)
+  const qs=[...d.questions].sort((a,b)=>VRANK[a.verdict]-VRANK[b.verdict]);
+  const cards = qs.map(q=>{
+    const engs = d.engines.map(e=>engCell(e,q.engines[e])).join('');
+    const comp = q.competitors&&q.competitors.length ? `<div class="comp">대신 추천: <b>${q.competitors.join(', ')}</b></div>` : '';
+    return `<div class="qcard ${q.verdict}">
+      <div class="qhead"><div><div class="qtext">${q.q}</div><div class="qline">${q.line}</div></div>
+        <span class="${VB[q.verdict]}">${VT[q.verdict]}</span></div>
+      <div class="engs">${engs}</div>${comp}</div>`;
+  }).join('');
+  // 할 일
+  const holes=qs.filter(q=>q.verdict==='hole'||q.verdict==='none');
+  const todo = holes.length ? `<div class="section-t">✅ 지금 할 일 — 비어있는 자리 채우기</div>
+    <div class="section-d">아래 주제로 티스토리 글·유튜브 롱폼을 깔면 AI가 리훈을 인용하기 시작합니다.</div>
+    <div class="todo"><ul>${holes.map(q=>`<li>${q.q}</li>`).join('')}</ul></div>` : '';
+
+  document.getElementById('app').innerHTML =
+    `<div class="hero">${hero}</div>${kpis}
+     <div class="section-t">📈 리훈 추천 비율</div>${trend}
+     <div class="section-t">🔌 측정 엔진</div><div class="chips">${chips}</div>
+     <div class="section-t">📋 질문별 현황</div>
+     <div class="section-d">우리가 어디서 이기고(🟢) 어디서 지는지(🔴), 대신 누가 추천되는지.</div>
+     ${cards}
+     ${todo}`;
+}
+fetch('./data.json?'+Date.now()).then(r=>r.json()).then(render)
+  .catch(e=>{document.getElementById('app').innerHTML='<div class="loading">데이터를 불러오지 못했어요.<br>'+e+'</div>';});
+</script>
+</body>
+</html>

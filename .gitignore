@@ -11,3 +11,5 @@ __pycache__/
 # 대용량 인덱스(웹에 불필요)
 nas_imgs.txt
 nas_full.txt
+
+sov_results.jsonl
