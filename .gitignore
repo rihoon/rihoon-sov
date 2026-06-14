@@ -1,0 +1,13 @@
+# 키/토큰 절대 올리지 않기
+*.toml
+secrets.toml
+.streamlit/secrets.toml
+*token*.json
+cafe24_token.json
+# 바이너리/캐시
+cloudflared.exe
+__pycache__/
+*.pyc
+# 대용량 인덱스(웹에 불필요)
+nas_imgs.txt
+nas_full.txt
