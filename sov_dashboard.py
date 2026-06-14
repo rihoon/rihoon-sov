@@ -89,7 +89,7 @@ def paint(v):
     if '🟡' in v: return 'background-color:#fff8e1; color:#e65100; font-weight:700'
     if '🔴' in v: return 'background-color:#ffebee; color:#b71c1c; font-weight:700'
     return 'color:#9e9e9e'
-st.dataframe(disp.style.map(paint, subset=['상태']), hide_index=True, use_container_width=True,
+st.dataframe(disp.style.map(paint, subset=['상태']), hide_index=True, width='stretch',
              column_config={'질문': st.column_config.TextColumn(width='large'),
                             '대신 추천되는 곳': st.column_config.TextColumn(width='medium')})
 
