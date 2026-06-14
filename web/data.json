@@ -17,10 +17,10 @@
   "네이버Cue": "공개 API 없음 · 수기"
  },
  "summary": {
-  "measuredQuestions": 12,
+  "measuredQuestions": 14,
   "won": 4,
-  "top1": 3,
-  "holes": 8
+  "top1": 4,
+  "holes": 10
  },
  "questions": [
   {
@@ -56,15 +56,15 @@
    "q": "만년필로 쓰기 좋은 다이어리 추천해줘",
    "kw": "만년필다이어리",
    "line": "잉크파인(만년필종이)",
-   "verdict": "win",
+   "verdict": "win1",
    "engines": {
     "Gemini": {
      "m": true,
-     "rank": 9
+     "rank": 10
     },
     "Perplexity": {
      "m": true,
-     "rank": 2
+     "rank": 1
     },
     "Claude": {
      "m": false,
@@ -75,7 +75,65 @@
    },
    "competitors": [
     "미도리",
-    "로디아"
+    "몰스킨"
+   ]
+  },
+  {
+   "q": "만년필 쓰기 좋은 종이 추천해줘",
+   "kw": "만년필종이",
+   "line": "잉크파인(만년필종이)",
+   "verdict": "hole",
+   "engines": {
+    "Gemini": {
+     "m": false,
+     "rank": null
+    },
+    "Perplexity": {
+     "m": false,
+     "rank": null
+    },
+    "Claude": {
+     "m": false,
+     "rank": null
+    },
+    "ChatGPT": null,
+    "네이버Cue": null
+   },
+   "competitors": [
+    "미도리",
+    "로디아",
+    "라이프",
+    "클레르퐁텐",
+    "아피카"
+   ]
+  },
+  {
+   "q": "만년필 잉크가 안 번지는 종이 추천해줘",
+   "kw": "안번지는만년필종이",
+   "line": "잉크파인(만년필종이)",
+   "verdict": "hole",
+   "engines": {
+    "Gemini": {
+     "m": false,
+     "rank": null
+    },
+    "Perplexity": {
+     "m": false,
+     "rank": null
+    },
+    "Claude": {
+     "m": false,
+     "rank": null
+    },
+    "ChatGPT": null,
+    "네이버Cue": null
+   },
+   "competitors": [
+    "미도리",
+    "로디아",
+    "아피카",
+    "무인양품",
+    "라이프"
    ]
   },
   {
@@ -101,6 +159,7 @@
    },
    "competitors": [
     "미도리",
+    "아날로그",
     "텐바이텐"
    ]
   },
@@ -127,9 +186,9 @@
    },
    "competitors": [
     "미도리",
-    "텐바이텐",
-    "라이프",
+    "무지",
     "위클리",
+    "라이프",
     "몰스킨"
    ]
   },
@@ -139,7 +198,10 @@
    "line": "오늘기억 일기",
    "verdict": "hole",
    "engines": {
-    "Gemini": null,
+    "Gemini": {
+     "m": false,
+     "rank": null
+    },
     "Perplexity": {
      "m": false,
      "rank": null
@@ -151,9 +213,7 @@
     "ChatGPT": null,
     "네이버Cue": null
    },
-   "competitors": [
-    "무지"
-   ]
+   "competitors": []
   },
   {
    "q": "손으로 쓰는 가계부 추천해줘",
@@ -177,7 +237,7 @@
     "네이버Cue": null
    },
    "competitors": [
-    "위클리"
+    "아날로그"
    ]
   },
   {
@@ -186,7 +246,10 @@
    "line": "오늘쓰임 가계부",
    "verdict": "hole",
    "engines": {
-    "Gemini": null,
+    "Gemini": {
+     "m": false,
+     "rank": null
+    },
     "Perplexity": {
      "m": false,
      "rank": null
@@ -198,9 +261,7 @@
     "ChatGPT": null,
     "네이버Cue": null
    },
-   "competitors": [
-    "라이프"
-   ]
+   "competitors": []
   },
   {
    "q": "초등학생 스터디플래너 추천해줘",
@@ -208,7 +269,10 @@
    "line": "차일드라이크 초등",
    "verdict": "win1",
    "engines": {
-    "Gemini": null,
+    "Gemini": {
+     "m": true,
+     "rank": 1
+    },
     "Perplexity": {
      "m": true,
      "rank": 1
@@ -228,10 +292,13 @@
    "line": "차일드라이크 초등",
    "verdict": "win1",
    "engines": {
-    "Gemini": null,
-    "Perplexity": {
+    "Gemini": {
      "m": true,
      "rank": 1
+    },
+    "Perplexity": {
+     "m": false,
+     "rank": null
     },
     "Claude": {
      "m": false,
@@ -241,7 +308,7 @@
     "네이버Cue": null
    },
    "competitors": [
-    "아날로그"
+    "위클리"
    ]
   },
   {
@@ -265,11 +332,7 @@
     "ChatGPT": null,
     "네이버Cue": null
    },
-   "competitors": [
-    "무지",
-    "아날로그",
-    "프랭클린"
-   ]
+   "competitors": []
   },
   {
    "q": "독서기록장 추천해줘",
@@ -277,7 +340,10 @@
    "line": "독서기록",
    "verdict": "hole",
    "engines": {
-    "Gemini": null,
+    "Gemini": {
+     "m": false,
+     "rank": null
+    },
     "Perplexity": {
      "m": false,
      "rank": null
@@ -290,7 +356,6 @@
     "네이버Cue": null
    },
    "competitors": [
-    "무인양품",
     "아날로그"
    ]
   },
@@ -300,7 +365,10 @@
    "line": "필사/노트",
    "verdict": "hole",
    "engines": {
-    "Gemini": null,
+    "Gemini": {
+     "m": false,
+     "rank": null
+    },
     "Perplexity": {
      "m": false,
      "rank": null
@@ -313,21 +381,22 @@
     "네이버Cue": null
    },
    "competitors": [
-    "미도리",
+    "로디아",
+    "몰스킨",
     "무지",
-    "클레르퐁텐",
-    "몰스킨"
+    "라이프",
+    "클레르퐁텐"
    ]
   }
  ],
  "trend": [
   {
    "date": "2026-06-14",
-   "rate": 20,
+   "rate": 17,
    "byEngine": {
-    "Gemini": 17,
-    "Perplexity": 25,
-    "Claude": 17
+    "Gemini": 21,
+    "Perplexity": 14,
+    "Claude": 14
    }
   }
  ]
