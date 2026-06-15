@@ -1,26 +1,26 @@
 {
- "updated": "2026-06-14",
+ "updated": "2026-06-15",
  "engines": [
   "Gemini",
   "Perplexity",
   "Claude",
   "ChatGPT",
-  "네이버Cue"
+  "네이버 AI브리핑"
  ],
  "measuredEngines": [
+  "ChatGPT",
   "Claude",
   "Gemini",
   "Perplexity"
  ],
  "engineNote": {
-  "ChatGPT": "충전 반영 대기",
-  "네이버Cue": "공개 API 없음 · 수기"
+  "네이버 AI브리핑": "검색 상단 AI요약 · 수기"
  },
  "summary": {
   "measuredQuestions": 14,
-  "won": 4,
+  "won": 7,
   "top1": 4,
-  "holes": 10
+  "holes": 7
  },
  "questions": [
   {
@@ -41,52 +41,61 @@
      "m": false,
      "rank": null
     },
-    "ChatGPT": null,
-    "네이버Cue": null
+    "ChatGPT": {
+     "m": false,
+     "rank": null
+    },
+    "네이버 AI브리핑": null
    },
    "competitors": [
     "미도리",
     "로디아",
-    "몰스킨",
-    "라이프",
-    "클레르퐁텐"
+    "무지",
+    "클레르퐁텐",
+    "라이프"
    ]
   },
   {
    "q": "만년필로 쓰기 좋은 다이어리 추천해줘",
    "kw": "만년필다이어리",
    "line": "잉크파인(만년필종이)",
-   "verdict": "win1",
+   "verdict": "win",
    "engines": {
     "Gemini": {
-     "m": true,
-     "rank": 10
+     "m": false,
+     "rank": null
     },
     "Perplexity": {
      "m": true,
-     "rank": 1
+     "rank": 2
     },
     "Claude": {
      "m": false,
      "rank": null
     },
-    "ChatGPT": null,
-    "네이버Cue": null
+    "ChatGPT": {
+     "m": false,
+     "rank": null
+    },
+    "네이버 AI브리핑": null
    },
    "competitors": [
     "미도리",
-    "몰스킨"
+    "로디아",
+    "양지사",
+    "클레르퐁텐",
+    "아피카"
    ]
   },
   {
    "q": "만년필 쓰기 좋은 종이 추천해줘",
    "kw": "만년필종이",
    "line": "잉크파인(만년필종이)",
-   "verdict": "hole",
+   "verdict": "win",
    "engines": {
     "Gemini": {
-     "m": false,
-     "rank": null
+     "m": true,
+     "rank": 9
     },
     "Perplexity": {
      "m": false,
@@ -96,15 +105,18 @@
      "m": false,
      "rank": null
     },
-    "ChatGPT": null,
-    "네이버Cue": null
+    "ChatGPT": {
+     "m": false,
+     "rank": null
+    },
+    "네이버 AI브리핑": null
    },
    "competitors": [
     "미도리",
     "로디아",
     "라이프",
     "클레르퐁텐",
-    "아피카"
+    "옥스포드"
    ]
   },
   {
@@ -125,14 +137,17 @@
      "m": false,
      "rank": null
     },
-    "ChatGPT": null,
-    "네이버Cue": null
+    "ChatGPT": {
+     "m": false,
+     "rank": null
+    },
+    "네이버 AI브리핑": null
    },
    "competitors": [
     "미도리",
     "로디아",
-    "아피카",
-    "무인양품",
+    "모닝글로리",
+    "클레르퐁텐",
     "라이프"
    ]
   },
@@ -140,7 +155,7 @@
    "q": "5년 일기장 추천해줘",
    "kw": "5년일기장",
    "line": "오늘기억 일기",
-   "verdict": "win1",
+   "verdict": "win",
    "engines": {
     "Gemini": {
      "m": false,
@@ -152,15 +167,18 @@
     },
     "Claude": {
      "m": true,
-     "rank": 1
+     "rank": 3
     },
-    "ChatGPT": null,
-    "네이버Cue": null
+    "ChatGPT": {
+     "m": false,
+     "rank": null
+    },
+    "네이버 AI브리핑": null
    },
    "competitors": [
     "미도리",
     "아날로그",
-    "텐바이텐"
+    "몰스킨"
    ]
   },
   {
@@ -181,26 +199,29 @@
      "m": false,
      "rank": null
     },
-    "ChatGPT": null,
-    "네이버Cue": null
+    "ChatGPT": {
+     "m": false,
+     "rank": null
+    },
+    "네이버 AI브리핑": null
    },
    "competitors": [
-    "미도리",
-    "무지",
+    "텐바이텐",
     "위클리",
-    "라이프",
-    "몰스킨"
+    "미도리",
+    "몰스킨",
+    "무지"
    ]
   },
   {
    "q": "감사일기 쓰기 좋은 일기장 추천해줘",
    "kw": "감사일기",
    "line": "오늘기억 일기",
-   "verdict": "hole",
+   "verdict": "win1",
    "engines": {
     "Gemini": {
-     "m": false,
-     "rank": null
+     "m": true,
+     "rank": 1
     },
     "Perplexity": {
      "m": false,
@@ -210,10 +231,18 @@
      "m": false,
      "rank": null
     },
-    "ChatGPT": null,
-    "네이버Cue": null
+    "ChatGPT": {
+     "m": false,
+     "rank": null
+    },
+    "네이버 AI브리핑": null
    },
-   "competitors": []
+   "competitors": [
+    "아날로그",
+    "미도리",
+    "몰스킨",
+    "무지"
+   ]
   },
   {
    "q": "손으로 쓰는 가계부 추천해줘",
@@ -233,11 +262,16 @@
      "m": false,
      "rank": null
     },
-    "ChatGPT": null,
-    "네이버Cue": null
+    "ChatGPT": {
+     "m": false,
+     "rank": null
+    },
+    "네이버 AI브리핑": null
    },
    "competitors": [
-    "아날로그"
+    "양지사",
+    "모닝글로리",
+    "위클리"
    ]
   },
   {
@@ -258,8 +292,11 @@
      "m": false,
      "rank": null
     },
-    "ChatGPT": null,
-    "네이버Cue": null
+    "ChatGPT": {
+     "m": false,
+     "rank": null
+    },
+    "네이버 AI브리핑": null
    },
    "competitors": []
   },
@@ -281,10 +318,15 @@
      "m": true,
      "rank": 1
     },
-    "ChatGPT": null,
-    "네이버Cue": null
+    "ChatGPT": {
+     "m": false,
+     "rank": null
+    },
+    "네이버 AI브리핑": null
    },
-   "competitors": []
+   "competitors": [
+    "모닝글로리"
+   ]
   },
   {
    "q": "초등 자기주도학습 플래너 추천해줘",
@@ -297,19 +339,20 @@
      "rank": 1
     },
     "Perplexity": {
-     "m": false,
-     "rank": null
+     "m": true,
+     "rank": 1
     },
     "Claude": {
      "m": false,
      "rank": null
     },
-    "ChatGPT": null,
-    "네이버Cue": null
+    "ChatGPT": {
+     "m": false,
+     "rank": null
+    },
+    "네이버 AI브리핑": null
    },
-   "competitors": [
-    "위클리"
-   ]
+   "competitors": []
   },
   {
    "q": "직장인 업무일지 추천해줘",
@@ -329,10 +372,15 @@
      "m": false,
      "rank": null
     },
-    "ChatGPT": null,
-    "네이버Cue": null
+    "ChatGPT": {
+     "m": false,
+     "rank": null
+    },
+    "네이버 AI브리핑": null
    },
-   "competitors": []
+   "competitors": [
+    "아날로그"
+   ]
   },
   {
    "q": "독서기록장 추천해줘",
@@ -352,8 +400,11 @@
      "m": false,
      "rank": null
     },
-    "ChatGPT": null,
-    "네이버Cue": null
+    "ChatGPT": {
+     "m": false,
+     "rank": null
+    },
+    "네이버 AI브리핑": null
    },
    "competitors": [
     "아날로그"
@@ -363,11 +414,11 @@
    "q": "필사하기 좋은 노트 추천해줘",
    "kw": "필사노트",
    "line": "필사/노트",
-   "verdict": "hole",
+   "verdict": "win1",
    "engines": {
     "Gemini": {
-     "m": false,
-     "rank": null
+     "m": true,
+     "rank": 1
     },
     "Perplexity": {
      "m": false,
@@ -377,15 +428,18 @@
      "m": false,
      "rank": null
     },
-    "ChatGPT": null,
-    "네이버Cue": null
+    "ChatGPT": {
+     "m": false,
+     "rank": null
+    },
+    "네이버 AI브리핑": null
    },
    "competitors": [
-    "로디아",
-    "몰스킨",
+    "미도리",
     "무지",
-    "라이프",
-    "클레르퐁텐"
+    "클레르퐁텐",
+    "로디아",
+    "몰스킨"
    ]
   }
  ],
@@ -397,6 +451,16 @@
     "Gemini": 21,
     "Perplexity": 14,
     "Claude": 14
+   }
+  },
+  {
+   "date": "2026-06-15",
+   "rate": 18,
+   "byEngine": {
+    "Gemini": 36,
+    "Perplexity": 21,
+    "Claude": 14,
+    "ChatGPT": 0
    }
   }
  ]
