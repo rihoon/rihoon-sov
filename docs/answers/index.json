@@ -1,0 +1,21 @@
+{
+ "dates": [
+  "2026-06-14",
+  "2026-06-15",
+  "2026-06-22"
+ ],
+ "detail": {
+  "2026-06-14": {
+   "questions": 14,
+   "withSources": 0
+  },
+  "2026-06-15": {
+   "questions": 14,
+   "withSources": 0
+  },
+  "2026-06-22": {
+   "questions": 14,
+   "withSources": 33
+  }
+ }
+}

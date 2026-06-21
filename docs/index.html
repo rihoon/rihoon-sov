@@ -61,6 +61,15 @@
   .src:active{opacity:.55} .src:last-child{border-bottom:none}
   .sk{font-size:10px;font-weight:700;color:var(--sub);background:var(--soft);padding:2px 7px;border-radius:6px;flex-shrink:0;min-width:46px;text-align:center}
   .stitle{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .ansbox{margin-top:10px;border-top:1px solid var(--line);padding-top:9px}
+  .ansbox>summary{font-size:12.5px;color:var(--green);cursor:pointer;font-weight:700;list-style:none;outline:none}
+  .ansbox>summary::-webkit-details-marker{display:none}
+  .anseng{margin-top:11px}
+  .anseng-h{font-size:13px;font-weight:700;display:flex;align-items:center;gap:7px;margin-bottom:5px}
+  .anseng-b{font-weight:600;font-size:11.5px;color:var(--sub)}
+  .anstext{font-size:12.5px;color:var(--ink);line-height:1.62;white-space:pre-wrap;word-break:break-word;
+    max-height:300px;overflow:auto;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 11px}
+  .anssrc-t{font-size:11px;font-weight:700;color:var(--sub);margin:8px 0 1px}
   .todo{background:var(--red-bg);border:1px solid #fbdce2;border-radius:14px;padding:14px 16px}
   .todo li{font-size:13.5px;margin:6px 0 0 2px;list-style:none;padding-left:16px;position:relative}
   .todo li:before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--red)}
@@ -100,6 +109,38 @@ function engCell(name, v){
 const VB={win1:'badge win1',win:'badge win',hole:'badge hole',none:'badge none'};
 const VT={win1:'🟢 1위',win:'🟡 언급',hole:'🔴 안 나옴',none:'— 미측정'};
 const VRANK={win1:0,win:1,hole:2,none:3};
+const ANSCACHE={};
+function escapeHtml(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function ansBadge(a){
+  if(!a.mentioned) return '🔴 안 나옴';
+  return a.rank===1 ? '🟢 1위 추천' : (a.rank ? '🟡 '+a.rank+'위' : '🟡 언급됨');
+}
+function renderAns(qd){
+  let html='';
+  DATA.engines.forEach(e=>{
+    const a=qd[e]; if(!a) return;
+    const ans=(a.answer||'').trim()||'(답변 없음)';
+    let srcs='';
+    if(a.sources&&a.sources.length){
+      srcs='<div class="anssrc-t">📄 이 답변이 읽은 페이지 '+a.sources.length+'개</div><div class="srclist">'
+        +a.sources.map(s=>{const label=(s.title||s.url.replace(/^https?:\/\/(www\.)?/,'')).slice(0,60);
+          return `<a class="src" href="${s.url}" target="_blank" rel="noopener"><span class="stitle">${escapeHtml(label)}</span></a>`;}).join('')
+        +'</div>';
+    }
+    const qrs=a.searchQueries&&a.searchQueries.length?`<div class="sq">🔍 ${EABBR[e]}가 검색한 말: ${escapeHtml(a.searchQueries.join(' · '))}</div>`:'';
+    html+=`<div class="anseng"><div class="anseng-h">${EABBR[e]} <span class="anseng-b">${ansBadge(a)}</span></div>${qrs}<div class="anstext">${escapeHtml(ans)}</div>${srcs}</div>`;
+  });
+  return html||'<div class="sq">이 주에는 저장된 답변이 없어요.</div>';
+}
+async function loadAns(el){
+  if(!el.open || el.dataset.loaded) return;
+  el.dataset.loaded='1';
+  const date=el.dataset.date, id=el.dataset.id, body=el.querySelector('.ansbody');
+  try{
+    if(!ANSCACHE[date]) ANSCACHE[date]=await fetch('./answers/'+date+'.json?'+Date.now()).then(r=>r.json());
+    body.innerHTML=renderAns(ANSCACHE[date][id]||{});
+  }catch(e){ body.innerHTML='<div class="sq">답변 데이터를 아직 못 불러왔어요(이 주는 저장 전일 수 있어요).</div>'; el.dataset.loaded=''; }
+}
 let DATA=null, SRCBYKW={}, SEL=null;
 function weekOf(date){
   if(DATA.weeks && DATA.weeks[date]) return DATA.weeks[date];
@@ -156,10 +197,11 @@ function paintWeek(date){
       const sq = src.searchQueries&&src.searchQueries.length ? `<div class="sq">🔍 AI가 구글에 친 검색어<br>${src.searchQueries.join(' · ')}</div>` : '';
       srcHtml = `<details class="srcbox"><summary>📄 AI가 읽은 출처 ${src.sources.length}개 — 눌러서 학습 ⌄</summary>${sq}<div class="srclist">${links}</div></details>`;
     }
+    const ansBox = `<details class="ansbox" data-date="${date}" data-id="${q.id}" ontoggle="loadAns(this)"><summary>🗨️ AI별 답변 전문 · 인용 페이지 보기 ⌄</summary><div class="ansbody"><div class="sq">불러오는 중…</div></div></details>`;
     return `<div class="qcard ${q.verdict}">
       <div class="qhead"><div><div class="qtext">${q.q}</div><div class="qline">${q.line}</div></div>
         <span class="${VB[q.verdict]}">${VT[q.verdict]}</span></div>
-      <div class="engs">${engs}</div>${comp}${srcHtml}</div>`;
+      <div class="engs">${engs}</div>${comp}${srcHtml}${ansBox}</div>`;
   }).join('');
   const holes=qs.filter(q=>q.verdict==='hole'||q.verdict==='none');
   const todo = holes.length ? `<div class="section-t">✅ 지금 할 일 — 비어있는 자리 채우기</div>

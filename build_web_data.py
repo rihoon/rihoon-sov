@@ -44,7 +44,7 @@ def build_week(date):
                 for c in (r.get('competitors') or []):
                     if hangul(c) and c not in comps: comps.append(c)
         verdict = 'win1' if won else ('win' if ment else ('hole' if nmeas else 'none'))
-        questions.append({'q': q['q'], 'kw': q['kw'], 'line': q['line'], 'verdict': verdict,
+        questions.append({'id': i, 'q': q['q'], 'kw': q['kw'], 'line': q['line'], 'verdict': verdict,
                           'engines': eng, 'competitors': comps[:5]})
     cur = [r for r in meas if r['date'] == date]
     mq = len({r['id'] for r in cur})
