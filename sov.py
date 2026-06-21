@@ -155,22 +155,44 @@ def analyze(text):
         rank = 1 + sum(1 for c in comps if t.index(c) < bpos)
     return {'mentioned': bool(brand_hit), 'brand_hit': brand_hit, 'rank': rank, 'competitors': comps}
 
+def done_today(today):
+    # 같은 날 이미 '성공'(에러 아님)한 (엔진,질문) 집합 → 재측정 시 API 호출 스킵(중복 과금 방지)
+    done = set()
+    if os.path.exists(OUT):
+        for l in open(OUT, encoding='utf-8'):
+            l = l.strip()
+            if not l: continue
+            try: r = json.loads(l)
+            except Exception: continue
+            if r.get('date') == today and r.get('mentioned') is not None and r.get('engine') and r.get('id'):
+                done.add((r['engine'], r['id']))
+    return done
+
 def main():
     today = datetime.date.today().isoformat()
     active = [(n, f) for n, f in ENGINES if (f.__name__ == 'ask_gemini' and S.get('gemini_key')) or
               (f.__name__ == 'ask_perplexity' and S.get('perplexity_key')) or
               (f.__name__ == 'ask_openai' and S.get('openai_key')) or
               (f.__name__ == 'ask_claude' and S.get('anthropic_key'))]
-    only = set(a.lower() for a in sys.argv[1:])      # 예: python sov.py perplexity claude
+    args = [a.lower() for a in sys.argv[1:]]
+    force = '--force' in args                          # --force: 이미 성공한 것도 재측정(비용↑, 기본 OFF)
+    only = set(a for a in args if not a.startswith('-'))   # 예: python sov.py perplexity claude
     if only: active = [(n, f) for n, f in active if n.lower() in only]
     if not active:
         print('⚠ 활성 엔진 없음 ([ai] 키 확인 or 인자로 준 엔진명 확인)'); return
+    done = set() if force else done_today(today)       # 기본: 오늘 이미 성공한 건 건너뜀(실패/누락만 호출)
+    if done: print('↻ 오늘 이미 성공 %d건은 스킵 → 실패/누락만 측정 (전체 재측정은 --force)' % len(done))
     print('측정 엔진: %s | 질문 %d개 | %s' % (', '.join(n for n, _ in active), len(core['questions']), today))
     fout = open(OUT, 'a', encoding='utf-8')
     summary = {n: {'mention': 0, 'top1': 0} for n, _ in active}
+    skipped = 0
     for qi in core['questions']:
         line = '· %-22s' % (qi['kw'])
+        called = False
         for name, fn in active:
+            if (name, qi['id']) in done:               # 이미 성공 → API 호출 안 함(과금 0)
+                line += ' %s:skip' % name[:4]; skipped += 1; continue
+            called = True
             try:
                 res = fn(qi['q'])
                 if isinstance(res, dict):
@@ -190,7 +212,8 @@ def main():
                 line += ' %s:ERR' % name[:4]
                 fout.write(json.dumps({'date': today, 'engine': name, 'id': qi['id'], 'error': str(e)[:200]}, ensure_ascii=False) + '\n'); fout.flush()
         print(line)
-        time.sleep(1.5)
+        if called: time.sleep(1.5)                     # 호출 없으면(전부 스킵) 대기도 생략
+    if skipped: print('(스킵 %d건 — 이미 성공한 측정은 재호출 안 함)' % skipped)
     n = len(core['questions'])
     print('\n=== SOV 요약 (%s) ===' % today)
     for name, _ in active:
