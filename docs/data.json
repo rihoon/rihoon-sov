@@ -433,6 +433,1248 @@
    ]
   }
  ],
+ "weeks": {
+  "2026-06-14": {
+   "measuredEngines": [
+    "Claude",
+    "Gemini",
+    "Perplexity"
+   ],
+   "summary": {
+    "measuredQuestions": 14,
+    "won": 4,
+    "top1": 4,
+    "holes": 10
+   },
+   "questions": [
+    {
+     "q": "만년필로 써도 안 번지는 노트 추천해줘",
+     "kw": "만년필노트",
+     "line": "잉크파인(만년필종이)",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": null,
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "로디아",
+      "몰스킨",
+      "라이프",
+      "클레르퐁텐"
+     ]
+    },
+    {
+     "q": "만년필로 쓰기 좋은 다이어리 추천해줘",
+     "kw": "만년필다이어리",
+     "line": "잉크파인(만년필종이)",
+     "verdict": "win1",
+     "engines": {
+      "Gemini": {
+       "m": true,
+       "rank": 10
+      },
+      "Perplexity": {
+       "m": true,
+       "rank": 1
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": null,
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "몰스킨"
+     ]
+    },
+    {
+     "q": "만년필 쓰기 좋은 종이 추천해줘",
+     "kw": "만년필종이",
+     "line": "잉크파인(만년필종이)",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": null,
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "로디아",
+      "라이프",
+      "클레르퐁텐",
+      "아피카"
+     ]
+    },
+    {
+     "q": "만년필 잉크가 안 번지는 종이 추천해줘",
+     "kw": "안번지는만년필종이",
+     "line": "잉크파인(만년필종이)",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": null,
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "로디아",
+      "아피카",
+      "무인양품",
+      "라이프"
+     ]
+    },
+    {
+     "q": "5년 일기장 추천해줘",
+     "kw": "5년일기장",
+     "line": "오늘기억 일기",
+     "verdict": "win1",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": true,
+       "rank": 1
+      },
+      "ChatGPT": null,
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "아날로그",
+      "텐바이텐"
+     ]
+    },
+    {
+     "q": "날짜 없는 만년형 다이어리 추천해줘",
+     "kw": "만년다이어리",
+     "line": "오늘기억 일기",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": null,
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "무지",
+      "위클리",
+      "라이프",
+      "몰스킨"
+     ]
+    },
+    {
+     "q": "감사일기 쓰기 좋은 일기장 추천해줘",
+     "kw": "감사일기",
+     "line": "오늘기억 일기",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": null,
+      "네이버 AI브리핑": null
+     },
+     "competitors": []
+    },
+    {
+     "q": "손으로 쓰는 가계부 추천해줘",
+     "kw": "수기가계부",
+     "line": "오늘쓰임 가계부",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": null,
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "아날로그"
+     ]
+    },
+    {
+     "q": "초보도 쓰기 쉬운 가계부 추천해줘",
+     "kw": "초보가계부",
+     "line": "오늘쓰임 가계부",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": null,
+      "네이버 AI브리핑": null
+     },
+     "competitors": []
+    },
+    {
+     "q": "초등학생 스터디플래너 추천해줘",
+     "kw": "초등스터디플래너",
+     "line": "차일드라이크 초등",
+     "verdict": "win1",
+     "engines": {
+      "Gemini": {
+       "m": true,
+       "rank": 1
+      },
+      "Perplexity": {
+       "m": true,
+       "rank": 1
+      },
+      "Claude": {
+       "m": true,
+       "rank": 1
+      },
+      "ChatGPT": null,
+      "네이버 AI브리핑": null
+     },
+     "competitors": []
+    },
+    {
+     "q": "초등 자기주도학습 플래너 추천해줘",
+     "kw": "자기주도학습플래너",
+     "line": "차일드라이크 초등",
+     "verdict": "win1",
+     "engines": {
+      "Gemini": {
+       "m": true,
+       "rank": 1
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": null,
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "위클리"
+     ]
+    },
+    {
+     "q": "직장인 업무일지 추천해줘",
+     "kw": "업무일지",
+     "line": "업무/직장",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": null,
+      "네이버 AI브리핑": null
+     },
+     "competitors": []
+    },
+    {
+     "q": "독서기록장 추천해줘",
+     "kw": "독서기록장",
+     "line": "독서기록",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": null,
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "아날로그"
+     ]
+    },
+    {
+     "q": "필사하기 좋은 노트 추천해줘",
+     "kw": "필사노트",
+     "line": "필사/노트",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": null,
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "로디아",
+      "몰스킨",
+      "무지",
+      "라이프",
+      "클레르퐁텐"
+     ]
+    }
+   ]
+  },
+  "2026-06-15": {
+   "measuredEngines": [
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "Perplexity"
+   ],
+   "summary": {
+    "measuredQuestions": 14,
+    "won": 7,
+    "top1": 4,
+    "holes": 7
+   },
+   "questions": [
+    {
+     "q": "만년필로 써도 안 번지는 노트 추천해줘",
+     "kw": "만년필노트",
+     "line": "잉크파인(만년필종이)",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "로디아",
+      "무지",
+      "클레르퐁텐",
+      "라이프"
+     ]
+    },
+    {
+     "q": "만년필로 쓰기 좋은 다이어리 추천해줘",
+     "kw": "만년필다이어리",
+     "line": "잉크파인(만년필종이)",
+     "verdict": "win",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": true,
+       "rank": 2
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "로디아",
+      "양지사",
+      "클레르퐁텐",
+      "아피카"
+     ]
+    },
+    {
+     "q": "만년필 쓰기 좋은 종이 추천해줘",
+     "kw": "만년필종이",
+     "line": "잉크파인(만년필종이)",
+     "verdict": "win",
+     "engines": {
+      "Gemini": {
+       "m": true,
+       "rank": 9
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "로디아",
+      "라이프",
+      "클레르퐁텐",
+      "옥스포드"
+     ]
+    },
+    {
+     "q": "만년필 잉크가 안 번지는 종이 추천해줘",
+     "kw": "안번지는만년필종이",
+     "line": "잉크파인(만년필종이)",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "로디아",
+      "모닝글로리",
+      "클레르퐁텐",
+      "라이프"
+     ]
+    },
+    {
+     "q": "5년 일기장 추천해줘",
+     "kw": "5년일기장",
+     "line": "오늘기억 일기",
+     "verdict": "win",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": true,
+       "rank": 3
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "아날로그",
+      "몰스킨"
+     ]
+    },
+    {
+     "q": "날짜 없는 만년형 다이어리 추천해줘",
+     "kw": "만년다이어리",
+     "line": "오늘기억 일기",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "텐바이텐",
+      "위클리",
+      "미도리",
+      "몰스킨",
+      "무지"
+     ]
+    },
+    {
+     "q": "감사일기 쓰기 좋은 일기장 추천해줘",
+     "kw": "감사일기",
+     "line": "오늘기억 일기",
+     "verdict": "win1",
+     "engines": {
+      "Gemini": {
+       "m": true,
+       "rank": 1
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "아날로그",
+      "미도리",
+      "몰스킨",
+      "무지"
+     ]
+    },
+    {
+     "q": "손으로 쓰는 가계부 추천해줘",
+     "kw": "수기가계부",
+     "line": "오늘쓰임 가계부",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "양지사",
+      "모닝글로리",
+      "위클리"
+     ]
+    },
+    {
+     "q": "초보도 쓰기 쉬운 가계부 추천해줘",
+     "kw": "초보가계부",
+     "line": "오늘쓰임 가계부",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": []
+    },
+    {
+     "q": "초등학생 스터디플래너 추천해줘",
+     "kw": "초등스터디플래너",
+     "line": "차일드라이크 초등",
+     "verdict": "win1",
+     "engines": {
+      "Gemini": {
+       "m": true,
+       "rank": 1
+      },
+      "Perplexity": {
+       "m": true,
+       "rank": 1
+      },
+      "Claude": {
+       "m": true,
+       "rank": 1
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "모닝글로리"
+     ]
+    },
+    {
+     "q": "초등 자기주도학습 플래너 추천해줘",
+     "kw": "자기주도학습플래너",
+     "line": "차일드라이크 초등",
+     "verdict": "win1",
+     "engines": {
+      "Gemini": {
+       "m": true,
+       "rank": 1
+      },
+      "Perplexity": {
+       "m": true,
+       "rank": 1
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": []
+    },
+    {
+     "q": "직장인 업무일지 추천해줘",
+     "kw": "업무일지",
+     "line": "업무/직장",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "아날로그"
+     ]
+    },
+    {
+     "q": "독서기록장 추천해줘",
+     "kw": "독서기록장",
+     "line": "독서기록",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "아날로그"
+     ]
+    },
+    {
+     "q": "필사하기 좋은 노트 추천해줘",
+     "kw": "필사노트",
+     "line": "필사/노트",
+     "verdict": "win1",
+     "engines": {
+      "Gemini": {
+       "m": true,
+       "rank": 1
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "무지",
+      "클레르퐁텐",
+      "로디아",
+      "몰스킨"
+     ]
+    }
+   ]
+  },
+  "2026-06-22": {
+   "measuredEngines": [
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "Perplexity"
+   ],
+   "summary": {
+    "measuredQuestions": 14,
+    "won": 6,
+    "top1": 4,
+    "holes": 8
+   },
+   "questions": [
+    {
+     "q": "만년필로 써도 안 번지는 노트 추천해줘",
+     "kw": "만년필노트",
+     "line": "잉크파인(만년필종이)",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "로디아",
+      "몰스킨",
+      "라이프",
+      "클레르퐁텐"
+     ]
+    },
+    {
+     "q": "만년필로 쓰기 좋은 다이어리 추천해줘",
+     "kw": "만년필다이어리",
+     "line": "잉크파인(만년필종이)",
+     "verdict": "win",
+     "engines": {
+      "Gemini": {
+       "m": true,
+       "rank": 8
+      },
+      "Perplexity": {
+       "m": true,
+       "rank": 4
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "위클리"
+     ]
+    },
+    {
+     "q": "만년필 쓰기 좋은 종이 추천해줘",
+     "kw": "만년필종이",
+     "line": "잉크파인(만년필종이)",
+     "verdict": "win",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": true,
+       "rank": 6
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "로디아",
+      "라이프",
+      "클레르퐁텐",
+      "아피카"
+     ]
+    },
+    {
+     "q": "만년필 잉크가 안 번지는 종이 추천해줘",
+     "kw": "안번지는만년필종이",
+     "line": "잉크파인(만년필종이)",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "미도리",
+      "로디아",
+      "양지사",
+      "라이프",
+      "클레르퐁텐"
+     ]
+    },
+    {
+     "q": "5년 일기장 추천해줘",
+     "kw": "5년일기장",
+     "line": "오늘기억 일기",
+     "verdict": "win1",
+     "engines": {
+      "Gemini": {
+       "m": true,
+       "rank": 3
+      },
+      "Perplexity": {
+       "m": true,
+       "rank": 2
+      },
+      "Claude": {
+       "m": true,
+       "rank": 2
+      },
+      "ChatGPT": {
+       "m": true,
+       "rank": 1
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": []
+    },
+    {
+     "q": "날짜 없는 만년형 다이어리 추천해줘",
+     "kw": "만년다이어리",
+     "line": "오늘기억 일기",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "위클리",
+      "텐바이텐",
+      "아피카"
+     ]
+    },
+    {
+     "q": "감사일기 쓰기 좋은 일기장 추천해줘",
+     "kw": "감사일기",
+     "line": "오늘기억 일기",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "아날로그",
+      "무지"
+     ]
+    },
+    {
+     "q": "손으로 쓰는 가계부 추천해줘",
+     "kw": "수기가계부",
+     "line": "오늘쓰임 가계부",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "양지사",
+      "모닝글로리",
+      "위클리",
+      "프랭클린"
+     ]
+    },
+    {
+     "q": "초보도 쓰기 쉬운 가계부 추천해줘",
+     "kw": "초보가계부",
+     "line": "오늘쓰임 가계부",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": []
+    },
+    {
+     "q": "초등학생 스터디플래너 추천해줘",
+     "kw": "초등스터디플래너",
+     "line": "차일드라이크 초등",
+     "verdict": "win1",
+     "engines": {
+      "Gemini": {
+       "m": true,
+       "rank": 1
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": true,
+       "rank": 1
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": []
+    },
+    {
+     "q": "초등 자기주도학습 플래너 추천해줘",
+     "kw": "자기주도학습플래너",
+     "line": "차일드라이크 초등",
+     "verdict": "win1",
+     "engines": {
+      "Gemini": {
+       "m": true,
+       "rank": 1
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": true,
+       "rank": 1
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": []
+    },
+    {
+     "q": "직장인 업무일지 추천해줘",
+     "kw": "업무일지",
+     "line": "업무/직장",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "무지"
+     ]
+    },
+    {
+     "q": "독서기록장 추천해줘",
+     "kw": "독서기록장",
+     "line": "독서기록",
+     "verdict": "hole",
+     "engines": {
+      "Gemini": {
+       "m": false,
+       "rank": null
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "아날로그",
+      "미도리",
+      "무인양품"
+     ]
+    },
+    {
+     "q": "필사하기 좋은 노트 추천해줘",
+     "kw": "필사노트",
+     "line": "필사/노트",
+     "verdict": "win1",
+     "engines": {
+      "Gemini": {
+       "m": true,
+       "rank": 1
+      },
+      "Perplexity": {
+       "m": false,
+       "rank": null
+      },
+      "Claude": {
+       "m": false,
+       "rank": null
+      },
+      "ChatGPT": {
+       "m": false,
+       "rank": null
+      },
+      "네이버 AI브리핑": null
+     },
+     "competitors": [
+      "클레르퐁텐",
+      "미도리",
+      "로디아",
+      "무지",
+      "몰스킨"
+     ]
+    }
+   ]
+  }
+ },
  "trend": [
   {
    "date": "2026-06-14",
