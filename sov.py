@@ -119,8 +119,10 @@ def ask_openai(q):
 def ask_claude(q):
     k = S.get('anthropic_key')
     if not k: return None
+    # max_uses: 질문당 웹검색 횟수 상한 → 1회 측정 비용 고정·예측 가능(비용 폭주 방지)
     body = {'model': S.get('anthropic_model', 'claude-sonnet-4-6'), 'max_tokens': 2048,
-            'tools': [{'type': 'web_search_20250305', 'name': 'web_search'}],
+            'tools': [{'type': 'web_search_20250305', 'name': 'web_search',
+                       'max_uses': int(S.get('claude_search_max', 3))}],
             'messages': [{'role': 'user', 'content': q}]}
     r = post('https://api.anthropic.com/v1/messages', {'x-api-key': k, 'anthropic-version': '2023-06-01'}, body)
     parts, srcs, queries = [], [], []
