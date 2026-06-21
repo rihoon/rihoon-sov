@@ -67,6 +67,7 @@
   .trend{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff}
   .trend .big{font-size:32px;font-weight:900;letter-spacing:-.03em}
   .trend .cap{font-size:12.5px;color:var(--sub);margin-top:4px}
+  .trend .tchart{width:100%;max-width:440px;height:auto;display:block;margin:14px auto 0;overflow:visible}
   footer{color:var(--gray);font-size:11.5px;text-align:center;margin-top:30px;line-height:1.7}
   .loading{text-align:center;color:var(--sub);padding:60px 0;font-size:14px}
   @media(min-width:600px){ h1{font-size:24px} .hero{font-size:20px} .kpi .n{font-size:30px} }
@@ -115,10 +116,30 @@ function render(d, srcData){
     const note = d.engineNote&&d.engineNote[e] ? ' ('+d.engineNote[e]+')' : '';
     return `<span class="chip ${on?'on':'off'}"><span class="dot" style="background:${on?'var(--green)':'var(--gray)'}"></span>${EABBR[e]}${on?'':note}</span>`;
   }).join('');
-  // 추세
-  const last=d.trend[d.trend.length-1];
+  // 추세 (주차별 그래프)
+  const T=d.trend||[], last=T[T.length-1], prev=T.length>1?T[T.length-2]:null;
+  const rates=T.map(t=>t.rate);
+  const niceMax=Math.max(10, Math.ceil(Math.max(...rates,0)/10)*10 + 5);
+  const ch=148, padB=28, padT=22, padX=10;
+  const gap=64, cw=Math.max(T.length*gap + padX*2, 260);
+  const bw=Math.min(44, gap*0.5);
+  const bars=T.map((t,i)=>{
+    const x=padX+gap*i+gap/2;
+    const h=(ch-padB-padT)*(t.rate/niceMax);
+    const y=ch-padB-h;
+    const isLast=i===T.length-1;
+    const col=isLast?'var(--green)':'#c7e6d2';
+    const md=t.date.slice(5).replace('-','/');
+    return `<rect x="${(x-bw/2).toFixed(1)}" y="${y.toFixed(1)}" width="${bw}" height="${Math.max(h,1).toFixed(1)}" rx="5" fill="${col}"/>
+      <text x="${x}" y="${(y-7).toFixed(1)}" text-anchor="middle" font-size="12.5" font-weight="700" fill="${isLast?'var(--green)':'var(--sub)'}">${t.rate}%</text>
+      <text x="${x}" y="${ch-9}" text-anchor="middle" font-size="10.5" fill="var(--gray)">${md}</text>`;
+  }).join('');
+  const deltaTxt = T.length<=1
+    ? '오늘이 첫 측정(기준선)이에요. 콘텐츠를 깔고 다시 측정하면 이 숫자가 올라가는 게 보입니다 — 그게 핵심.'
+    : '직전 대비 '+((last.rate-prev.rate)>=0?'+':'')+(last.rate-prev.rate)+'%p · '+prev.date.slice(5).replace('-','/')+' '+prev.rate+'% → '+last.rate+'%';
   let trend = `<div class="trend"><div class="big">${last?last.rate:0}%</div>
-    <div class="cap">${d.trend.length<=1?'오늘이 첫 측정(기준선)이에요. 콘텐츠를 깔고 다시 측정하면 이 숫자가 올라가는 게 보입니다 — 그게 핵심.':'직전 대비 '+(last.rate-d.trend[d.trend.length-2].rate>=0?'+':'')+(last.rate-d.trend[d.trend.length-2].rate)+'%p'}</div></div>`;
+    <div class="cap">${deltaTxt}</div>
+    <svg class="tchart" viewBox="0 0 ${cw} ${ch}" preserveAspectRatio="xMidYMax meet" role="img" aria-label="주차별 리훈 추천 비율">${bars}</svg></div>`;
   // 질문 카드 (공백 먼저)
   const qs=[...d.questions].sort((a,b)=>VRANK[a.verdict]-VRANK[b.verdict]);
   const cards = qs.map(q=>{
