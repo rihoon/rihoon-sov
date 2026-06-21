@@ -70,6 +70,12 @@
   .anstext{font-size:12.5px;color:var(--ink);line-height:1.62;white-space:pre-wrap;word-break:break-word;
     max-height:300px;overflow:auto;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 11px}
   .anssrc-t{font-size:11px;font-weight:700;color:var(--sub);margin:8px 0 1px}
+  .chg{font-size:13px;padding:9px 11px;border:1px solid var(--line);border-radius:10px;margin-bottom:7px;
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:7px}
+  .chg.g{background:var(--green-bg);border-color:#cdedd6} .chg.r{background:var(--red-bg);border-color:#fbdce2} .chg.d{background:var(--soft)}
+  .chg b{font-weight:700} .chg-q{font-size:11.5px;color:var(--sub)}
+  .chg-n{font-size:11.5px;font-weight:700;margin-left:auto;white-space:nowrap}
+  .chg.g .chg-n{color:var(--green)} .chg.r .chg-n{color:var(--red)} .chg.d .chg-n{color:var(--gray)}
   .todo{background:var(--red-bg);border:1px solid #fbdce2;border-radius:14px;padding:14px 16px}
   .todo li{font-size:13.5px;margin:6px 0 0 2px;list-style:none;padding-left:16px;position:relative}
   .todo li:before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--red)}
@@ -226,6 +232,32 @@ function trendInner(){
     +`<svg class="tchart" viewBox="0 0 ${cw} ${ch}" preserveAspectRatio="xMidYMax meet" role="img" aria-label="주차별 엔진별 리훈 추천 수">${bars}</svg>`
     +`<div class="cap" style="text-align:center;margin-top:8px">👆 막대=그 주 상세 · 색 위에 올리면 엔진별 추천 수 · 막대 위 숫자=그 주 총 추천 칸 수</div>`;
 }
+function qHitCount(q){ return chartEngines().filter(e=>q.engines[e]&&q.engines[e].m).length; }
+function changePanel(date){
+  const T=DATA.trend||[], i=T.findIndex(t=>t.date===date);
+  if(i<=0) return '';                       // 첫 주는 비교 대상 없음
+  const prevDate=T[i-1].date;
+  const pm={}; weekOf(prevDate).questions.forEach(q=>pm[q.id]=q);
+  const gained=[],lost=[],up=[],down=[];
+  weekOf(date).questions.forEach(q=>{
+    const p=pm[q.id]; if(!p) return;
+    const c=qHitCount(q), pc=qHitCount(p);
+    if(pc===0&&c>0) gained.push({q,c,pc});
+    else if(pc>0&&c===0) lost.push({q,c,pc});
+    else if(c>pc) up.push({q,c,pc});
+    else if(c<pc&&c>0) down.push({q,c,pc});
+  });
+  if(!gained.length&&!lost.length&&!up.length&&!down.length)
+    return `<div class="section-t">📊 직전(${prevDate.slice(5).replace('-','/')}) 대비 변화</div><div class="section-d">바뀐 질문이 없어요.</div>`;
+  const md=prevDate.slice(5).replace('-','/');
+  const row=(arr,emoji,cls,fmt)=>arr.map(o=>`<div class="chg ${cls}">${emoji} <b>${o.q.kw}</b> <span class="chg-q">${o.q.q}</span><span class="chg-n">${fmt(o)}</span></div>`).join('');
+  let h=`<div class="section-t">📊 직전 측정(${md}) 대비 변화</div>`;
+  h+=row(gained,'🔺','g',o=>`새로 뚫림 · ${o.c}개 엔진`);
+  h+=row(up,'💪','g',o=>`강해짐 ${o.pc}→${o.c}개 엔진`);
+  h+=row(down,'🔻','d',o=>`약해짐 ${o.pc}→${o.c}개 엔진`);
+  h+=row(lost,'❌','r',o=>`빠짐 ${o.pc}→0 (${o.pc}표였음)`);
+  return h;
+}
 function paintWeek(date){
   SEL=date;
   const w=weekOf(date), s=w.summary, isLatest=(date===DATA.updated);
@@ -267,6 +299,7 @@ function paintWeek(date){
   const srcNote = isLatest ? '' : '<div class="section-d" style="margin-top:-4px">※ AI가 읽은 출처 목록은 최신 주에만 저장돼요.</div>';
   document.getElementById('weekview').innerHTML =
     `<div class="hero">${hero}</div>${kpis}
+     ${changePanel(date)}
      <div class="section-t">🔌 측정 엔진 (${dl})</div><div class="chips">${chips}</div>
      <div class="section-t">📋 ${dl} 질문별 현황</div>
      <div class="section-d">우리가 어디서 이기고(🟢) 어디서 지는지(🔴), 대신 누가 추천되는지.</div>${srcNote}
