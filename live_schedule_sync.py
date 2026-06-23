@@ -6,7 +6,9 @@ import re, json, os, urllib.request, datetime
 
 ENV = r'Z:/rihoon1/자동화/[AI페어워크]인스타컨텐츠 제작/.env'
 DB  = 'f218f7a9944b4db4a47bde68343d8445'
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'live-schedule.json')
+_BASE = os.path.dirname(os.path.abspath(__file__))
+# GitHub Pages는 docs/ 에서 서빙 → docs/ 있으면 거기에, 없으면(로컬테스트) 옆에
+OUT = os.path.join(_BASE, 'docs', 'live-schedule.json') if os.path.isdir(os.path.join(_BASE, 'docs')) else os.path.join(_BASE, 'live-schedule.json')
 
 # 토큰: GitHub Action에선 환경변수(시크릿), 로컬에선 .env에서
 tok = os.environ.get('NOTION_API_KEY')

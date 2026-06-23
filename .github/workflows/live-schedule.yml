@@ -24,6 +24,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add live-schedule.json
+          git add docs/live-schedule.json
           git diff --cached --quiet || git commit -m "라이브 일정 자동 갱신 (노션 동기화)"
           git push
