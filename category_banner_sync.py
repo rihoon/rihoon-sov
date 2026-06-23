@@ -54,7 +54,9 @@ def main():
     for fn in sorted(os.listdir(DIR)):
         low = fn.lower()
         if low in ('기본.jpg', '기본.jpeg', '기본.png', 'default.jpg', 'default.jpeg', 'default.png'):
-            cate = 'default'  # 모든 카테고리 기본 배너
+            cate = 'default'  # (미사용) 기본 배너
+        elif low in ('라이브.jpg', '라이브.jpeg', '라이브.png', 'live.jpg', 'live.jpeg', 'live.png'):
+            cate = 'live'  # 라이브 방송 페이지 상단 배너
         else:
             m = re.match(r'(\d+)\.(jpg|jpeg|png)$', fn, re.I)
             if not m:
@@ -73,7 +75,10 @@ def main():
         if cate in links:
             out[cate]['link'] = links[cate]
     json.dump(out, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    json.dump(cache, open(CACHE, 'w', encoding='utf-8'), ensure_ascii=False)
+    try:
+        json.dump(cache, open(CACHE, 'w', encoding='utf-8'), ensure_ascii=False)
+    except Exception as e:
+        print('  (캐시 저장 생략:', e, ')')
     print('카테고리 배너 %d개 → %s' % (len(out), OUT))
     for k, v in out.items():
         print('  ', k, '→', v['image'][-44:], ('(링크O)' if v.get('link') else ''))
