@@ -52,10 +52,15 @@ def main():
     links = read_links()
     out = {}
     for fn in sorted(os.listdir(DIR)):
-        m = re.match(r'(\d+)\.(jpg|jpeg|png)$', fn, re.I)
-        if not m:
-            continue
-        cate, path = m.group(1), os.path.join(DIR, fn)
+        low = fn.lower()
+        if low in ('기본.jpg', '기본.jpeg', '기본.png', 'default.jpg', 'default.jpeg', 'default.png'):
+            cate = 'default'  # 모든 카테고리 기본 배너
+        else:
+            m = re.match(r'(\d+)\.(jpg|jpeg|png)$', fn, re.I)
+            if not m:
+                continue
+            cate = m.group(1)
+        path = os.path.join(DIR, fn)
         key = fn + ':' + md5(path)
         url = cache.get(key)
         if url:
