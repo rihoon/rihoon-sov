@@ -1,0 +1,38 @@
+[
+ {
+  "image": "https://rihoon.co.kr/web/upload/NNEditor/20260623/d83fa9fd126a0c36756c21794540d5ad.jpg",
+  "head": "5년을 한 페이지에",
+  "title": "오늘기억 5년 다이어리",
+  "sub": "북슬립 추가, 만년필 용지로 업그레이드.",
+  "link": "/product/detail.html?product_no=1466&cate_no=1&display_group=2",
+  "light": true,
+  "dim": 15
+ },
+ {
+  "image": "https://rihoon.co.kr/web/upload/NNEditor/20260623/5e0e67691bc455cb02a4231d3773e70c.jpg",
+  "head": "일주일 공부가 한 눈에",
+  "title": "리뉴얼 오늘공부",
+  "sub": "뒷장에 형광펜이 배어나지 않게 만년필용지로 업그레이드",
+  "link": "/product/detail.html?product_no=147&cate_no=1&display_group=2",
+  "light": true,
+  "dim": 20
+ },
+ {
+  "image": "https://rihoon.co.kr/web/upload/NNEditor/20260623/551e8df90129f80d07f66b8dd799e43f.jpg",
+  "head": "7월 1일부터 시작하는",
+  "title": "하반기 이야기 다이어리",
+  "sub": "날짜, 공휴일, 음력이 모두 기입되어 있어요",
+  "link": "/product/detail.html?product_no=318&cate_no=1&display_group=2",
+  "light": false,
+  "dim": 0
+ },
+ {
+  "image": "https://rihoon.co.kr/web/upload/NNEditor/20260623/db33a390e304a5370c25954bd248e521.jpg",
+  "head": "세상에서 가장 쉬운 가계부",
+  "title": "쉬운 오늘쓰임",
+  "sub": "한 달이 한눈에, 현금 흐름이 한눈에",
+  "link": "/product/detail.html?product_no=519&cate_no=1&display_group=2",
+  "light": false,
+  "dim": 0
+ }
+]
