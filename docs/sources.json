@@ -5,41 +5,112 @@
    "kw": "만년필노트",
    "line": "잉크파인(만년필종이)",
    "mentioned": false,
-   "searchQueries": [],
-   "brands": [
-    "로이텀 1917 (Leuchtturm1917)",
-    "토모에리버 (Tomoe River)",
-    "페이퍼블랑 (Paperblanks)",
-    "Rhoda (로디아)",
-    "클레르퐁텐 (Clairefontaine)"
+   "searchQueries": [
+    "만년필 번짐 없는 노트 추천",
+    "만년필 친화적인 노트",
+    "만년필에 좋은 종이 노트",
+    "fountain pen friendly notebooks korea"
    ],
-   "sources": []
+   "brands": [
+    "로디아 (Rhodia)",
+    "토모에리버 (Tomoe River Paper)",
+    "고쿠요 캠퍼스 (Kokuyo Campus)",
+    "로이텀1917 (Leuchtturm1917)",
+    "클레르퐁텐 (Clairefontaine)",
+    "Fig 노트 (Fig Notebook)",
+    "Stalogy 365 Days Notebook",
+    "Paperage 노트"
+   ],
+   "sources": [
+    {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=HzMRqPKhuuU"
+    },
+    {
+     "kind": "레딧",
+     "title": "reddit.com",
+     "url": "https://www.reddit.com/r/fountainpens/comments/11fxtqj/what_is_the_best_brand_of_notebooks_for_fountain/?tl=ko"
+    },
+    {
+     "kind": "티스토리",
+     "title": "tistory.com",
+     "url": "https://self-cure.tistory.com/31"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "rediscoveranalog.com",
+     "url": "https://rediscoveranalog.com/fountain-pen-friendly-notebooks-that-arent-rhodia-or-tomoe-river/"
+    },
+    {
+     "kind": "카페",
+     "title": "daum.net",
+     "url": "https://cafe.daum.net/aisitaihito/HJ9M/11?svc=cafeapi"
+    },
+    {
+     "kind": "레딧",
+     "title": "reddit.com",
+     "url": "https://www.reddit.com/r/fountainpens/comments/1m9j9qq/best_notebook_for_fountain_pen/?tl=ko"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "thejournalshop.com",
+     "url": "https://www.thejournalshop.com/collections/iconic"
+    },
+    {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=mPCNmYTAHmk"
+    }
+   ]
   },
   "fp-02": {
    "q": "만년필로 쓰기 좋은 다이어리 추천해줘",
    "kw": "만년필다이어리",
    "line": "잉크파인(만년필종이)",
-   "mentioned": true,
+   "mentioned": false,
    "searchQueries": [
     "만년필 다이어리 추천",
-    "만년필 사용 시 번짐 없는 다이어리",
-    "만년필 잉크 비침 적은 다이어리"
+    "만년필 친화적인 종이",
+    "잉크 번짐 없는 다이어리",
+    "만년필 뒷면 비침 없는 다이어리",
+    "만년필 필감 좋은 다이어리"
    ],
    "brands": [
-    "호보니치 테쵸 (Hobonichi Techo)",
-    "베러미도 노트 (Better Me Dot Note)",
-    "미도리 MD 노트 (Midori MD Note)",
-    "로디아 (Rhodia) 노트",
+    "로이텀 1917 (Leuchtturm1917)",
+    "미도리 MD (Midori MD)",
     "클레르퐁텐 (Clairefontaine)",
-    "Leuchtturm 1917",
-    "국내 브랜드 다이어리",
-    "리훈 (Rihoon)"
+    "로디아 (Rhodia)",
+    "Read & Lead 만년필 전용 방탄 노트",
+    "베러미 도트 노트 (제로일기 X 북엔드 출판사)",
+    "비온뒤 (Be on:D) 새틴 북 데일리 다이어리",
+    "양지사 유즈어리 25A"
    ],
    "sources": [
     {
      "kind": "티스토리",
      "title": "tistory.com",
-     "url": "https://1jeongbo.tistory.com/entry/%EB%A7%8C%EB%85%84%ED%95%84%EB%A1%9C-%EC%93%B0%EB%8A%94-%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC-%EA%B0%80%EC%9D%B4%EB%93%9C-%EC%9E%89%ED%81%AC-%EB%B2%88%EC%A7%90-%EC%97%86%EC%9D%B4-%EC%99%84%EC%84%B1%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95"
+     "url": "https://self-cure.tistory.com/31"
+    },
+    {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=7e1WkxVnLow"
+    },
+    {
+     "kind": "레딧",
+     "title": "reddit.com",
+     "url": "https://www.reddit.com/r/fountainpens/comments/1hkwkaw/what_is_the_best_paper_for_fountain_pens/?tl=ko"
+    },
+    {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=TUUMy_yW5RU"
+    },
+    {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=hs6RECpMI9w"
     },
     {
      "kind": "레딧",
@@ -49,32 +120,12 @@
     {
      "kind": "유튜브",
      "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=PI32NrD-Ud4"
+     "url": "https://www.youtube.com/watch?v=NAU73IpXlHI"
     },
     {
-     "kind": "레딧",
-     "title": "reddit.com",
-     "url": "https://www.reddit.com/r/fountainpens/comments/17y7hd1/what_are_some_of_your_favorite_fountain/?tl=ko"
-    },
-    {
-     "kind": "레딧",
-     "title": "reddit.com",
-     "url": "https://www.reddit.com/r/fountainpens/comments/w68eiu/any_diary_recommendations_for_fountain_pens/?tl=ko"
-    },
-    {
-     "kind": "유튜브",
-     "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=NK3nuQLVO28"
-    },
-    {
-     "kind": "유튜브",
-     "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=JkngKgiGqRA"
-    },
-    {
-     "kind": "레딧",
-     "title": "reddit.com",
-     "url": "https://www.reddit.com/r/fountainpens/comments/qmcp8o/diary_recommendations_for_fountain_pens/?tl=ko"
+     "kind": "웹/블로그",
+     "title": "phaze.co.kr",
+     "url": "https://www.phaze.co.kr/html/view.php?no=669"
     }
    ]
   },
@@ -84,85 +135,31 @@
    "line": "잉크파인(만년필종이)",
    "mentioned": false,
    "searchQueries": [
-    "만년필용 종이 추천",
-    "만년필 사용 시 좋은 종이 특성",
-    "만년필 잉크 번짐 없는 종이",
-    "만년필 뒷면 비침 적은 종이",
-    "만년필 종이 평량",
-    "로디아 만년필 종이"
+    "만년필 종이 추천",
+    "만년필에 좋은 종이",
+    "만년필 용지 브랜드"
    ],
-   "brands": [
-    "종이 질감, 평량(두께), 잉크 흡수 속도"
-   ],
+   "brands": [],
    "sources": [
-    {
-     "kind": "웹/블로그",
-     "title": "samwonpaper.com",
-     "url": "https://www.samwonpaper.com/blog/%ED%95%84%EC%82%AC-%EB%A7%8C%EB%85%84%ED%95%84-%ED%8E%A0%EB%A6%AC%EC%B9%B8-%EB%9D%BC%EB%AF%B8-%ED%94%8C%EB%9E%98%ED%8B%B0%EB%84%98-%EC%A2%85%EC%9D%B4-%EB%B9%84%EC%BD%94%ED%8C%85/"
-    },
-    {
-     "kind": "유튜브",
-     "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=2ERmnBvbPK4"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "darkerdum.com",
-     "url": "https://darkerdum.com/%EB%A7%8C%EB%85%84%ED%95%84%EC%9A%A9-%EB%82%B1%EC%9E%A5-%EC%A2%85%EC%9D%B4-%EC%B6%94%EC%B2%9C-%EB%B0%8F-%EA%B5%AC%EB%A7%A4-%EB%B0%A9%EB%B2%95/"
-    },
-    {
-     "kind": "레딧",
-     "title": "reddit.com",
-     "url": "https://www.reddit.com/r/fountainpens/comments/1dqr16z/what_should_be_the_minimum_gsm_of_paper_for/?tl=ko"
-    },
-    {
-     "kind": "레딧",
-     "title": "reddit.com",
-     "url": "https://www.reddit.com/r/fountainpens/comments/tbsx69/what_makes_a_paper_good_for_fountain_pens/?tl=ko"
-    },
     {
      "kind": "유튜브",
      "title": "youtube.com",
      "url": "https://www.youtube.com/watch?v=HzMRqPKhuuU"
     },
     {
-     "kind": "유튜브",
-     "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=0elQ1Tqk-m8"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "steemit.com",
-     "url": "https://steemit.com/kr/@oldtaste/tomoe-river-paper"
-    }
-   ]
-  },
-  "fp-04": {
-   "q": "만년필 잉크가 안 번지는 종이 추천해줘",
-   "kw": "안번지는만년필종이",
-   "line": "잉크파인(만년필종이)",
-   "mentioned": false,
-   "searchQueries": [
-    "만년필 잉크 번짐 없는 종이 추천",
-    "만년필 종이 번짐",
-    "만년필 잉크 비침 없는 종이",
-    "만년필 친화적인 종이"
-   ],
-   "brands": [
-    "로이텀 (Leuchtturm1917)",
-    "미도리 MD (Midori MD)",
-    "토모에리버 (Tomoe River)",
-    "아레나 (Arena)",
-    "아코팩 (Acopack)",
-    "옥스포드 옵틱 (Oxford Optik)",
-    "모닝글로리 노트",
-    "로디아 (Rhodia)"
-   ],
-   "sources": [
-    {
      "kind": "티스토리",
      "title": "tistory.com",
-     "url": "https://self-cure.tistory.com/31"
+     "url": "https://malgamisclearandicyyy.tistory.com/entry/%EB%A7%8C%EB%85%84%ED%95%84%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%A2%85%EC%9D%B4-%EB%85%B8%ED%8A%B8-%EB%B8%8C%EB%9E%9C%EB%93%9C"
+    },
+    {
+     "kind": "카페",
+     "title": "daum.net",
+     "url": "https://cafe.daum.net/aisitaihito/HJ9M/11?svc=cafeapi"
+    },
+    {
+     "kind": "레딧",
+     "title": "reddit.com",
+     "url": "https://www.reddit.com/r/fountainpens/comments/11fxtqj/what_is_the_best_brand_of_notebooks_for_fountain/?tl=ko"
     },
     {
      "kind": "레딧",
@@ -183,6 +180,41 @@
      "kind": "웹/블로그",
      "title": "samwonpaper.com",
      "url": "https://www.samwonpaper.com/blog/%ED%95%84%EC%82%AC-%EB%A7%8C%EB%85%84%ED%95%84-%ED%8E%A0%EB%A6%AC%EC%B9%B8-%EB%9D%BC%EB%AF%B8-%ED%94%8C%EB%9E%98%ED%8B%B0%EB%84%98-%EC%A2%85%EC%9D%B4-%EB%B9%84%EC%BD%94%ED%8C%85/"
+    }
+   ]
+  },
+  "fp-04": {
+   "q": "만년필 잉크가 안 번지는 종이 추천해줘",
+   "kw": "안번지는만년필종이",
+   "line": "잉크파인(만년필종이)",
+   "mentioned": false,
+   "searchQueries": [
+    "만년필 잉크 번짐 없는 종이 추천",
+    "만년필 잉크 친화적인 종이",
+    "만년필 종이 추천",
+    "잉크 번짐 적은 노트"
+   ],
+   "brands": [],
+   "sources": [
+    {
+     "kind": "웹/블로그",
+     "title": "darkerdum.com",
+     "url": "https://darkerdum.com/%EB%A7%8C%EB%85%84%ED%95%84%EC%9A%A9-%EB%82%B1%EC%9E%A5-%EC%A2%85%EC%9D%B4-%EC%B6%94%EC%B2%9C-%EB%B0%8F-%EA%B5%AC%EB%A7%A4-%EB%B0%A9%EB%B2%95/"
+    },
+    {
+     "kind": "레딧",
+     "title": "reddit.com",
+     "url": "https://www.reddit.com/r/fountainpens/comments/1g215qy/best_paper_to_write_on_with_fountain_pen/?tl=ko"
+    },
+    {
+     "kind": "레딧",
+     "title": "reddit.com",
+     "url": "https://www.reddit.com/r/fountainpens/comments/l2t870/most_fountain_pen_friendly_paper/?tl=ko"
+    },
+    {
+     "kind": "레딧",
+     "title": "reddit.com",
+     "url": "https://www.reddit.com/r/fountainpens/comments/1hkwkaw/what_is_the_best_paper_for_fountain_pens/?tl=ko"
     },
     {
      "kind": "카페",
@@ -190,14 +222,19 @@
      "url": "https://cafe.daum.net/aisitaihito/HJ9M/11?svc=cafeapi"
     },
     {
-     "kind": "웹/블로그",
-     "title": "tumblbug.com",
-     "url": "https://tumblbug.com/nobile/story"
-    },
-    {
      "kind": "티스토리",
      "title": "tistory.com",
-     "url": "https://my-breeze.tistory.com/369"
+     "url": "https://self-cure.tistory.com/31"
+    },
+    {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=dZExaRRtwx8"
+    },
+    {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=2vqIi4JzH9g"
     }
    ]
   },
@@ -208,15 +245,37 @@
    "mentioned": true,
    "searchQueries": [
     "5년 일기장 추천",
-    "인기 5년 다이어리",
-    "5년 저널 특징",
-    "베스트 5년 기록 다이어리"
+    "5년 다이어리 인기",
+    "5년 저널 추천",
+    "best 5 year diary korea"
    ],
-   "brands": [
-    "Sterling Ink 5년 다이어리",
-    "FiveYearJournal (앱)"
-   ],
+   "brands": [],
    "sources": [
+    {
+     "kind": "웹/블로그",
+     "title": "classicmoongusa.com",
+     "url": "https://classicmoongusa.com/332/?idx=377"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "thejournalshop.com",
+     "url": "https://www.thejournalshop.com/products/midori-5-year-diary-gate-red"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "tokyopenshop.com",
+     "url": "https://tokyopenshop.com/products/midori-5-year-diary"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "vanness1938.com",
+     "url": "https://vanness1938.com/products/midori-5-years-diary"
+    },
+    {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=Jid3nrLOdas"
+    },
     {
      "kind": "티스토리",
      "title": "tistory.com",
@@ -225,37 +284,12 @@
     {
      "kind": "유튜브",
      "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=Jid3nrLOdas"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "10x10.co.kr",
-     "url": "https://www.10x10.co.kr/shopping/category_prd.asp?itemid=1389910"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "11st.co.kr",
-     "url": "https://search.11st.co.kr/MW/search?&searchKeyword=%EB%AF%B8%EB%8F%84%EB%A6%AC%205%EB%85%84%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&tabId=TOTAL_SEARCH"
-    },
-    {
-     "kind": "레딧",
-     "title": "reddit.com",
-     "url": "https://www.reddit.com/r/notebooks/comments/1lwope4/please_recommend_a_5_year_journal/?tl=ko"
+     "url": "https://www.youtube.com/watch?v=dpN5GmSVSsM"
     },
     {
      "kind": "웹/블로그",
      "title": "wannathis.co.kr",
      "url": "https://wannathis.co.kr/product/%EC%9E%94%EB%AC%BC%EA%B2%B0-5%EB%85%84-%EC%9D%BC%EA%B8%B0%EC%9E%A5-%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC/1032/"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "mellowstory.com",
-     "url": "https://m.mellowstory.com/product/5%EB%85%84-%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC/48/"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "danawa.com",
-     "url": "https://search.danawa.com/dsearch.php?query=5%EB%85%84%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC"
     }
    ]
   },
@@ -266,57 +300,50 @@
    "mentioned": true,
    "searchQueries": [
     "날짜 없는 만년형 다이어리 추천",
-    "만년 다이어리 인기 제품",
-    "undated perpetual diary recommendations Korea",
-    "만년 다이어리 장점 단점"
+    "만년형 다이어리 인기",
+    "언데이티드 다이어리 추천"
    ],
-   "brands": [
-    "2. 페이퍼리안 (PAPERIAN) 만년형 다이어리",
-    "4. 라이브워크 (Livework) 만년형 다이어리",
-    "5. 아르디움 (Ardium) 만년형 다이어리",
-    "6. 소소문구 (Sosomungu) 만년형 다이어리",
-    "9. 리훈 (Rihoon) 만년형 다이어리"
-   ],
+   "brands": [],
    "sources": [
     {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=uz9sb5OpQ-I"
+    },
+    {
      "kind": "웹/블로그",
-     "title": "mt.co.kr",
-     "url": "https://www.mt.co.kr/society/2020/01/01/2019123112493370182"
+     "title": "aving.net",
+     "url": "https://kr.aving.net/news/articleView.html?idxno=1778830"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "moleskine.co.kr",
+     "url": "https://www.moleskine.co.kr/shop/shopbrand.html?xcode=019&mcode=003&type=Y"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "ardium.co.kr",
+     "url": "https://ardium.co.kr/category/%EB%A7%8C%EB%85%84%ED%98%95/165/"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "o-check.net",
+     "url": "https://o-check.net/category/%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC%EB%A7%8C%EB%85%84%ED%98%95/176/"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "livework.net",
+     "url": "https://m.livework.net/category/%EB%A7%8C%EB%85%84%ED%98%95/110/"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "rihoon.co.kr",
+     "url": "https://m.rihoon.co.kr/category/%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC%ED%94%8C%EB%9E%98%EB%84%88/45/"
     },
     {
      "kind": "티스토리",
      "title": "tistory.com",
-     "url": "https://semo-na.tistory.com/62"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "photobookkorea.com",
-     "url": "https://www.photobookkorea.com/stationery/all-year-planner"
-    },
-    {
-     "kind": "나무위키",
-     "title": "namu.wiki",
-     "url": "https://namu.wiki/w/%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "desk-gems.com",
-     "url": "https://desk-gems.com/products/analogue-keeper-undated-space-diary"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "fallindesign.com",
-     "url": "https://www.fallindesign.com/diaries-planners/"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "paperian.co.kr",
-     "url": "https://m.paperian.co.kr/category/%EB%A7%8C%EB%85%84%ED%98%95-%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC/150/"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "wconcept.com",
-     "url": "https://www.wconcept.com/product/everyday-home-3-year-perpetual-gratitude-diary-planner-journal/720885658.html"
+     "url": "https://taeranstory.tistory.com/584"
     }
    ]
   },
@@ -327,60 +354,57 @@
    "mentioned": false,
    "searchQueries": [
     "감사일기 쓰기 좋은 일기장 추천",
-    "gratitude journal recommendations Korean",
-    "인기 감사일기장",
-    "감사일기장 구매 가이드"
+    "gratitude journal recommendations Korea",
+    "best gratitude journals",
+    "감사일기 효과 좋은 일기장",
+    "감사일기 작성 팁"
    ],
    "brands": [
-    "1. 종이 감사일기장",
-    "자문자답 세가지 감사 일기 (인디고 디자인문구)",
-    "하루 5분 감사 일기",
-    "한 줄의 기적, 감사일기",
-    "NCD 감사일기 (나만의 감사일기장 시리즈)",
-    "2. 감사일기 앱",
-    "감사모아 - 5개씩 감사일기 쓰기",
-    "데일리 다이어리 - 감사일기, 감정일기 와 그림일기"
+    "2. 폭넓은 자기 성찰을 돕는 일기장",
+    "3. 자유로운 기록을 선호하는 분들을 위한 일기장",
+    "4. 디지털 감사일기 앱 (스마트폰 활용)",
+    "감사일기 작성 팁"
    ],
    "sources": [
     {
-     "kind": "웹/블로그",
-     "title": "indigostory.co.kr",
-     "url": "https://m.indigostory.co.kr/product/detail.html?product_no=1493&cate_no=0&display_group=5"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "journey.cloud",
-     "url": "https://journey.cloud/ko/gratitude-journal"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "kyobobook.co.kr",
-     "url": "https://search.kyobobook.co.kr/search?keyword=%EA%B0%90%EC%82%AC%EC%9D%BC%EA%B8%B0"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "aladin.co.kr",
-     "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=189874823"
-    },
-    {
      "kind": "티스토리",
      "title": "tistory.com",
-     "url": "https://bosslove.tistory.com/115"
+     "url": "https://health3minute.tistory.com/13"
+    },
+    {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=GYhjIWKbtOs"
     },
     {
      "kind": "웹/블로그",
-     "title": "google.com",
-     "url": "https://play.google.com/store/apps/details?id=org.maysnow.gratitudediary&hl=ko"
+     "title": "kmong.com",
+     "url": "https://kmong.com/article/1550--%EA%B0%90%EC%82%AC-%EC%9D%BC%EA%B8%B0-%EC%93%B0%EA%B8%B0%EB%A1%9C-%ED%95%98%EB%A3%A8%EC%9D%98-%EC%86%8C%EC%86%8C%ED%95%9C-%ED%96%89%EB%B3%B5-%EA%B8%B0%EC%96%B5%ED%95%98%EA%B8%B0"
     },
     {
      "kind": "웹/블로그",
-     "title": "apple.com",
-     "url": "https://apps.apple.com/us/app/%EB%8D%B0%EC%9D%BC%EB%A6%AC-%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC-%EA%B0%90%EC%82%AC%EC%9D%BC%EA%B8%B0-%EA%B0%90%EC%A0%95%EC%9D%BC%EA%B8%B0-%EC%99%80-%EA%B7%B8%EB%A6%BC%EC%9D%BC%EA%B8%B0/id1605113008?l=ko&platform=ipad"
+     "title": "giveyourselfkindness.com",
+     "url": "https://giveyourselfkindness.com/pages/best-gratitude-journals"
     },
     {
      "kind": "웹/블로그",
-     "title": "gamsanews.co.kr",
-     "url": "https://www.gamsanews.co.kr/news/articleView.html?idxno=18572"
+     "title": "success.com",
+     "url": "https://www.success.com/gratitude-journals"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "cleverfoxplanner.com",
+     "url": "https://cleverfoxplanner.com/collections/gratitude-journal"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "amylandino.com",
+     "url": "https://amylandino.com/gratitudejournals/"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "wondermind.com",
+     "url": "https://www.wondermind.com/article/gratitude-journal/"
     }
    ]
   },
@@ -391,31 +415,40 @@
    "mentioned": true,
    "searchQueries": [
     "손으로 쓰는 가계부 추천",
-    "인기 수기 가계부",
-    "가계부 다이어리 추천",
-    "예쁜 가계부",
-    "가계부 종류 비교"
+    "수기 가계부 장점",
+    "가계부 고르는 팁",
+    "인기 수기 가계부"
    ],
    "brands": [
-    "카테고리 오늘쓰임 가계부",
-    "맘마미아 가계부",
-    "호호양 가계부",
-    "뿌미맘 가계부, 샀다치고 가계부",
-    "디지털 환경에서 손글씨 느낌을 원한다면",
-    "돈플래너 (노션 템플릿)",
-    "하다 가계부 (노션 템플릿)",
-    "오뮤다이어리 (굿노트 디지털 문구)"
+    "나의 생활 방식과 맞는 가계부",
+    "카테고리의 자유도",
+    "예산 및 고정비 구분",
+    "월별/연간 결산 기능",
+    "자산 현황 기록",
+    "만년형 여부",
+    "디자인 및 구성",
+    "리훈 가계부"
    ],
    "sources": [
+    {
+     "kind": "웹/블로그",
+     "title": "3o3.co.kr",
+     "url": "https://help.3o3.co.kr/hc/ko/articles/15516331018521-%EC%84%B8%EC%83%81%EC%97%90%EC%84%9C-%EA%B0%80%EC%9E%A5-%EC%89%AC%EC%9A%B4-%EA%B0%80%EA%B3%84%EB%B6%80-%EC%9E%91%EC%84%B1-%EA%B0%80%EC%9D%B4%EB%93%9C"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "econoi.com",
+     "url": "https://www.econoi.com/news/articleView.html?idxno=40781"
+    },
     {
      "kind": "웹/블로그",
      "title": "signalplanner.co.kr",
      "url": "https://blog.signalplanner.co.kr/9536/"
     },
     {
-     "kind": "유튜브",
-     "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=WEuoBMqfRQc"
+     "kind": "웹/블로그",
+     "title": "gongysd.com",
+     "url": "https://gongysd.com/notion-budget/?bmode=view&idx=171399746"
     },
     {
      "kind": "유튜브",
@@ -423,29 +456,14 @@
      "url": "https://www.youtube.com/watch?v=fklys7AbSJU"
     },
     {
-     "kind": "웹/블로그",
-     "title": "gongysd.com",
-     "url": "https://gongysd.com/shop_view/?idx=70"
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=0YcJUMkwXC0"
     },
     {
      "kind": "웹/블로그",
-     "title": "gongysd.com",
-     "url": "https://gongysd.com/template?idx=70&utm_source=naver&utm_medium=blog&utm_campaign=revu_2603_money&%20utm_content=accountbook_effect"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "notion.com",
-     "url": "https://www.notion.com/ko/templates/money-planner-kr"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "notion.com",
-     "url": "https://www.notion.com/ko/templates/21aba040586b80b38ba0d186247dd07c"
-    },
-    {
-     "kind": "티스토리",
-     "title": "tistory.com",
-     "url": "https://everyonedata.tistory.com/entry/%EA%B0%80%EA%B3%84%EB%B6%80-%EC%95%B1-%EC%B6%94%EC%B2%9C-%EB%B0%8F-%EC%A7%80%EC%B6%9C%EA%B4%80%EB%A6%AC-%EC%95%B1-%EB%B9%84%EA%B5%90%EF%BD%9C2025%EB%85%84-%EC%95%8C%EB%9C%B0-%EC%86%8C%EB%B9%84-%ED%95%84%EC%88%98-%EC%95%B1-TOP-4"
+     "title": "namsieon.com",
+     "url": "https://namsieon.com/4982"
     }
    ]
   },
@@ -453,21 +471,14 @@
    "q": "초보도 쓰기 쉬운 가계부 추천해줘",
    "kw": "초보가계부",
    "line": "오늘쓰임 가계부",
-   "mentioned": false,
+   "mentioned": true,
    "searchQueries": [
-    "초보자용 가계부 앱 추천",
-    "쉬운 가계부 어플",
-    "가계부 어플 초보",
-    "수기 가계부 추천 초보"
+    "초보자 가계부 추천",
+    "쉬운 가계부 앱 추천",
+    "수기 가계부 초보",
+    "무료 가계부 앱 추천 초보"
    ],
-   "brands": [
-    "1. 자동 입력으로 편리함을 더한 가계부 앱",
-    "뱅크샐러드 (Bank Salad)",
-    "카카오페이 가계부",
-    "편한가계부 (Easy Money / PENANG)",
-    "간편가계부 (똑똑가계부, 용돈 기입장, 편한가계부)",
-    "하이가계부"
-   ],
+   "brands": [],
    "sources": [
     {
      "kind": "티스토리",
@@ -477,7 +488,7 @@
     {
      "kind": "티스토리",
      "title": "tistory.com",
-     "url": "https://s2ohxx.tistory.com/entry/%EC%82%AC%ED%9A%8C%EC%B4%88%EB%85%84%EC%83%9D%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B0%80%EA%B3%84%EB%B6%80-%EC%96%B4%ED%94%8C-%EB%B9%84%EA%B5%90-%EB%B0%8F-%EC%B6%94%EC%B2%9C"
+     "url": "https://ddooneday.tistory.com/4"
     },
     {
      "kind": "티스토리",
@@ -485,29 +496,29 @@
      "url": "https://global-woman4.tistory.com/entry/%EB%AC%B4%EB%A3%8C-%EA%B0%80%EA%B3%84%EB%B6%80-%EC%95%B1-%EC%B6%94%EC%B2%9C-TOP-5-2025%EB%85%84-%EA%B8%B0%EC%A4%80"
     },
     {
-     "kind": "웹/블로그",
-     "title": "banksalad.com",
-     "url": "https://www.banksalad.com/articles/%EA%B0%80%EA%B3%84%EB%B6%80%EC%96%B4%ED%94%8C-%EC%B6%94%EC%B2%9C-%EC%93%B0%EB%8A%94%EB%B2%95-%EB%8F%88%EA%B4%80%EB%A6%AC"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "banksalad.com",
-     "url": "https://www.banksalad.com/articles/%EA%B0%80%EA%B3%84%EB%B6%80-%EC%97%91%EC%85%80-%EC%96%B4%ED%94%8C-%EC%B6%94%EC%B2%9C-%EC%96%91%EC%8B%9D"
+     "kind": "티스토리",
+     "title": "tistory.com",
+     "url": "https://ii33.tistory.com/entry/2025%EB%85%84-%EC%B5%9C%EC%8B%A0-%EC%97%91%EC%85%80-%EC%97%86%EC%9D%B4%EB%8F%84-%ED%8E%B8%ED%95%98%EA%B2%8C-%EA%B0%80%EA%B3%84%EB%B6%80-%EC%95%B1-%EC%B6%94%EC%B2%9C-TOP-5"
     },
     {
      "kind": "티스토리",
      "title": "tistory.com",
-     "url": "https://momostech.tistory.com/8"
-    },
-    {
-     "kind": "티스토리",
-     "title": "tistory.com",
-     "url": "https://kwaziimom.tistory.com/104"
+     "url": "https://s2ohxx.tistory.com/entry/%EC%82%AC%ED%9A%8C%EC%B4%88%EB%85%84%EC%83%9D%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B0%80%EA%B3%84%EB%B6%80-%EC%96%B4%ED%94%8C-%EB%B9%84%EA%B5%90-%EB%B0%8F-%EC%B6%94%EC%B2%9C"
     },
     {
      "kind": "웹/블로그",
-     "title": "realbyteapps.com",
-     "url": "https://ko.realbyteapps.com/"
+     "title": "google.com",
+     "url": "https://play.google.com/store/apps/details?id=com.freeman.moneymanager&hl=ko"
+    },
+    {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=QP0UMlOg_Rk"
+    },
+    {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=WEuoBMqfRQc"
     }
    ]
   },
@@ -518,36 +529,22 @@
    "mentioned": true,
    "searchQueries": [
     "초등학생 스터디플래너 추천",
-    "초등 스터디플래너 종류",
-    "초등학생 플래너 효과",
-    "초등학생 자기주도학습 플래너",
-    "초등학생 학습 습관 플래너"
+    "초등 스터디플래너 인기 제품",
+    "초등학생 공부 계획표 양식",
+    "초등학생 학습 플래너 종류",
+    "초등 스터디플래너 고르는 팁"
    ],
-   "brands": [
-    "날짜와 요일",
-    "오늘의 목표",
-    "해야 할 일 리스트 (To Do List)",
-    "공부 시간 기록",
-    "오늘의 기분 또는 한 줄 일기",
-    "별점 평가 또는 스티커",
-    "리훈 곰부 초등학생 스터디플래너",
-    "모트모트 스터디플래너"
-   ],
+   "brands": [],
    "sources": [
-    {
-     "kind": "티스토리",
-     "title": "tistory.com",
-     "url": "https://smartday01.tistory.com/entry/%EC%9E%90%EA%B8%B0%EC%A3%BC%EB%8F%84%ED%95%99%EC%8A%B5%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%94%8C%EB%9E%98%EB%84%88-%ED%99%9C%EC%9A%A9%EB%B2%95"
-    },
     {
      "kind": "웹/블로그",
      "title": "kakao.com",
      "url": "https://m.shoppinghow.kakao.com/m/search/q/%EC%9E%90%EA%B8%B0%EC%A3%BC%EB%8F%84%ED%95%99%EC%8A%B5%20%ED%94%8C%EB%9E%98%EB%84%88"
     },
     {
-     "kind": "유튜브",
-     "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=n3tPk2I4Ojg"
+     "kind": "웹/블로그",
+     "title": "rihoon.co.kr",
+     "url": "https://m.rihoon.co.kr/category/%EC%B4%88%EB%93%B1%ED%95%99%EC%83%9D/227/"
     },
     {
      "kind": "웹/블로그",
@@ -560,19 +557,24 @@
      "url": "https://search.danawa.com/dsearch.php?query=%EC%B4%88%EB%93%B1%20%EA%B3%B5%EB%B6%80%EC%8A%B5%EA%B4%80%20%EC%A0%80%ED%95%99%EB%85%84%20%EC%8A%A4%ED%84%B0%EB%94%94%ED%94%8C%EB%9E%98%EB%84%88"
     },
     {
-     "kind": "유튜브",
-     "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=W7_WzY7xUWs"
+     "kind": "웹/블로그",
+     "title": "poom.co.kr",
+     "url": "https://m.poom.co.kr/goods/initDetailGoods.action?goods_no=G23020586396"
     },
     {
      "kind": "웹/블로그",
-     "title": "kyobobook.co.kr",
-     "url": "https://hottracks.kyobobook.co.kr/gift/detail/S000212604603"
+     "title": "indigostory.co.kr",
+     "url": "https://m.indigostory.co.kr/product/%EC%B4%88%EB%93%B1-%EC%A0%80%ED%95%99%EB%85%84-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%94%8C%EB%9E%98%EB%84%88-%EC%88%98%EC%B2%A9%ED%98%953%EA%B0%9C%EC%9B%94/1797/"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "everyday-feels.com",
+     "url": "https://everyday-feels.com/153"
     },
     {
      "kind": "유튜브",
      "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=u5_n3utTBcI"
+     "url": "https://www.youtube.com/watch?v=n3tPk2I4Ojg"
     }
    ]
   },
@@ -582,11 +584,11 @@
    "line": "차일드라이크 초등",
    "mentioned": true,
    "searchQueries": [
-    "초등 자기주도학습 플래너 추천",
-    "초등학생 공부 플래너 종류",
-    "초등 플래너 사용법",
-    "초등학생을 위한 자기주도학습 플래너",
-    "초등 자기주도 학습 플래너 베스트"
+    "초등학생 자기주도학습 플래너 추천",
+    "초등 학습 플래너 종류",
+    "초등학생 공부 계획표 양식",
+    "초등 자기주도학습 플래너 사용법",
+    "초등학생 플래너 효과"
    ],
    "brands": [],
    "sources": [
@@ -596,9 +598,24 @@
      "url": "https://smartday01.tistory.com/entry/%EC%9E%90%EA%B8%B0%EC%A3%BC%EB%8F%84%ED%95%99%EC%8A%B5%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%94%8C%EB%9E%98%EB%84%88-%ED%99%9C%EC%9A%A9%EB%B2%95"
     },
     {
-     "kind": "유튜브",
-     "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=3qbRu_qU2ms"
+     "kind": "웹/블로그",
+     "title": "everyday-feels.com",
+     "url": "https://everyday-feels.com/153"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "rihoon.co.kr",
+     "url": "https://rihoon.co.kr/product/%EA%B3%B0%EB%B6%80-%EC%84%B8%EC%9A%B0%EB%8A%94-%EC%B4%88%EB%93%B1%ED%94%8C%EB%9E%98%EB%84%88-%EC%B4%88%EB%93%B1%ED%95%99%EC%83%9D-%EC%9E%90%EA%B8%B0%EC%A3%BC%EB%8F%84%ED%95%99%EC%8A%B5-%EA%B3%B5%EB%B6%80%EC%8A%B5%EA%B4%80-%EB%A7%8C%EB%93%A4%EA%B8%B0/625/"
+    },
+    {
+     "kind": "티스토리",
+     "title": "tistory.com",
+     "url": "https://caleb072900.tistory.com/3"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "the1el.kr",
+     "url": "https://www.the1el.kr/25/?bmode=view&idx=17289456"
     },
     {
      "kind": "웹/블로그",
@@ -608,27 +625,12 @@
     {
      "kind": "웹/블로그",
      "title": "rihoon.co.kr",
-     "url": "https://rihoon.co.kr/product/%EA%B3%B0%EB%B6%80-%EC%84%B8%EC%9A%B0%EB%8A%94-%EC%B4%88%EB%93%B1%ED%94%8C%EB%9E%98%EB%84%88-%EC%B4%88%EB%93%B1%ED%95%99%EC%83%9D-%EC%9E%90%EA%B8%B0%EC%A3%BC%EB%8F%84%ED%95%99%EC%8A%B5-%EA%B3%B5%EB%B6%80%EC%8A%B5%EA%B4%80-%EB%A7%8C%EB%93%A4%EA%B8%B0/625/"
+     "url": "https://m.rihoon.co.kr/category/%EC%B4%88%EB%93%B1%ED%95%99%EC%83%9D/227/"
     },
     {
      "kind": "웹/블로그",
      "title": "aladin.co.kr",
      "url": "https://www.aladin.co.kr/shop/wbrowse.aspx?CID=251442"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "danawa.com",
-     "url": "https://search.danawa.com/dsearch.php?query=%EC%B4%88%EB%93%B1%20%EA%B3%B5%EB%B6%80%EC%8A%B5%EA%B4%80%20%EC%A0%80%ED%95%99%EB%85%84%20%EC%8A%A4%ED%84%B0%EB%94%94%ED%94%8C%EB%9E%98%EB%84%88"
-    },
-    {
-     "kind": "유튜브",
-     "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=u5_n3utTBcI"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "danawa.com",
-     "url": "https://search.danawa.com/dsearch.php?query=%EC%9E%90%EA%B8%B0%EC%A3%BC%EB%8F%84%ED%95%99%EC%8A%B5%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC%20%ED%95%99%EC%83%9D%EC%9A%A9"
     }
    ]
   },
@@ -636,23 +638,16 @@
    "q": "직장인 업무일지 추천해줘",
    "kw": "업무일지",
    "line": "업무/직장",
-   "mentioned": true,
+   "mentioned": false,
    "searchQueries": [
     "직장인 업무일지 추천",
-    "업무일지 양식 추천",
-    "효율적인 업무일지 작성법",
-    "직장인 다이어리 추천",
-    "업무 기록 앱 추천"
+    "업무일지 양식",
+    "업무일지 작성법",
+    "좋은 업무일지 특징"
    ],
    "brands": [
-    "1. 업무일지 구성 요소 및 작성 팁",
-    "기본 정보",
-    "업무 소개",
-    "일일 업무 항목",
-    "진행 현황",
-    "어려움 및 문제점",
-    "개선 사항 및 제안",
-    "내일의 계획"
+    "디지털 업무일지 (노션, 엑셀/구글 시트 등)",
+    "수기 업무일지 (노트/플래너)"
    ],
    "sources": [
     {
@@ -661,29 +656,14 @@
      "url": "https://shiftee.io/ko/blog/article/how-to-write-a-work-journal-to-boost-your-work-productivity"
     },
     {
-     "kind": "티스토리",
-     "title": "tistory.com",
-     "url": "https://godlifedream.tistory.com/entry/%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EC%97%85%EB%AC%B4%EC%9D%BC%EC%A7%80-%EC%9E%91%EC%84%B1%EB%B2%95%EA%B3%BC-%ED%99%9C%EC%9A%A9-%EA%BF%80%ED%8C%81-%EC%86%8C%EA%B0%9C"
+     "kind": "웹/블로그",
+     "title": "yesform.com",
+     "url": "https://www.yesform.com/cnts_mgzn/%BE%F7%B9%AB%C0%CF%C1%F6%BF%A1+%B4%EB%C7%D8+%BE%CB%BE%C6%BA%B8%C0%DA-60/"
     },
     {
      "kind": "웹/블로그",
-     "title": "impactflow.kr",
-     "url": "https://impactflow.kr/post/hr-work-log-template-detailed-guide"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "boardmix.com",
-     "url": "https://boardmix.com/kr/skills/how-to-write-my-worklog/"
-    },
-    {
-     "kind": "티스토리",
-     "title": "tistory.com",
-     "url": "https://dokoro.tistory.com/entry/%EC%97%85%EB%AC%B4%EC%9D%BC%EC%A7%80-%EC%96%91%EC%8B%9D-%EB%AC%B4%EB%A3%8C"
-    },
-    {
-     "kind": "티스토리",
-     "title": "tistory.com",
-     "url": "https://cavalokori.tistory.com/entry/%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EC%97%85%EB%AC%B4-%EC%9D%BC%EC%A7%80-%EC%9E%91%EC%84%B1%EB%B2%95-%EC%83%9D%EC%82%B0%EC%84%B1%EC%9D%84-%EB%86%92%EC%9D%B4%EB%8A%94-%ED%8C%81%EA%B3%BC-%EB%85%B8%ED%95%98%EC%9A%B0"
+     "title": "vision1098.com",
+     "url": "https://logo.vision1098.com/entry/%EB%AC%B4%EB%A3%8C-%EC%97%85%EB%AC%B4%EC%9D%BC%EC%A7%80-%EC%96%91%EC%8B%9D-HWP-%ED%95%9C%EA%B8%80-1"
     },
     {
      "kind": "티스토리",
@@ -692,8 +672,23 @@
     },
     {
      "kind": "웹/블로그",
-     "title": "edrawsoft.com",
-     "url": "https://www.edrawsoft.com/kr/diagram-tutorial/2026-diary-planner-guide.html"
+     "title": "impactflow.kr",
+     "url": "https://impactflow.kr/post/hr-work-log-template-detailed-guide"
+    },
+    {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/shorts/7z7eCBSKPds"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "notion.com",
+     "url": "https://www.notion.com/ko/templates/weekly-work-log"
+    },
+    {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=kythMBAjMVo"
     }
    ]
   },
@@ -704,52 +699,55 @@
    "mentioned": false,
    "searchQueries": [
     "독서기록장 추천",
-    "인기 독서 기록장",
-    "독서 다이어리 추천",
-    "독서 노트 추천",
-    "독서 기록 앱 추천"
+    "독서노트 추천",
+    "독서 기록장 양식",
+    "reading journal recommendations Korea"
    ],
-   "brands": [],
+   "brands": [
+    "1. 아날로그 독서 기록장 (수제 노트/다이어리)",
+    "2. 인쇄용 독서 기록장 양식",
+    "3. 디지털 독서 기록 앱/플랫폼"
+   ],
    "sources": [
     {
-     "kind": "웹/블로그",
-     "title": "theden.co.kr",
-     "url": "https://www.theden.co.kr/news/articleView.html?idxno=2877"
-    },
-    {
-     "kind": "티스토리",
-     "title": "tistory.com",
-     "url": "https://halsuitda.tistory.com/106"
-    },
-    {
      "kind": "유튜브",
      "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=P9A7tDXb-eI"
-    },
-    {
-     "kind": "유튜브",
-     "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=zgDuFJQk24g"
-    },
-    {
-     "kind": "티스토리",
-     "title": "tistory.com",
-     "url": "https://mockingwalking.tistory.com/90"
+     "url": "https://www.youtube.com/watch?v=Amv64H-ehHk"
     },
     {
      "kind": "웹/블로그",
-     "title": "maily.so",
-     "url": "https://maily.so/inspirex/posts/knrjm0v7rld"
-    },
-    {
-     "kind": "웹/블로그",
-     "title": "google.com",
-     "url": "https://play.google.com/store/apps/details?id=net.donxu.reading_diary&hl=ko"
+     "title": "wannathis.co.kr",
+     "url": "https://wannathis.co.kr/category/%EB%8F%85%EC%84%9C%ED%95%84%EC%82%AC%EB%85%B8%ED%8A%B8/296/"
     },
     {
      "kind": "웹/블로그",
      "title": "kyobobook.co.kr",
      "url": "https://hottracks.kyobobook.co.kr/gift/02/10/00"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "yes24.com",
+     "url": "https://m.yes24.com/category/display/006001004063009"
+    },
+    {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=V6ePbU3An2Y"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "yesform.com",
+     "url": "https://excel.yesform.com/xls/100384765.html"
+    },
+    {
+     "kind": "티스토리",
+     "title": "tistory.com",
+     "url": "https://gongform.tistory.com/"
+    },
+    {
+     "kind": "웹/블로그",
+     "title": "chamjal.com",
+     "url": "https://www.chamjal.com/main/list.php?fcate=05&scate=04"
     }
    ]
   },
@@ -760,25 +758,51 @@
    "mentioned": false,
    "searchQueries": [
     "필사하기 좋은 노트 추천",
-    "필사 노트 고르는 법",
-    "만년필 필사 노트 추천",
-    "번짐 없는 노트 추천"
+    "만년필 사용하기 좋은 노트",
+    "번짐 없는 노트 추천",
+    "필사 용지 추천",
+    "필사노트 인기"
    ],
    "brands": [
-    "로디아 (Rhodia)",
-    "클레르퐁텐 (Clairefontaine)",
-    "로이텀 (Leuchtturm1917)",
+    "미도리 MD 노트 (MIDORI MD Note)",
+    "토모에리버 (Tomoe River)",
+    "로이텀 1917 (LEUCHTTURM1917)",
+    "2. 필사에 특화된 기능성 노트",
+    "페이지너리 독서노트 / 펜투페이퍼 필사노트",
     "리드앤리드 필사노트",
-    "BUKE NOTEBOOK",
-    "2. 필사 초보자 및 휴대성을 고려한 노트",
-    "글입다 만년필 필사노트",
-    "3. 필사 노트 선택 시 고려사항"
+    "루카랩 '스크랩 더 모먼트'",
+    "3. 그 외 추천 노트"
    ],
    "sources": [
+    {
+     "kind": "유튜브",
+     "title": "youtube.com",
+     "url": "https://www.youtube.com/watch?v=HzMRqPKhuuU"
+    },
     {
      "kind": "레딧",
      "title": "reddit.com",
      "url": "https://www.reddit.com/r/fountainpens/comments/1k62zo5/notebooks_with_no_ghosting/?tl=ko"
+    },
+    {
+     "kind": "티스토리",
+     "title": "tistory.com",
+     "url": "https://self-cure.tistory.com/31"
+    },
+    {
+     "kind": "레딧",
+     "title": "reddit.com",
+     "url": "https://www.reddit.com/r/fountainpens/comments/1kgt1oc/what_are_peoples_favourite_papers_for_writing/?tl=ko"
+    },
+    {
+     "kind": "레딧",
+     "title": "reddit.com",
+     "url": "https://www.reddit.com/r/fountainpens/comments/11fxtqj/what_is_the_best_brand_of_notebooks_for_fountain/?tl=ko"
+    },
+    {
+     "kind": "티스토리",
+     "title": "tistory.com",
+     "url": "https://afterview.tistory.com/entry/%EB%A7%8C%EB%85%84%ED%95%84-%EB%85%B8%ED%8A%B8-%EB%B9%84%EA%B5%90%EB%9D%BC%EC%9D%B4%ED%94%84-%EA%B3%A0%EC%BF%A0%EC%9A%94-%EB%A7%88%EB%A3%A8%EB%A7%9D-%ED%81%B4%EB%A0%88%EB%A5%B4%ED%90%81%ED%85%90-%EA%B0%81%EB%8B%B7-%EC%95%84%EB%A5%B4%EB%94%94%EC%9B%80"
     },
     {
      "kind": "유튜브",
@@ -788,32 +812,7 @@
     {
      "kind": "레딧",
      "title": "reddit.com",
-     "url": "https://www.reddit.com/r/fountainpens/comments/1c1aj1b/notebook_suggestion_where_the_ink_doesnt_bleed/?tl=ko"
-    },
-    {
-     "kind": "유튜브",
-     "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=V6ePbU3An2Y"
-    },
-    {
-     "kind": "티스토리",
-     "title": "tistory.com",
-     "url": "https://afterview.tistory.com/entry/%EB%A7%8C%EB%85%84%ED%95%84-%EB%85%B8%ED%8A%B8-%EB%B9%84%EA%B5%90%EB%9D%BC%EC%9D%B4%ED%94%84-%EA%B3%A0%EC%BF%A0%EC%9A%94-%EB%A7%88%EB%A3%A8%EB%A7%9D-%ED%81%B4%EB%A0%88%EB%A5%B4%ED%90%81%ED%85%90-%EA%B0%81%EB%8B%B7-%EC%95%84%EB%A5%B4%EB%94%94%EC%9B%80"
-    },
-    {
-     "kind": "티스토리",
-     "title": "tistory.com",
-     "url": "https://bovistaplumbeapers.tistory.com/71"
-    },
-    {
-     "kind": "레딧",
-     "title": "reddit.com",
-     "url": "https://www.reddit.com/r/fountainpens/comments/1djn22q/any_recommendations_for_fp_friendly_pocket/?tl=ko"
-    },
-    {
-     "kind": "유튜브",
-     "title": "youtube.com",
-     "url": "https://www.youtube.com/watch?v=6M_rpeYmr0k"
+     "url": "https://www.reddit.com/r/fountainpens/comments/1dcsazd/best_notebook_for_fountain_pen/?tl=ko"
     }
    ]
   }
