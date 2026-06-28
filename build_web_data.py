@@ -6,6 +6,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 CORE = json.load(open(os.path.join(HERE, 'sov_core.json'), encoding='utf-8'))
 WEB = os.path.join(HERE, 'docs'); os.makedirs(WEB, exist_ok=True)
 ENGINES = ['Gemini', 'Perplexity', 'Claude', 'ChatGPT', '네이버 AI브리핑']  # 표시 순서(네이버=수기)
+COMP_TERMS = CORE.get('competitor_terms', [])      # 경쟁사는 답변원문에서 '현재' 용어로 재추출(소급 반영)
+COMP_NORM = {'아날로그 키퍼': '아날로그키퍼'}        # 표기 통일(띄어쓰기 변형 합치기)
 
 rows = []
 for l in open(os.path.join(HERE, 'sov_results.jsonl'), encoding='utf-8'):
@@ -61,14 +63,17 @@ def build_week(date):
                 if d and d not in doms:
                     doms.add(d); src_cnt[d] = src_cnt.get(d, 0) + 1
                     src_samp.setdefault(d, s.get('url') or '')
-            if not m:                                     # 경쟁사: 리훈 없을 때만
+            if not m:                                     # 경쟁사: 리훈 없을 때만, 답변원문에서 현재 용어로 재추출
+                atext = (r.get('answer') or '').lower()
                 cseen = set()
-                for c in (r.get('competitors') or []):
-                    if hangul(c) and c not in cseen:
-                        cseen.add(c); comp_cnt[c] = comp_cnt.get(c, 0) + 1
-                        comp_kw.setdefault(c, [])
-                        if q['kw'] not in comp_kw[c]: comp_kw[c].append(q['kw'])
-                        if c not in comps: comps.append(c)
+                for c in COMP_TERMS:
+                    if c.lower() not in atext: continue
+                    name = COMP_NORM.get(c, c)
+                    if not hangul(name) or name in cseen: continue
+                    cseen.add(name); comp_cnt[name] = comp_cnt.get(name, 0) + 1
+                    comp_kw.setdefault(name, [])
+                    if q['kw'] not in comp_kw[name]: comp_kw[name].append(q['kw'])
+                    if name not in comps: comps.append(name)
         verdict = 'win1' if won else ('win' if ment else ('hole' if nmeas else 'none'))
         questions.append({'id': i, 'q': q['q'], 'kw': q['kw'], 'line': q['line'], 'verdict': verdict,
                           'engines': eng, 'competitors': comps[:5]})
