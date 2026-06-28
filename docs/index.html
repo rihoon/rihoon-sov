@@ -200,8 +200,9 @@ function trendInner(){
   const chE=chartEngines();
   const data=T.map(t=>({date:t.date, rate:t.rate, counts:engCounts(t.date)}));
   const cOf=(d,e)=>d.counts[e]?d.counts[e].mentions:0;
-  const maxC=Math.max(2,...data.map(d=>Math.max(0,...chE.map(e=>cOf(d,e)))));
-  const niceMax=Math.max(4, Math.ceil(maxC/2)*2);
+  const tOf=d=>chE.reduce((s,e)=>s+cOf(d,e),0);
+  const maxT=Math.max(2,...data.map(tOf));
+  const niceMax=Math.max(4, Math.ceil(maxT/2)*2);
   const ch=184, padB=30, padT=16, padL=24, padR=14, n=data.length;
   const cw=440, plotW=cw-padL-padR, plotH=ch-padB-padT, base=ch-padB;
   const xOf=i=> n<=1 ? padL+plotW/2 : padL+plotW*(i/(n-1));
@@ -226,8 +227,16 @@ function trendInner(){
       g+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${sel?'4':'3'}" fill="${ECOLOR[e]}" stroke="#fff" stroke-width="1.5" style="cursor:pointer" onmousemove="showTip(event,'${e}','${d.date}',${cOf(d,e)},${c.top1||0},${c.measured||0})" onmouseout="hideTip()" onclick="selectWeek('${d.date}')"></circle>`;
     });
   });
+  const tpts=data.map((d,i)=>`${xOf(i).toFixed(1)},${yOf(tOf(d)).toFixed(1)}`).join(' ');
+  g+=`<polyline points="${tpts}" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>`;
+  data.forEach((d,i)=>{ const x=xOf(i), t=tOf(d), y=yOf(t);
+    g+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.5" fill="var(--ink)" stroke="#fff" stroke-width="1.5"/>`;
+    g+=`<text x="${x.toFixed(1)}" y="${(y-8).toFixed(1)}" text-anchor="middle" font-size="11" font-weight="800" fill="var(--ink)">${t}</text>`;
+  });
   const sc=(selI>=0?data[selI]:{counts:{}}).counts||{};
-  const legend=chE.map(e=>`<span class="lg"><span class="lgd" style="background:${ECOLOR[e]}"></span>${EABBR[e]} <b>${sc[e]?sc[e].mentions:0}</b></span>`).join('');
+  const selTot=selI>=0?tOf(data[selI]):0;
+  const legend=`<span class="lg"><span class="lgd" style="background:var(--ink)"></span>합계 <b>${selTot}</b></span>`
+    +chE.map(e=>`<span class="lg"><span class="lgd" style="background:${ECOLOR[e]}"></span>${EABBR[e]} <b>${sc[e]?sc[e].mentions:0}</b></span>`).join('');
   const selT=selI>=0?T[selI]:last, prevT=selI>0?T[selI-1]:null;
   let cells=0, mentions=0;
   chE.forEach(e=>{const c=sc[e]; if(c){cells+=c.measured||0; mentions+=c.mentions||0;}});
@@ -243,8 +252,8 @@ function trendInner(){
     +`<div class="cap" style="margin-top:5px">${deltaTxt}</div></div>`;
   return head
     +`<div class="tlegend">${legend}</div>`
-    +`<svg class="tchart" viewBox="0 0 ${cw} ${ch}" preserveAspectRatio="xMidYMax meet" role="img" aria-label="주차별 엔진별 리훈 추천 수 추세 꺾은선">${g}</svg>`
-    +`<div class="cap" style="text-align:center;margin-top:8px">👆 점·주차 클릭 = 그 주 상세 · 선 = 엔진별 추천 수(개) 추세 · 범례 숫자 = 선택 주 추천 수</div>`;
+    +`<svg class="tchart" viewBox="0 0 ${cw} ${ch}" preserveAspectRatio="xMidYMax meet" role="img" aria-label="주차별 리훈 추천 수 추세 꺾은선. 굵은 검은선=전체 합계, 색선=엔진별.">${g}</svg>`
+    +`<div class="cap" style="text-align:center;margin-top:8px">👆 점·주차 클릭 = 그 주 상세 · <b style="color:var(--ink)">굵은 선 = 전체 합계 추세</b> · 색 선 = 엔진별 · 범례 숫자 = 선택 주</div>`;
 }
 function qHitCount(q){ return chartEngines().filter(e=>q.engines[e]&&q.engines[e].m).length; }
 function changePanel(date){
