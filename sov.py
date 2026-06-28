@@ -168,6 +168,34 @@ def done_today(today):
                 done.add((r['engine'], r['id']))
     return done
 
+def tally_today(today):
+    # 오늘 성공 기록 '전체'를 (engine,id) 단위로 합쳐 엔진별 언급/1위 집계.
+    # → 측정이 여러 번(아침 스케줄+수동 재실행 등)으로 나뉘어도 항상 합산되어 정확.
+    latest = {}
+    if os.path.exists(OUT):
+        for l in open(OUT, encoding='utf-8'):
+            l = l.strip()
+            if not l:
+                continue
+            try:
+                r = json.loads(l)
+            except Exception:
+                continue
+            if r.get('date') != today or r.get('engine') is None or r.get('id') is None:
+                continue
+            if r.get('error') or r.get('mentioned') is None:
+                continue
+            latest[(r['engine'], r['id'])] = r   # 같은 칸 재측정 시 마지막 값 채택
+    tal = {}
+    for (eng, _id), r in latest.items():
+        s = tal.setdefault(eng, {'mention': 0, 'top1': 0})
+        if r.get('mentioned'):
+            s['mention'] += 1
+            if r.get('rank') == 1:
+                s['top1'] += 1
+    return tal
+
+
 def main():
     today = datetime.date.today().isoformat()
     active = [(n, f) for n, f in ENGINES if (f.__name__ == 'ask_gemini' and S.get('gemini_key')) or
@@ -215,10 +243,12 @@ def main():
         if called: time.sleep(1.5)                     # 호출 없으면(전부 스킵) 대기도 생략
     if skipped: print('(스킵 %d건 — 이미 성공한 측정은 재호출 안 함)' % skipped)
     n = len(core['questions'])
-    print('\n=== SOV 요약 (%s) ===' % today)
+    tal = tally_today(today)   # 파일 전체 재집계 → 여러 번 나눠 측정해도 합산
+    print('\n=== SOV 요약 (%s) — 오늘 전체 측정 합산 ===' % today)
     for name, _ in active:
-        s = summary[name]
-        print('%-11s 언급률 %2d/%d (%3d%%)  1위 %d회' % (name, s['mention'], n, round(100*s['mention']/n), s['top1']))
+        s = tal.get(name, {'mention': 0, 'top1': 0})
+        pct = round(100 * s['mention'] / n) if n else 0
+        print('%-11s 언급률 %2d/%d (%3d%%)  1위 %d회' % (name, s['mention'], n, pct, s['top1']))
     print('\n네이버Cue: 공개API 없음 → 수기 측정 필요(12질문 직접 입력)')
     print('상세결과: sov_results.jsonl')
 
