@@ -842,6 +842,105 @@
       "클레르퐁텐"
      ]
     }
+   ],
+   "topSources": [],
+   "competitorRank": [
+    {
+     "name": "미도리",
+     "n": 14,
+     "kws": [
+      "만년필노트",
+      "만년필다이어리",
+      "만년필종이",
+      "안번지는만년필종이",
+      "5년일기장",
+      "만년다이어리"
+     ]
+    },
+    {
+     "name": "로디아",
+     "n": 9,
+     "kws": [
+      "만년필노트",
+      "만년필종이",
+      "안번지는만년필종이",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "클레르퐁텐",
+     "n": 8,
+     "kws": [
+      "만년필노트",
+      "만년필종이",
+      "안번지는만년필종이",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "라이프",
+     "n": 7,
+     "kws": [
+      "만년필노트",
+      "만년필종이",
+      "안번지는만년필종이",
+      "만년다이어리",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "몰스킨",
+     "n": 5,
+     "kws": [
+      "만년필노트",
+      "만년필다이어리",
+      "만년다이어리",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "아날로그",
+     "n": 4,
+     "kws": [
+      "5년일기장",
+      "수기가계부",
+      "독서기록장"
+     ]
+    },
+    {
+     "name": "위클리",
+     "n": 4,
+     "kws": [
+      "만년다이어리",
+      "자기주도학습플래너"
+     ]
+    },
+    {
+     "name": "아피카",
+     "n": 3,
+     "kws": [
+      "만년필노트",
+      "만년필종이",
+      "안번지는만년필종이"
+     ]
+    },
+    {
+     "name": "무인양품",
+     "n": 3,
+     "kws": [
+      "만년필노트",
+      "만년필종이",
+      "안번지는만년필종이"
+     ]
+    },
+    {
+     "name": "텐바이텐",
+     "n": 2,
+     "kws": [
+      "5년일기장",
+      "필사노트"
+     ]
+    }
    ]
   },
   "2026-06-15": {
@@ -1291,6 +1390,112 @@
       "몰스킨"
      ]
     }
+   ],
+   "topSources": [],
+   "competitorRank": [
+    {
+     "name": "미도리",
+     "n": 21,
+     "kws": [
+      "만년필노트",
+      "만년필다이어리",
+      "만년필종이",
+      "안번지는만년필종이",
+      "5년일기장",
+      "만년다이어리"
+     ]
+    },
+    {
+     "name": "로디아",
+     "n": 11,
+     "kws": [
+      "만년필노트",
+      "만년필다이어리",
+      "만년필종이",
+      "안번지는만년필종이",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "클레르퐁텐",
+     "n": 10,
+     "kws": [
+      "만년필노트",
+      "만년필다이어리",
+      "만년필종이",
+      "안번지는만년필종이",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "무지",
+     "n": 7,
+     "kws": [
+      "만년필노트",
+      "안번지는만년필종이",
+      "만년다이어리",
+      "감사일기",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "라이프",
+     "n": 7,
+     "kws": [
+      "만년필노트",
+      "만년필종이",
+      "안번지는만년필종이",
+      "만년다이어리"
+     ]
+    },
+    {
+     "name": "몰스킨",
+     "n": 6,
+     "kws": [
+      "만년필노트",
+      "5년일기장",
+      "만년다이어리",
+      "감사일기",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "위클리",
+     "n": 4,
+     "kws": [
+      "만년필다이어리",
+      "만년다이어리",
+      "수기가계부"
+     ]
+    },
+    {
+     "name": "아날로그",
+     "n": 4,
+     "kws": [
+      "5년일기장",
+      "감사일기",
+      "업무일지",
+      "독서기록장"
+     ]
+    },
+    {
+     "name": "아피카",
+     "n": 3,
+     "kws": [
+      "만년필다이어리",
+      "안번지는만년필종이",
+      "만년다이어리"
+     ]
+    },
+    {
+     "name": "모닝글로리",
+     "n": 3,
+     "kws": [
+      "안번지는만년필종이",
+      "수기가계부",
+      "초등스터디플래너"
+     ]
+    }
    ]
   },
   "2026-06-22": {
@@ -1734,6 +1939,193 @@
       "미도리"
      ]
     }
+   ],
+   "topSources": [
+    {
+     "domain": "youtube.com",
+     "n": 25,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGv0x5pZKaXZgRNDiJN6EhXBZ0e2i_6vnUkVSH0-eLfobFcgNbHf4LB-4uSZumhDJjncrd08ueEhmvif58FYG6hJkG0UspkZ2gaGJQiFnQrg0oMBoaglaWW5xH5QMoXbyVGht2NMtk=",
+     "rihoon": false
+    },
+    {
+     "domain": "tistory.com",
+     "n": 13,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFd3JXZXEyf0_EoezBy1jItIec7ivxJS5aEEZMfSTNmOpkl9lUaQ9hkv8Ii1N8_jySz2NPC4z5L7lrar9r_chrKgVPc_Ty8lsVk05zb8Msw8RmSZ7ujGEaoqw6qLLWsXI1jp0_7i91i0SsvP1Di3jWKp35AQZUIITyh2NXBeVYYO4cUb5xsrUQufXBsgVWwi75vmx0S404o4Wb-k3K4CVFf9gCbXruagcWY9cA9PtEICi_KiBdNv-pzqeGL-PcD2TfiRJ3dEpler12UCK8YWiPcaFBT67IxPEOfgutQ2AO3ydugE8BzxsJ5qqx1lZ5SKl-2ZpwjqOXviXJn7MU_VrfJbAKA54rppXgznBzWvp5SVV3BsAugLYm2lCf1TqMYspGgZD3vxfrbPjRPgz--dzlTKkpbmR29PFMK9h9w17Ju2U9aON8sAqYR7rKv1vo95l6yWiwpupvKUotQ",
+     "rihoon": false
+    },
+    {
+     "domain": "blog.naver.com",
+     "n": 13,
+     "url": "https://blog.naver.com/sdot1203/223157704845",
+     "rihoon": false
+    },
+    {
+     "domain": "rihoon.co.kr",
+     "n": 6,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEe8l4WK3UxHxv_6nPmNhXIbILZngxEDOgRkJr0wO0ozfZnjHMJnYQfXxCWS-lQsUE3H6d3pAtLOgGNWV5iFzq6dZ7zylUNcgQsX_eZSqB4P4ngw3mhB92LMHdtMtBkmSOeQFVyCSWWma8UmKcsZSNv1Up8RO86FqUIZqT5QwOqMphRhKdlmvBztkJDHbtsTu7BDyYYMpLf3_Pujrp7kA==",
+     "rihoon": true
+    },
+    {
+     "domain": "reddit.com",
+     "n": 5,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGd2qJC6NBmaHYNnNTK5aGxiA7ngZj1wI0q3yYRUi-4bToIczSMuud9CYLBqllcoV12M3UHapAtOQZ8ctXbMg2jMNF3afZs1gxWdbJ017wA7ydPODhq65n_0fGzG_7jZuu7komg03UfCAv5HS_dGK-skHDE2K9bxO-nQCPGjtZ1WozLZm7uVlRSII8iMXCw-Gk5GJ5fSALFhSWz2ZHNRIZqsw_t",
+     "rihoon": false
+    },
+    {
+     "domain": "indigostory.co.kr",
+     "n": 4,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqG-JXnD684xb4Gga5bag1Tba6_6yjQgxaYKJCXR4n_tZavo2X5cgz7XqNrWiz9McfgaTROwWnOXhcnR62mOon0hvwJpXjsPa5FdsBq8q2kSYypozjmmATJmw1am2BYjbXBEo2K0Kr1_0U7i9qwzInuZI92ZrXXAkEjlBMNIv7wQdG3QFKcdm1rikmYLzAXHWcWU1v963EW7N4qG_xKkVuqOx8Jalsjk1nmUQICFgf5-G6PpU_aQ3t39pxUQ5Vjuo8EeL0mwYaV3KrIA5_rSLnmnaIoV3BQ-myty5xNXCP1y-QNXyYrLIH_V1OlEz15Z0H-2fmD-NmcyJGY8BR1wY3QTToAxK2Ch02r-RHXTNFByDm2VLKz9ai8lRVYvBJtasUUJ30rf0uomY=",
+     "rihoon": false
+    },
+    {
+     "domain": "kyobobook.co.kr",
+     "n": 4,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHt--Zx_rSz51JY7oC6drTG4gqCKBDDWPokey1XFrSiEq4jpgImRGPF4Icw7RB-6O5VZExd4kZLFsmnsM28V4OwDklG9IQEu5iL98pte4CH5xbOVODW72f2cGceq6TF-D8e3z6rexdh2oUM",
+     "rihoon": false
+    },
+    {
+     "domain": "yes24.com",
+     "n": 4,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvSWX5Qr8w8emcBqEvXVU30mqxz5vHHUiX1sJLj1uNhhBYBV454LcilWPRiNrAoH9Mw72t8JPSjto0Il_rNuFovvESk-iW7qgB8lH2Ahhj4vlhA0xQ3cmLBqo5q0z8htxq_N7I-cOZZUrN",
+     "rihoon": false
+    },
+    {
+     "domain": "google.com",
+     "n": 4,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgbahVg53S1Ntsz15dITqoclXW0-n52RtY8pRl4J5HIR_uO5giyLa6PO07evS--WkYQTb4oX-BKCE0jIdSuf83L1UHtcayhuIOsL-Lwn-kS0h2HpGXfbfMy4krt36Swt6ma0v9Gorg5k3oRjJYbdkON5u2lsoCfKKalcsec7f6-ep8DK6KV_K_bw==",
+     "rihoon": false
+    },
+    {
+     "domain": "gongysd.com",
+     "n": 4,
+     "url": "https://gongysd.com/notion-budget/?bmode=view&idx=169923322",
+     "rihoon": false
+    },
+    {
+     "domain": "darkerdum.com",
+     "n": 3,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwJ2n9e7J2N9PSxjOVHQQXLN_oegu3mjI3QDRcvZwbcGv50NQcfOlJzUouxmwSl3NKOuLvTkBi7NGvZ0zQvUJ4LTJwJ15u6T2BW_LX80JInoHXSx5l_aQbDyvMqYe7sgz1cuLQccXMyufTRJIUrk_U3VpmTosSG_c5Z0qJDbhOUXZMiGq1XNBi5v1p7cHsYskq0-ZyEtjCHpBlkuktNxZ-UZWBNbz0L3HzSLueOD4hMcaYOlPvRgU8U8azI_3WzRijmshuW9cn3Yp-v4VhdW2JzKZ8NJIM8DEofSh3qjb9LQ==",
+     "rihoon": false
+    },
+    {
+     "domain": "self-cure.tistory.com",
+     "n": 3,
+     "url": "https://self-cure.tistory.com/31",
+     "rihoon": false
+    },
+    {
+     "domain": "samwonpaper.com",
+     "n": 3,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOkY5IP62MtUioPgqrZl3x2m4jI83FWodmXbnATriVR0KLRApKAADVXkgMfIEWzrWvt4GdUV5xbpk8fO6EUjjRb8GXmG9WGNz8BQVz7IG_bHDocP0tEQOqDLPInSf95xLML53HBu04mM6Ah5LiR8dBfV5cVVRuBsF5R5bXsi5yQHMFsUMFdr8dtDeJlK3AqThwwsOVga2iQFWELmF1CElWEddTOq-_LXStjh4KgH5Gsk1-ooapE3K9ybNKtUVxpptwP__9STzQqIW_yo69UuT0EhYfxS5JgFT4ccPh_M4MXeYS4LDyg5dN5u-GTuV0dueJwWMxZLUV9Zj4sot4q5mwsniNarRu8_Wh9DczD_lz",
+     "rihoon": false
+    },
+    {
+     "domain": "wannathis.co.kr",
+     "n": 3,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFV6xp8zZOwG50Tl8T0gof_lPquLc0S7MvkoQ2yx2dIUUHv4R-96lDbRbgQ2cOfMf7yMMXW3jDZG8O5BBKZQDb6xddryiTZEirS-eyE6cg3tvLnxzKFk3VCjXjTSmIkq710M-eFNt6P0JWV9sMvBtYDAjhILA4tB_W4RIXga1ghzSpcy0H0ZAVQATav3y891qCFAEte2tyEdzanqd4_Qy_KF89xYXyEvPv6P5LLRQzeOjLKE9VVbrCmQNG69lfl3V3JVWSwQQvVR3E=",
+     "rihoon": false
+    }
+   ],
+   "competitorRank": [
+    {
+     "name": "미도리",
+     "n": 16,
+     "kws": [
+      "만년필노트",
+      "만년필다이어리",
+      "만년필종이",
+      "안번지는만년필종이",
+      "만년다이어리",
+      "업무일지"
+     ]
+    },
+    {
+     "name": "클레르퐁텐",
+     "n": 13,
+     "kws": [
+      "만년필노트",
+      "만년필종이",
+      "안번지는만년필종이",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "로디아",
+     "n": 12,
+     "kws": [
+      "만년필노트",
+      "만년필종이",
+      "안번지는만년필종이",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "라이프",
+     "n": 11,
+     "kws": [
+      "만년필노트",
+      "만년필종이",
+      "안번지는만년필종이",
+      "업무일지",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "무지",
+     "n": 6,
+     "kws": [
+      "안번지는만년필종이",
+      "감사일기",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "위클리",
+     "n": 6,
+     "kws": [
+      "만년다이어리",
+      "감사일기",
+      "업무일지"
+     ]
+    },
+    {
+     "name": "아날로그",
+     "n": 5,
+     "kws": [
+      "안번지는만년필종이",
+      "초보가계부",
+      "업무일지",
+      "독서기록장"
+     ]
+    },
+    {
+     "name": "몰스킨",
+     "n": 4,
+     "kws": [
+      "만년필노트",
+      "감사일기",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "양지사",
+     "n": 4,
+     "kws": [
+      "안번지는만년필종이",
+      "만년다이어리",
+      "수기가계부",
+      "업무일지"
+     ]
+    },
+    {
+     "name": "아피카",
+     "n": 3,
+     "kws": [
+      "만년필종이",
+      "안번지는만년필종이",
+      "필사노트"
+     ]
+    }
    ]
   },
   "2026-06-28": {
@@ -2173,6 +2565,193 @@
       "무지",
       "미도리",
       "무인양품"
+     ]
+    }
+   ],
+   "topSources": [
+    {
+     "domain": "youtube.com",
+     "n": 27,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDkMyjwQCTvjPqn69FYGqrWjqnM6q10mG_jJg4S552n6mw1Kp8zP97WdgA-QQ2QF75ZdoTNah4NQLymTBE8cTT1DZVIZfD9AgQ-muXUwm-41UfZw87vOS4kS1SP328-firIVYlWOg=",
+     "rihoon": false
+    },
+    {
+     "domain": "blog.naver.com",
+     "n": 14,
+     "url": "https://blog.naver.com/sdot1203/223157704845",
+     "rihoon": false
+    },
+    {
+     "domain": "reddit.com",
+     "n": 12,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9phBEvcZXnrYjGmXKexgWG-597pYCS0z_oU6VyKEytwrc1pciABw1s1LQmR2ymDU8erzxffvAJ4UFn40eUwvCWVH21BQ0vQ6TKtmvJ_SR5TTSQMEt4ktd75Hn922987DEgHSnZ5F2AN7CtPoXax3WIPDv5dYRwHVnErrkw8UiRkZTBg-7vU1IbHd2t_Kq5MCkfZ_yWB9tSMVox9hAK1okFsQrTrSbkRbu",
+     "rihoon": false
+    },
+    {
+     "domain": "tistory.com",
+     "n": 12,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQhHzLn0bmLVCE9C9gP57ntxYQQlSvVm_QzUAiLGpa7c5cTrYq-Cmrl_GA-ctn58P6PSak3IBIid3t_80Wlb8zdZADtp-wYZSr3Ys8gwhuMnZn6xv3pDfdPsGi9ea7NrKJv0fw",
+     "rihoon": false
+    },
+    {
+     "domain": "rihoon.co.kr",
+     "n": 10,
+     "url": "https://rihoon.co.kr/product/2025-%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC-%ED%95%98%EA%B3%A0%EC%8B%B6%EC%9D%80%EB%A7%90-%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC-%EC%9C%84%ED%81%B4%EB%A6%AC-%EB%A7%8C%EB%85%84%ED%95%84-%EB%82%A0%EC%A7%9C%ED%98%95/1190/",
+     "rihoon": true
+    },
+    {
+     "domain": "brunch.co.kr",
+     "n": 10,
+     "url": "https://brunch.co.kr/@soseul/53",
+     "rihoon": false
+    },
+    {
+     "domain": "leatai.com",
+     "n": 7,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuln9qBnJgaq8iVVHqxMgG44CDhzIagCpb2pc2Rqr6iemOWDbdWb3sCHjra753FZBc8XWXh12VdTd35VeQCtsv7RwK7HZRJS5XkgXdhLEFGUkUIqolXFHkKifveSXAPeY1StSRAHd7pCKiegEZRO-E4j-MvvepTz3TG_z41t0I6IkYfQJ1rApjQoDg9_j_NypAiuerSQa0wEF2w-G7nAE_skQRGLdhQfxFC-fSHTRlae8SW-kYYeHjrH4QAngL4frwpqXNrJhbfCkox5zmaXbBLM7oTr4PypFs0kewj1ao3GIg_ee8QJSX9BL9aEuS2i6Pf77-ea8dWA4nAlZ9lyVgm0fKycQMVC8pH6n_Ab8ZWigQfiPAF1JujQXT75fbjI3TddF9fql9dQw6EJFdA7WhkfuIfkfWVxsgWYIl3DjmsM1w-UQetnbL",
+     "rihoon": false
+    },
+    {
+     "domain": "the-edit.co.kr",
+     "n": 7,
+     "url": "https://the-edit.co.kr/62421",
+     "rihoon": false
+    },
+    {
+     "domain": "apps.apple.com",
+     "n": 7,
+     "url": "https://apps.apple.com/us/app/%EB%8D%B0%EC%9D%BC%EB%A6%AC-%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC-%EA%B0%90%EC%82%AC%EC%9D%BC%EA%B8%B0-%EA%B0%90%EC%A0%95%EC%9D%BC%EA%B8%B0-%EC%99%80-%EA%B7%B8%EB%A6%BC%EC%9D%BC%EA%B8%B0/id1605113008?l=ko&platform=ipad",
+     "rihoon": false
+    },
+    {
+     "domain": "clien.net",
+     "n": 6,
+     "url": "https://www.clien.net/service/board/kin/11053078",
+     "rihoon": false
+    },
+    {
+     "domain": "namu.wiki",
+     "n": 6,
+     "url": "https://namu.wiki/w/%EB%A7%8C%EB%85%84%ED%95%84",
+     "rihoon": false
+    },
+    {
+     "domain": "play.google.com",
+     "n": 6,
+     "url": "https://play.google.com/store/apps/details?id=org.maysnow.gratitudediary&hl=ko",
+     "rihoon": false
+    },
+    {
+     "domain": "gongysd.com",
+     "n": 6,
+     "url": "https://gongysd.com/notion-budget/?bmode=view&idx=169923322",
+     "rihoon": false
+    },
+    {
+     "domain": "hottracks.kyobobook.co.kr",
+     "n": 5,
+     "url": "https://hottracks.kyobobook.co.kr/gift/detail/S000051120154?utm_source=openai",
+     "rihoon": false
+    }
+   ],
+   "competitorRank": [
+    {
+     "name": "로디아",
+     "n": 16,
+     "kws": [
+      "만년필노트",
+      "만년필다이어리",
+      "만년필종이",
+      "안번지는만년필종이",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "미도리",
+     "n": 15,
+     "kws": [
+      "만년필노트",
+      "만년필다이어리",
+      "만년필종이",
+      "안번지는만년필종이",
+      "5년일기장",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "라이프",
+     "n": 10,
+     "kws": [
+      "만년필노트",
+      "만년필종이",
+      "안번지는만년필종이",
+      "만년다이어리"
+     ]
+    },
+    {
+     "name": "클레르퐁텐",
+     "n": 9,
+     "kws": [
+      "만년필노트",
+      "만년필다이어리",
+      "만년필종이",
+      "안번지는만년필종이"
+     ]
+    },
+    {
+     "name": "아피카",
+     "n": 7,
+     "kws": [
+      "만년필노트",
+      "만년필종이",
+      "안번지는만년필종이"
+     ]
+    },
+    {
+     "name": "무지",
+     "n": 7,
+     "kws": [
+      "만년필다이어리",
+      "감사일기",
+      "수기가계부",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "몰스킨",
+     "n": 6,
+     "kws": [
+      "만년필노트",
+      "만년필다이어리",
+      "안번지는만년필종이",
+      "만년다이어리",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "위클리",
+     "n": 4,
+     "kws": [
+      "만년필노트",
+      "만년필다이어리",
+      "만년다이어리"
+     ]
+    },
+    {
+     "name": "아날로그",
+     "n": 4,
+     "kws": [
+      "업무일지",
+      "독서기록장"
+     ]
+    },
+    {
+     "name": "모닝글로리",
+     "n": 3,
+     "kws": [
+      "만년필종이",
+      "안번지는만년필종이",
+      "수기가계부"
      ]
     }
    ]

@@ -92,6 +92,16 @@
   .tlegend{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;margin:12px 0 2px}
   .lg{font-size:11.5px;color:var(--sub);display:flex;align-items:center;gap:5px}
   .lgd{width:11px;height:11px;border-radius:3px;display:inline-block}
+  .lg b{color:var(--ink);font-weight:700;margin-left:1px}
+  .panel{border:1px solid var(--line);border-radius:14px;padding:5px 14px;background:#fff}
+  .rankrow{display:flex;flex-wrap:wrap;align-items:center;gap:9px;font-size:13px;padding:8px 0;border-bottom:1px solid var(--soft)}
+  .rankrow:last-child{border-bottom:none}
+  .rank-name{font-weight:500;min-width:76px;flex-shrink:0}
+  .rank-name.rihoon{color:var(--green);font-weight:700}
+  .rank-bar{flex:1;min-width:50px;height:8px;background:var(--soft);border-radius:999px;overflow:hidden}
+  .rank-bar>i{display:block;height:100%;border-radius:999px}
+  .rank-n{font-size:12px;color:var(--sub);min-width:32px;text-align:right;font-weight:700}
+  .rank-kw{font-size:11px;color:var(--gray);flex-basis:100%;margin:-3px 0 0 85px;line-height:1.4}
   .ttip{position:fixed;z-index:50;background:#fff;border:1px solid var(--line);border-radius:10px;
     box-shadow:0 8px 24px rgba(0,0,0,.13);padding:9px 12px;font-size:12px;color:var(--ink);
     pointer-events:none;display:none;line-height:1.55;max-width:200px}
@@ -186,35 +196,39 @@ function showTip(ev,e,date,m,t,meas){
 }
 function hideTip(){const t=document.getElementById('ttip');if(t)t.style.display='none';}
 function trendInner(){
-  const T=DATA.trend||[], last=T[T.length-1], prev=T.length>1?T[T.length-2]:null;
+  const T=DATA.trend||[], last=T[T.length-1];
   const chE=chartEngines();
   const data=T.map(t=>({date:t.date, rate:t.rate, counts:engCounts(t.date)}));
-  const totals=data.map(d=>chE.reduce((s,e)=>s+(d.counts[e]?d.counts[e].mentions:0),0));
-  const niceMax=Math.max(4, Math.ceil(Math.max(...totals,0)/2)*2);
-  const ch=176, padB=30, padT=20, padX=12, gap=72;
-  const cw=Math.max(T.length*gap + padX*2, 280), bw=Math.min(42, gap*0.5);
-  let bars='';
-  data.forEach((d,i)=>{
-    const x=padX+gap*i+gap/2, sel=d.date===SEL, md=d.date.slice(5).replace('-','/');
-    bars+=`<rect x="${(padX+gap*i+3).toFixed(1)}" y="0" width="${(gap-6).toFixed(1)}" height="${ch}" rx="7" fill="${sel?'rgba(24,24,27,.045)':'transparent'}" style="cursor:pointer" onclick="selectWeek('${d.date}')"/>`;
-    let yCur=ch-padB;
-    chE.forEach(e=>{
-      const c=d.counts[e]||{mentions:0,top1:0,measured:0}, m=c.mentions||0;
-      if(!m) return;
-      const h=(ch-padB-padT)*(m/niceMax), y=yCur-h; yCur=y;
-      bars+=`<rect x="${(x-bw/2).toFixed(1)}" y="${y.toFixed(1)}" width="${bw}" height="${h.toFixed(1)}" fill="${ECOLOR[e]}" `
-        +`style="cursor:pointer" onclick="selectWeek('${d.date}')" `
-        +`onmousemove="showTip(event,'${e}','${d.date}',${m},${c.top1||0},${c.measured||0})" onmouseout="hideTip()" `
-        +`onclick="selectWeek('${d.date}')"><title>${EABBR[e]} ${md} · 추천 ${m} · 1위 ${c.top1||0}</title></rect>`;
-    });
-    const total=totals[i], topY=ch-padB-(ch-padB-padT)*(total/niceMax);
-    if(total>0) bars+=`<text x="${x}" y="${(topY-7).toFixed(1)}" text-anchor="middle" font-size="12" font-weight="800" fill="var(--ink)">${total}</text>`;
-    bars+=`<text x="${x}" y="${ch-10}" text-anchor="middle" font-size="10.5" font-weight="${sel?'700':'400'}" fill="${sel?'var(--ink)':'var(--gray)'}">${md}</text>`;
+  const cOf=(d,e)=>d.counts[e]?d.counts[e].mentions:0;
+  const maxC=Math.max(2,...data.map(d=>Math.max(0,...chE.map(e=>cOf(d,e)))));
+  const niceMax=Math.max(4, Math.ceil(maxC/2)*2);
+  const ch=184, padB=30, padT=16, padL=24, padR=14, n=data.length;
+  const cw=440, plotW=cw-padL-padR, plotH=ch-padB-padT, base=ch-padB;
+  const xOf=i=> n<=1 ? padL+plotW/2 : padL+plotW*(i/(n-1));
+  const yOf=c=> base-(c/niceMax)*plotH;
+  let g='';
+  [0, niceMax/2, niceMax].forEach(v=>{ const y=yOf(v);
+    g+=`<line x1="${padL}" y1="${y.toFixed(1)}" x2="${cw-padR}" y2="${y.toFixed(1)}" stroke="var(--line)" stroke-width="1"/>`;
+    g+=`<text x="${padL-6}" y="${(y+3.5).toFixed(1)}" text-anchor="end" font-size="10" fill="var(--gray)">${v}</text>`;
   });
-  const legend=chE.map(e=>`<span class="lg"><span class="lgd" style="background:${ECOLOR[e]}"></span>${EABBR[e]}</span>`).join('');
-  // 선택한 주 기준 두 지표(강도=답변칸%, 넓이=추천 질문수)
-  const selIdx=T.findIndex(t=>t.date===SEL), selT=selIdx>=0?T[selIdx]:last, prevT=selIdx>0?T[selIdx-1]:null;
-  const sc=(selIdx>=0?data[selIdx]:{counts:{}}).counts||{};
+  const selI=data.findIndex(d=>d.date===SEL);
+  if(selI>=0){ const x=xOf(selI);
+    g+=`<line x1="${x.toFixed(1)}" y1="${padT-2}" x2="${x.toFixed(1)}" y2="${base}" stroke="#d4d4d8" stroke-width="1.5" stroke-dasharray="3 3"/>`; }
+  const step=n<=8?1:Math.ceil(n/8);
+  data.forEach((d,i)=>{ const x=xOf(i), half=n>1?plotW/(n-1)/2:plotW/2, sel=d.date===SEL;
+    g+=`<rect x="${(x-half).toFixed(1)}" y="0" width="${(half*2).toFixed(1)}" height="${ch}" fill="transparent" style="cursor:pointer" onclick="selectWeek('${d.date}')"/>`;
+    if(i%step===0||sel) g+=`<text x="${x.toFixed(1)}" y="${ch-9}" text-anchor="middle" font-size="10.5" font-weight="${sel?'700':'400'}" fill="${sel?'var(--ink)':'var(--gray)'}">${d.date.slice(5).replace('-','/')}</text>`;
+  });
+  chE.forEach(e=>{
+    const pts=data.map((d,i)=>`${xOf(i).toFixed(1)},${yOf(cOf(d,e)).toFixed(1)}`).join(' ');
+    g+=`<polyline points="${pts}" fill="none" stroke="${ECOLOR[e]}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>`;
+    data.forEach((d,i)=>{ const x=xOf(i), y=yOf(cOf(d,e)), sel=d.date===SEL, c=d.counts[e]||{mentions:0,top1:0,measured:0};
+      g+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${sel?'4':'3'}" fill="${ECOLOR[e]}" stroke="#fff" stroke-width="1.5" style="cursor:pointer" onmousemove="showTip(event,'${e}','${d.date}',${cOf(d,e)},${c.top1||0},${c.measured||0})" onmouseout="hideTip()" onclick="selectWeek('${d.date}')"></circle>`;
+    });
+  });
+  const sc=(selI>=0?data[selI]:{counts:{}}).counts||{};
+  const legend=chE.map(e=>`<span class="lg"><span class="lgd" style="background:${ECOLOR[e]}"></span>${EABBR[e]} <b>${sc[e]?sc[e].mentions:0}</b></span>`).join('');
+  const selT=selI>=0?T[selI]:last, prevT=selI>0?T[selI-1]:null;
   let cells=0, mentions=0;
   chE.forEach(e=>{const c=sc[e]; if(c){cells+=c.measured||0; mentions+=c.mentions||0;}});
   const ws=weekOf(SEL).summary||{measuredQuestions:0,won:0,holes:0};
@@ -229,8 +243,8 @@ function trendInner(){
     +`<div class="cap" style="margin-top:5px">${deltaTxt}</div></div>`;
   return head
     +`<div class="tlegend">${legend}</div>`
-    +`<svg class="tchart" viewBox="0 0 ${cw} ${ch}" preserveAspectRatio="xMidYMax meet" role="img" aria-label="주차별 엔진별 리훈 추천 수">${bars}</svg>`
-    +`<div class="cap" style="text-align:center;margin-top:8px">👆 막대=그 주 상세 · 색 위에 올리면 엔진별 추천 수 · 막대 위 숫자=그 주 총 추천 칸 수</div>`;
+    +`<svg class="tchart" viewBox="0 0 ${cw} ${ch}" preserveAspectRatio="xMidYMax meet" role="img" aria-label="주차별 엔진별 리훈 추천 수 추세 꺾은선">${g}</svg>`
+    +`<div class="cap" style="text-align:center;margin-top:8px">👆 점·주차 클릭 = 그 주 상세 · 선 = 엔진별 추천 수(개) 추세 · 범례 숫자 = 선택 주 추천 수</div>`;
 }
 function qHitCount(q){ return chartEngines().filter(e=>q.engines[e]&&q.engines[e].m).length; }
 function changePanel(date){
@@ -292,6 +306,24 @@ function paintWeek(date){
         <span class="${VB[q.verdict]}">${VT[q.verdict]}</span></div>
       <div class="engs">${engs}</div>${comp}${srcHtml}${ansBox}</div>`;
   }).join('');
+  const cr=w.competitorRank||[];
+  let compPanel='';
+  if(cr.length){ const mx=cr[0].n||1;
+    compPanel=`<div class="section-t">🥊 우리 대신 추천된 경쟁사 (${dl})</div>`
+     +`<div class="section-d">리훈이 안 나온 질문에서 AI가 대신 추천한 브랜드 — 여기가 뺏어올 자리예요.</div>`
+     +`<div class="panel">`+cr.map(c=>`<div class="rankrow"><span class="rank-name">${c.name}</span>`
+        +`<span class="rank-bar"><i style="width:${Math.max(6,Math.round(100*c.n/mx))}%;background:var(--red)"></i></span>`
+        +`<span class="rank-n">${c.n}회</span><span class="rank-kw">${c.kws.join(' · ')}</span></div>`).join('')+`</div>`;
+  }
+  const ts=w.topSources||[];
+  let srcPanel='';
+  if(ts.length){ const mx=ts[0].n||1;
+    srcPanel=`<div class="section-t">📚 AI가 자주 읽어온 곳 (${dl})</div>`
+     +`<div class="section-d">AI 답변들이 인용한 출처 — 여기에 리훈 콘텐츠를 깔수록 더 인용돼요. ⭐=리훈</div>`
+     +`<div class="panel">`+ts.map(s=>`<div class="rankrow"><span class="rank-name ${s.rihoon?'rihoon':''}" style="min-width:118px">${s.rihoon?'⭐ ':''}${s.domain}</span>`
+        +`<span class="rank-bar"><i style="width:${Math.max(6,Math.round(100*s.n/mx))}%;background:${s.rihoon?'var(--green)':'var(--gray)'}"></i></span>`
+        +`<span class="rank-n">${s.n}</span></div>`).join('')+`</div>`;
+  }
   const holes=qs.filter(q=>q.verdict==='hole'||q.verdict==='none');
   const todo = holes.length ? `<div class="section-t">✅ 지금 할 일 — 비어있는 자리 채우기</div>
     <div class="section-d">아래 주제로 티스토리 글·유튜브 롱폼을 깔면 AI가 리훈을 인용하기 시작합니다.</div>
@@ -301,6 +333,8 @@ function paintWeek(date){
     `<div class="hero">${hero}</div>${kpis}
      ${changePanel(date)}
      <div class="section-t">🔌 측정 엔진 (${dl})</div><div class="chips">${chips}</div>
+     ${compPanel}
+     ${srcPanel}
      <div class="section-t">📋 ${dl} 질문별 현황</div>
      <div class="section-d">우리가 어디서 이기고(🟢) 어디서 지는지(🔴), 대신 누가 추천되는지.</div>${srcNote}
      ${cards}
