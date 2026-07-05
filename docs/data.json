@@ -18,9 +18,9 @@
  },
  "summary": {
   "measuredQuestions": 14,
-  "won": 4,
-  "top1": 3,
-  "holes": 10
+  "won": 6,
+  "top1": 6,
+  "holes": 8
  },
  "questions": [
   {
@@ -32,28 +32,36 @@
    "engines": {
     "Gemini": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Perplexity": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Claude": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 1,
+     "hits": 0
     },
     "ChatGPT": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "네이버 AI브리핑": null
    },
    "competitors": [
     "미도리",
     "로디아",
-    "몰스킨",
     "라이프",
-    "클레르퐁텐"
+    "클레르퐁텐",
+    "아피카"
    ]
   },
   {
@@ -64,29 +72,35 @@
    "verdict": "win1",
    "engines": {
     "Gemini": {
-     "m": false,
-     "rank": null
+     "m": true,
+     "rank": 6,
+     "n": 3,
+     "hits": 2
     },
     "Perplexity": {
      "m": true,
-     "rank": 1
+     "rank": 1,
+     "n": 3,
+     "hits": 3
     },
     "Claude": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 1,
+     "hits": 0
     },
     "ChatGPT": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "네이버 AI브리핑": null
    },
    "competitors": [
     "미도리",
-    "로디아",
     "몰스킨",
-    "양지사",
-    "라이프"
+    "로디아"
    ]
   },
   {
@@ -98,19 +112,27 @@
    "engines": {
     "Gemini": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Perplexity": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Claude": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 1,
+     "hits": 0
     },
     "ChatGPT": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "네이버 AI브리핑": null
    },
@@ -131,27 +153,35 @@
    "engines": {
     "Gemini": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Perplexity": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Claude": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 1,
+     "hits": 0
     },
     "ChatGPT": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "네이버 AI브리핑": null
    },
    "competitors": [
     "미도리",
     "로디아",
-    "라이프",
     "클레르퐁텐",
+    "무인양품",
     "몰스킨"
    ]
   },
@@ -164,19 +194,27 @@
    "engines": {
     "Gemini": {
      "m": true,
-     "rank": 1
+     "rank": 1,
+     "n": 3,
+     "hits": 3
     },
     "Perplexity": {
-     "m": false,
-     "rank": null
+     "m": true,
+     "rank": 1,
+     "n": 3,
+     "hits": 2
     },
     "Claude": {
      "m": true,
-     "rank": 2
+     "rank": 2,
+     "n": 1,
+     "hits": 1
     },
     "ChatGPT": {
      "m": true,
-     "rank": 1
+     "rank": 1,
+     "n": 3,
+     "hits": 3
     },
     "네이버 AI브리핑": null
    },
@@ -187,29 +225,36 @@
    "q": "날짜 없는 만년형 다이어리 추천해줘",
    "kw": "만년다이어리",
    "line": "오늘기억 일기",
-   "verdict": "hole",
+   "verdict": "win1",
    "engines": {
     "Gemini": {
-     "m": false,
-     "rank": null
+     "m": true,
+     "rank": 1,
+     "n": 3,
+     "hits": 2
     },
     "Perplexity": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Claude": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 1,
+     "hits": 0
     },
     "ChatGPT": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "네이버 AI브리핑": null
    },
    "competitors": [
-    "미도리",
-    "라이프"
+    "아피카"
    ]
   },
   {
@@ -217,24 +262,33 @@
    "q": "감사일기 쓰기 좋은 일기장 추천해줘",
    "kw": "감사일기",
    "line": "오늘기억 일기",
-   "verdict": "win",
+   "verdict": "win1",
    "engines": {
     "Gemini": {
      "m": true,
-     "rank": 2
+     "rank": 1,
+     "n": 3,
+     "hits": 3
     },
     "Perplexity": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Claude": null,
     "ChatGPT": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "네이버 AI브리핑": null
    },
-   "competitors": []
+   "competitors": [
+    "몰스킨",
+    "무인양품"
+   ]
   },
   {
    "id": "gb-01",
@@ -245,23 +299,27 @@
    "engines": {
     "Gemini": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Perplexity": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Claude": null,
     "ChatGPT": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "네이버 AI브리핑": null
    },
    "competitors": [
-    "모닝글로리",
-    "텐바이텐",
-    "아이코닉"
+    "라이프"
    ]
   },
   {
@@ -273,16 +331,22 @@
    "engines": {
     "Gemini": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Perplexity": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Claude": null,
     "ChatGPT": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "네이버 AI브리핑": null
    },
@@ -297,16 +361,22 @@
    "engines": {
     "Gemini": {
      "m": true,
-     "rank": 1
+     "rank": 1,
+     "n": 3,
+     "hits": 3
     },
     "Perplexity": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Claude": null,
     "ChatGPT": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "네이버 AI브리핑": null
    },
@@ -317,20 +387,26 @@
    "q": "초등 자기주도학습 플래너 추천해줘",
    "kw": "자기주도학습플래너",
    "line": "차일드라이크 초등",
-   "verdict": "hole",
+   "verdict": "win1",
    "engines": {
     "Gemini": {
      "m": false,
-     "rank": null
+     "rank": 1,
+     "n": 3,
+     "hits": 1
     },
     "Perplexity": {
-     "m": false,
-     "rank": null
+     "m": true,
+     "rank": 1,
+     "n": 3,
+     "hits": 2
     },
     "Claude": null,
     "ChatGPT": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "네이버 AI브리핑": null
    },
@@ -345,24 +421,26 @@
    "engines": {
     "Gemini": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Perplexity": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Claude": null,
     "ChatGPT": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "네이버 AI브리핑": null
    },
-   "competitors": [
-    "몰스킨",
-    "양지사",
-    "프랭클린"
-   ]
+   "competitors": []
   },
   {
    "id": "rd-01",
@@ -373,21 +451,29 @@
    "engines": {
     "Gemini": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Perplexity": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Claude": null,
     "ChatGPT": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "네이버 AI브리핑": null
    },
    "competitors": [
-    "아날로그키퍼"
+    "로디아",
+    "몰스킨",
+    "무인양품"
    ]
   },
   {
@@ -399,22 +485,30 @@
    "engines": {
     "Gemini": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Perplexity": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "Claude": null,
     "ChatGPT": {
      "m": false,
-     "rank": null
+     "rank": null,
+     "n": 3,
+     "hits": 0
     },
     "네이버 AI브리핑": null
    },
    "competitors": [
     "미도리",
-    "무인양품",
+    "로디아",
+    "라이프",
+    "아피카",
     "몰스킨"
    ]
   }
@@ -428,9 +522,9 @@
    ],
    "summary": {
     "measuredQuestions": 14,
-    "won": 4,
-    "top1": 4,
-    "holes": 10
+    "won": 6,
+    "top1": 5,
+    "holes": 8
    },
    "questions": [
     {
@@ -442,15 +536,21 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 5,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "ChatGPT": null,
       "네이버 AI브리핑": null
@@ -472,15 +572,21 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 10
+       "rank": 7,
+       "n": 4,
+       "hits": 3
       },
       "Perplexity": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 3,
+       "hits": 3
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "ChatGPT": null,
       "네이버 AI브리핑": null
@@ -499,15 +605,21 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": null,
       "네이버 AI브리핑": null
@@ -529,15 +641,21 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": null,
       "네이버 AI브리핑": null
@@ -558,24 +676,28 @@
      "verdict": "win1",
      "engines": {
       "Gemini": {
-       "m": false,
-       "rank": null
+       "m": true,
+       "rank": 1,
+       "n": 4,
+       "hits": 2
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "Claude": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 3,
+       "hits": 3
       },
       "ChatGPT": null,
       "네이버 AI브리핑": null
      },
      "competitors": [
-      "미도리",
-      "텐바이텐",
-      "아날로그키퍼"
+      "미도리"
      ]
     },
     {
@@ -587,15 +709,21 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": 1,
+       "n": 4,
+       "hits": 1
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "ChatGPT": null,
       "네이버 AI브리핑": null
@@ -613,19 +741,25 @@
      "q": "감사일기 쓰기 좋은 일기장 추천해줘",
      "kw": "감사일기",
      "line": "오늘기억 일기",
-     "verdict": "hole",
+     "verdict": "win1",
      "engines": {
       "Gemini": {
-       "m": false,
-       "rank": null
+       "m": true,
+       "rank": 1,
+       "n": 2,
+       "hits": 1
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "ChatGPT": null,
       "네이버 AI브리핑": null
@@ -643,15 +777,21 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": 2,
+       "n": 3,
+       "hits": 1
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "ChatGPT": null,
       "네이버 AI브리핑": null
@@ -667,15 +807,21 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "ChatGPT": null,
       "네이버 AI브리핑": null
@@ -691,15 +837,21 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 2,
+       "hits": 2
       },
       "Perplexity": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 3,
+       "hits": 2
       },
       "Claude": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 3,
+       "hits": 3
       },
       "ChatGPT": null,
       "네이버 AI브리핑": null
@@ -715,15 +867,21 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 2,
+       "hits": 2
       },
       "Perplexity": {
-       "m": false,
-       "rank": null
+       "m": true,
+       "rank": 1,
+       "n": 3,
+       "hits": 2
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "ChatGPT": null,
       "네이버 AI브리핑": null
@@ -739,15 +897,21 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "ChatGPT": null,
       "네이버 AI브리핑": null
@@ -763,15 +927,21 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "ChatGPT": null,
       "네이버 AI브리핑": null
@@ -783,28 +953,32 @@
      "q": "필사하기 좋은 노트 추천해줘",
      "kw": "필사노트",
      "line": "필사/노트",
-     "verdict": "hole",
+     "verdict": "win",
      "engines": {
       "Gemini": {
-       "m": false,
-       "rank": null
+       "m": true,
+       "rank": 3,
+       "n": 2,
+       "hits": 1
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "ChatGPT": null,
       "네이버 AI브리핑": null
      },
      "competitors": [
-      "로디아",
-      "라이프",
-      "클레르퐁텐",
       "미도리",
+      "클레르퐁텐",
       "텐바이텐"
      ]
     }
@@ -813,7 +987,7 @@
    "competitorRank": [
     {
      "name": "미도리",
-     "n": 14,
+     "n": 13,
      "kws": [
       "만년필노트",
       "만년필다이어리",
@@ -825,17 +999,16 @@
     },
     {
      "name": "로디아",
-     "n": 9,
+     "n": 8,
      "kws": [
       "만년필노트",
       "만년필종이",
-      "안번지는만년필종이",
-      "필사노트"
+      "안번지는만년필종이"
      ]
     },
     {
      "name": "클레르퐁텐",
-     "n": 8,
+     "n": 7,
      "kws": [
       "만년필노트",
       "만년필종이",
@@ -845,13 +1018,12 @@
     },
     {
      "name": "라이프",
-     "n": 6,
+     "n": 5,
      "kws": [
       "만년필노트",
       "만년필종이",
       "안번지는만년필종이",
-      "만년다이어리",
-      "필사노트"
+      "만년다이어리"
      ]
     },
     {
@@ -889,18 +1061,17 @@
      ]
     },
     {
-     "name": "텐바이텐",
-     "n": 2,
+     "name": "포커스온",
+     "n": 1,
      "kws": [
-      "5년일기장",
-      "필사노트"
+      "만년다이어리"
      ]
     },
     {
-     "name": "아날로그키퍼",
+     "name": "텐바이텐",
      "n": 1,
      "kws": [
-      "5년일기장"
+      "필사노트"
      ]
     }
    ]
@@ -928,19 +1099,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -961,19 +1140,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": true,
-       "rank": 2
+       "rank": 2,
+       "n": 1,
+       "hits": 1
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -994,19 +1181,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 9
+       "rank": 9,
+       "n": 1,
+       "hits": 1
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1027,19 +1222,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1060,19 +1263,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": true,
-       "rank": 3
+       "rank": 3,
+       "n": 1,
+       "hits": 1
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1091,19 +1302,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1123,19 +1342,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1153,19 +1380,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1183,19 +1418,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1210,19 +1453,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "Perplexity": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "Claude": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1239,19 +1490,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "Perplexity": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1266,19 +1525,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1293,19 +1560,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1320,19 +1595,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1451,9 +1734,9 @@
    ],
    "summary": {
     "measuredQuestions": 14,
-    "won": 4,
-    "top1": 3,
-    "holes": 10
+    "won": 5,
+    "top1": 4,
+    "holes": 9
    },
    "questions": [
     {
@@ -1465,19 +1748,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1498,19 +1789,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 10
+       "rank": 8,
+       "n": 3,
+       "hits": 3
       },
       "Perplexity": {
        "m": true,
-       "rank": 2
+       "rank": 2,
+       "n": 3,
+       "hits": 3
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "ChatGPT": {
-       "m": true,
-       "rank": 2
+       "m": false,
+       "rank": 2,
+       "n": 3,
+       "hits": 1
       },
       "네이버 AI브리핑": null
      },
@@ -1527,19 +1826,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": 6,
+       "n": 3,
+       "hits": 1
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1560,19 +1867,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1593,19 +1908,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 2
+       "rank": 2,
+       "n": 3,
+       "hits": 3
       },
       "Perplexity": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 3,
+       "hits": 3
       },
       "Claude": {
        "m": true,
-       "rank": 2
+       "rank": 2,
+       "n": 2,
+       "hits": 2
       },
       "ChatGPT": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 3,
+       "hits": 3
       },
       "네이버 AI브리핑": null
      },
@@ -1620,19 +1943,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": 3,
+       "n": 3,
+       "hits": 1
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1652,19 +1983,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1682,19 +2021,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1712,19 +2059,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1739,19 +2094,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 2,
+       "hits": 2
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "Claude": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1766,19 +2129,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 2,
+       "hits": 2
       },
       "Perplexity": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 2,
+       "hits": 1
       },
       "Claude": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1793,19 +2164,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1824,19 +2203,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -1850,32 +2237,40 @@
      "q": "필사하기 좋은 노트 추천해줘",
      "kw": "필사노트",
      "line": "필사/노트",
-     "verdict": "hole",
+     "verdict": "win1",
      "engines": {
       "Gemini": {
-       "m": false,
-       "rank": null
+       "m": true,
+       "rank": 1,
+       "n": 2,
+       "hits": 1
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 2,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
      "competitors": [
-      "라이프",
-      "클레르퐁텐",
-      "아피카",
       "미도리",
-      "로디아"
+      "클레르퐁텐",
+      "로디아",
+      "몰스킨",
+      "무인양품"
      ]
     }
    ],
@@ -1968,7 +2363,7 @@
    "competitorRank": [
     {
      "name": "미도리",
-     "n": 16,
+     "n": 17,
      "kws": [
       "만년필노트",
       "만년필다이어리",
@@ -1976,16 +2371,6 @@
       "안번지는만년필종이",
       "만년다이어리",
       "업무일지"
-     ]
-    },
-    {
-     "name": "클레르퐁텐",
-     "n": 13,
-     "kws": [
-      "만년필노트",
-      "만년필종이",
-      "안번지는만년필종이",
-      "필사노트"
      ]
     },
     {
@@ -1999,14 +2384,23 @@
      ]
     },
     {
-     "name": "라이프",
-     "n": 11,
+     "name": "클레르퐁텐",
+     "n": 12,
      "kws": [
       "만년필노트",
       "만년필종이",
       "안번지는만년필종이",
-      "업무일지",
       "필사노트"
+     ]
+    },
+    {
+     "name": "라이프",
+     "n": 10,
+     "kws": [
+      "만년필노트",
+      "만년필종이",
+      "안번지는만년필종이",
+      "업무일지"
      ]
     },
     {
@@ -2026,15 +2420,6 @@
       "만년다이어리",
       "수기가계부",
       "업무일지"
-     ]
-    },
-    {
-     "name": "아피카",
-     "n": 3,
-     "kws": [
-      "만년필종이",
-      "안번지는만년필종이",
-      "필사노트"
      ]
     },
     {
@@ -2059,6 +2444,14 @@
      "n": 2,
      "kws": [
       "만년필노트",
+      "안번지는만년필종이"
+     ]
+    },
+    {
+     "name": "아피카",
+     "n": 2,
+     "kws": [
+      "만년필종이",
       "안번지는만년필종이"
      ]
     }
@@ -2087,19 +2480,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -2120,19 +2521,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 9
+       "rank": 9,
+       "n": 1,
+       "hits": 1
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -2152,19 +2561,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -2185,19 +2602,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -2218,19 +2643,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "ChatGPT": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "네이버 AI브리핑": null
      },
@@ -2247,19 +2680,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "Perplexity": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -2278,19 +2719,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -2309,19 +2758,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -2338,19 +2795,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -2365,19 +2830,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "Perplexity": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "Claude": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -2392,19 +2865,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -2419,19 +2900,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -2446,19 +2935,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -2473,19 +2970,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 1,
+       "hits": 1
       },
       "네이버 AI브리핑": null
      },
@@ -2692,9 +3197,9 @@
    ],
    "summary": {
     "measuredQuestions": 14,
-    "won": 4,
-    "top1": 3,
-    "holes": 10
+    "won": 6,
+    "top1": 6,
+    "holes": 8
    },
    "questions": [
     {
@@ -2706,28 +3211,36 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
      "competitors": [
       "미도리",
       "로디아",
-      "몰스킨",
       "라이프",
-      "클레르퐁텐"
+      "클레르퐁텐",
+      "아피카"
      ]
     },
     {
@@ -2738,29 +3251,35 @@
      "verdict": "win1",
      "engines": {
       "Gemini": {
-       "m": false,
-       "rank": null
+       "m": true,
+       "rank": 6,
+       "n": 3,
+       "hits": 2
       },
       "Perplexity": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 3,
+       "hits": 3
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
      "competitors": [
       "미도리",
-      "로디아",
       "몰스킨",
-      "양지사",
-      "라이프"
+      "로디아"
      ]
     },
     {
@@ -2772,19 +3291,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -2805,27 +3332,35 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
      "competitors": [
       "미도리",
       "로디아",
-      "라이프",
       "클레르퐁텐",
+      "무인양품",
       "몰스킨"
      ]
     },
@@ -2838,19 +3373,27 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 3,
+       "hits": 3
       },
       "Perplexity": {
-       "m": false,
-       "rank": null
+       "m": true,
+       "rank": 1,
+       "n": 3,
+       "hits": 2
       },
       "Claude": {
        "m": true,
-       "rank": 2
+       "rank": 2,
+       "n": 1,
+       "hits": 1
       },
       "ChatGPT": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 3,
+       "hits": 3
       },
       "네이버 AI브리핑": null
      },
@@ -2861,29 +3404,36 @@
      "q": "날짜 없는 만년형 다이어리 추천해줘",
      "kw": "만년다이어리",
      "line": "오늘기억 일기",
-     "verdict": "hole",
+     "verdict": "win1",
      "engines": {
       "Gemini": {
-       "m": false,
-       "rank": null
+       "m": true,
+       "rank": 1,
+       "n": 3,
+       "hits": 2
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 1,
+       "hits": 0
       },
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
      "competitors": [
-      "미도리",
-      "라이프"
+      "아피카"
      ]
     },
     {
@@ -2891,24 +3441,33 @@
      "q": "감사일기 쓰기 좋은 일기장 추천해줘",
      "kw": "감사일기",
      "line": "오늘기억 일기",
-     "verdict": "win",
+     "verdict": "win1",
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 2
+       "rank": 1,
+       "n": 3,
+       "hits": 3
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": null,
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
-     "competitors": []
+     "competitors": [
+      "몰스킨",
+      "무인양품"
+     ]
     },
     {
      "id": "gb-01",
@@ -2919,23 +3478,27 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": null,
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
      "competitors": [
-      "모닝글로리",
-      "텐바이텐",
-      "아이코닉"
+      "라이프"
      ]
     },
     {
@@ -2947,16 +3510,22 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": null,
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -2971,16 +3540,22 @@
      "engines": {
       "Gemini": {
        "m": true,
-       "rank": 1
+       "rank": 1,
+       "n": 3,
+       "hits": 3
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": null,
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -2991,20 +3566,26 @@
      "q": "초등 자기주도학습 플래너 추천해줘",
      "kw": "자기주도학습플래너",
      "line": "차일드라이크 초등",
-     "verdict": "hole",
+     "verdict": "win1",
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": 1,
+       "n": 3,
+       "hits": 1
       },
       "Perplexity": {
-       "m": false,
-       "rank": null
+       "m": true,
+       "rank": 1,
+       "n": 3,
+       "hits": 2
       },
       "Claude": null,
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
@@ -3019,24 +3600,26 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": null,
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
-     "competitors": [
-      "몰스킨",
-      "양지사",
-      "프랭클린"
-     ]
+     "competitors": []
     },
     {
      "id": "rd-01",
@@ -3047,21 +3630,29 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": null,
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
      "competitors": [
-      "아날로그키퍼"
+      "로디아",
+      "몰스킨",
+      "무인양품"
      ]
     },
     {
@@ -3073,22 +3664,30 @@
      "engines": {
       "Gemini": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Perplexity": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "Claude": null,
       "ChatGPT": {
        "m": false,
-       "rank": null
+       "rank": null,
+       "n": 3,
+       "hits": 0
       },
       "네이버 AI브리핑": null
      },
      "competitors": [
       "미도리",
-      "무인양품",
+      "로디아",
+      "라이프",
+      "아피카",
       "몰스킨"
      ]
     }
@@ -3096,99 +3695,98 @@
    "topSources": [
     {
      "domain": "youtube.com",
-     "n": 24,
-     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHz-7FLN-2ncOce78kpKxSGiEcb8wDuF_rvwjXgq4WJlx2ANVr2fj_fZdHELTG--llrTh8VhKsbLG4qwC3jQ2NfWmGmyilgv1uyoZuf0DkjTOsOSl9hpIq6RonxFIMbXSV6NBwV7Uo=",
-     "rihoon": false
-    },
-    {
-     "domain": "reddit.com",
-     "n": 15,
-     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMohAmHBhAWDA_X_krPwWdllM-PwZkBR0kO4snq9RAd37Osp0LOdgsiXz3pEAZXk2_VYKsbKfMS-pE1heSXGAxUPpuizqTbxix3FLpfTIX8YZd9rJgc9ZAjKfbsz20rN9BFT-g2JZk94HiivzzbAwRj4_tKSAH340SjkeQebgAVQxRYRr0X2GMdQA_VjM_2mmMZZT6kOoPv6QbotveK-3VJV6x_lqKIRwq",
-     "rihoon": false
-    },
-    {
-     "domain": "blog.naver.com",
-     "n": 13,
-     "url": "https://blog.naver.com/chuckchuck_whitebear/223342480449",
+     "n": 23,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwtElv3Z3eOjWPigJdwd3N1CGZ_9hbnIIXdstWIyFHZrdLrGwjtG9vYCfbR36Cw8tGjFSUy7DwdofCwQspecU9zTUr-RRPkYathICAmQ4aUFodVYsrtl6QklOPLzJn02vjNkXehjk=",
      "rihoon": false
     },
     {
      "domain": "tistory.com",
+     "n": 14,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFe3ZzdlgsQZ8ASHMmX2K56y6swlsywV2dT_ah7VnLOe_6X71L9yc0RSzaDhgwDylEjp5ZWJ2-YgsBldsI5SJrOcQ1Nj8PJ3THNXWSG2-GIx7r0H-g1NNOgOQC_usoL3XAW7q2BFNO94TixnnZ3q0JsupTGCfWwK8qYjGouIlQFFFQmhJe-ca08vqHRJwi2_CWR5bjb2ZLSmqhFKS084ZPa7y8tnC0YEo9grgUeUzlrriPjnHG76ysAjXf8TDTBLxYD16YcJfkdnJ885gyhGjhh7pNNKhqbQbeYuY1tKsg9GqY_bI10",
+     "rihoon": false
+    },
+    {
+     "domain": "reddit.com",
+     "n": 14,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFP0PRx49IQWiwHSMt6GcNmJ9KqYWxshjDEKPiCFDlotoqvA3HS9WTU3I5wXyVmjeSyO9nJi4kZosFQikdRv2tXgv0UD3iTG5zZY0aDGsDXFRxDWLtk0OQM4H3l7ZmqUyL2wu1j7CBeruSubL5KsTwUpu8Q8WJU5gFX7bdKGTZ2V6kaaiEbs36940lWaa8T49MtufagOJhRDzW_UtVTM4veCWYuoQiZBLyG",
+     "rihoon": false
+    },
+    {
+     "domain": "blog.naver.com",
      "n": 12,
-     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJ1flbF02BfKQ6GzMQtIqzoG3XUtGzs_S99_Re4ZquntcXPxkznuYe4vwwAOf96FJP9N51-dqSWBk9smLMUUiGbTIGU-dgJXaPLJ7vI8wM-Mrg3Rnp-Zq4wt3umCMhgaR74bgNsKWfACvirPDfPNkV1LlKjHtMdxH2mtkOL3s6L13Bv7ofAEfc9GZ7r5IxXPAxRbaMoTDG-xrENAMcGDNC_yn83z72zJ1Os-e94CrWDaUML1oUuNyIHapStQ300gJnyrvuByczjpBG4sY2YvXdQxQgeqdXvgIBtVDxLIHEIDr9jOhCKYTP5ESojh7G9tg545rXBoEKdHOStcWVCWPHC_PLVALTiirLF2t-JH_oVFo9lluyDZu_8iNpPXavj8TUQaYp46IbsnuDhRn2DrU9SfdEBEtI_keI3VkfTeamoK6FCBc3HWt0BfvoIewNWhrPU3Ei9CX6b44B",
+     "url": "https://blog.naver.com/sdot1203/223157704845",
      "rihoon": false
     },
     {
      "domain": "namu.wiki",
-     "n": 8,
+     "n": 7,
      "url": "https://namu.wiki/w/KOKUYO",
      "rihoon": false
     },
     {
-     "domain": "rihoon.co.kr",
+     "domain": "leatai.com",
      "n": 5,
-     "url": "https://rihoon.co.kr/product/2025-%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC-%ED%95%98%EA%B3%A0%EC%8B%B6%EC%9D%80%EB%A7%90-%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC-%EC%9C%84%ED%81%B4%EB%A6%AC-%EB%A7%8C%EB%85%84%ED%95%84-%EB%82%A0%EC%A7%9C%ED%98%95/1190/",
-     "rihoon": true
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbRprTkZ5Zqji99EFagnp3XjCDT7pPBRZhjfeUz7jzBXG97nTFzHeWMUt1HqGorlf181BTjW-2gOe0PdSHKfZ6zkIRHUBiCqcJuBOmhLdaF4YYv0IMbT8mH1RYpfiyJxhPTUsVizzdd5fTCGVYQjZTyDt80vBmSF-ZmeVBqA_IoqLtQ7PbsG5ldhURqNrV3Hbitdft9T0b8hTr8MJTpAPYp7wGUsieWP14wKs8Y1bRAHrzpnrtRMBeNoMWDkzg5l4fUYQ3cpj9Jnr00WZEkXQ3lKzzBh3sL5-CjDVfdPLf1DnNiRD_Tf3niRM-oYYynX2dUux0qXs1nqFl5F8ue0M4jTrlZ95CYgkkk47hrhcbJvs30gI3UO4j-9nBPdsZQ8b9HPiu7QKRM5rCzXlBypfQcvjGWXpIJEttwJ8Zt6VTRxmQ1o72Wskh",
+     "rihoon": false
     },
     {
-     "domain": "darkerdum.com",
-     "n": 4,
-     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEGvoEREQFnF_N9kwAKklmt34bgVZsBxLqnHlFHT4CPHyHnL6489kdqPlNv05PK2KK86tZH4hBrJpowAzgR_ujyX19xm8eGEbdhiUJ6ogfIqSkafIjW4oDSH9q7IeogUqUQOz_eFcgm_6WNG4_QUwr4kIiTMz9sNiWbwJDR8v-9NyH2-4acsp3P71-_p5rkNvlBpFlDyzi_ZYXlCudm89TqsZhfYSV-ng_X0V8CIxmMDx4633nEFrMqh1z5GSuw4lvsLJaYOZqnKRsLpOWdZMThMyYD17DtronWwjYdac1mw==",
+     "domain": "brunch.co.kr",
+     "n": 5,
+     "url": "https://brunch.co.kr/%40iamyourjam/49?utm_source=openai",
      "rihoon": false
     },
     {
      "domain": "samwonpaper.com",
-     "n": 4,
-     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHe1LI27EHtU6Jf8eqgI9LttnAM1AG-Ai6gDSu7E_vzyL-pQ1KrRn_OikNyCjpwvEj-5B3bzzkqW4KxWyhBXsjMN7kdufxqcMGwfJbQWQt1MB3_HUXYmawN_-Z3EA3utuzm2uK7gilNOfeXBBI_UiqlhivKLGXhS4r3UKKK-60PSxMuI7I-V3aFsKG--EivWaoLLNc23dyOof50dhLBpp-7DOmGlhuLwfjxeerUSJErAYE1U9_h0MXQcQb4hzm2NOsBiynQmVZlD5AJ05ea48qA_Pv8zd58ustWSuhMJqryGfWMmhTcLmA5oabF1Ozwnlb5Dp2ElLEvl4LZwLfLmFE7PEWGalSELAD2n-WirK1s",
+     "n": 5,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFb-0C9qhK0z3T3TQXfM0vPE4UmVds9yJCn2Uh242nzq5_mYGlwbnJkK5z67PBbT0LplQXhh8xCw1ekIJssHxGkLw1qZ3MBncW7FH1XBZsxRMCCXxNVYoZcq_-Tq0JUCL1KMlAa_Yow6kabYahhTUknlSSeK_dVJ7yNMzBtcgMvXs_aY0wzqpPi9YlSWWR4VUJqMSAs8PzV8gvctrryyKXfHsfYH7o2BtELd1T_iPC3_C7RJiIb68sbNxKUmMapqHgAxsJXOt6xy66h6bRN-Yg2lKde9sYE9OylURs9pJjLo2sRh7F6j-o7bgtoT-aczZGvbHxx4Ij2r9Zq3mMg45M3-FTtNXUhap1vq3G6PXVO",
      "rihoon": false
     },
     {
-     "domain": "clien.net",
+     "domain": "wannathis.co.kr",
+     "n": 5,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnDw7qL9iURB__1L_YUDqtfo-5ZekgRUniiWbYMFWz1ycmKGltu8xVPesidtUXHqSiwzoyhblmXvjElIiuGDUajS6D-aq5RNUW8TJCB6hvL2EQfm57NZ099g-Nyu8rLnQ9rddIByp3-8QOS2-J8oJE7VtiUoAtxlE1srx14wNQ7caaD5eBTYnVQ7YFaOkop014lKclJInyqKKCTNwcvQNYMkXeQtRBRG9moTEmDMhkhbuq9eGDCAcAJA5G1SSM1Wi5cLFGY56wgQ==",
+     "rihoon": false
+    },
+    {
+     "domain": "coupang.com",
      "n": 4,
-     "url": "https://www.clien.net/service/board/park/18033106",
+     "url": "https://www.coupang.com/vp/products/7679837205?utm_source=openai",
      "rihoon": false
     },
     {
      "domain": "hottracks.kyobobook.co.kr",
      "n": 4,
-     "url": "https://hottracks.kyobobook.co.kr/gift/detail/S000055039301?utm_source=openai",
+     "url": "https://hottracks.kyobobook.co.kr/gift/detail/S000051120154?utm_source=openai",
      "rihoon": false
     },
     {
-     "domain": "brunch.co.kr",
+     "domain": "rihoon.co.kr",
      "n": 4,
-     "url": "https://brunch.co.kr/@soseul/53",
+     "url": "https://rihoon.co.kr/product/2025-%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC-%ED%95%98%EA%B3%A0%EC%8B%B6%EC%9D%80%EB%A7%90-%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC-%EC%9C%84%ED%81%B4%EB%A6%AC-%EB%A7%8C%EB%85%84%ED%95%84-%EB%82%A0%EC%A7%9C%ED%98%95/1190/",
+     "rihoon": true
+    },
+    {
+     "domain": "gongysd.com",
+     "n": 4,
+     "url": "https://gongysd.com/notion-budget/?bmode=view&idx=170171581",
      "rihoon": false
     },
     {
-     "domain": "wannathis.co.kr",
-     "n": 4,
-     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9VACoEplUhhxiFFF5quRG1aye10g4CCMqpAO9cHpKyM6td16K4Pg9xXoiv5FNv5YHNCqhT4ARV8YonqJ3sZ-xy_PUwzlyPPk1S1Sv12GnDasvZKlFWta58no_9ETA-bDWHkloFjTzRc59vD-ZJtBjSE9SxPArIT2T6h5XPZycPort1OTd6QJ0BphCUUSE7oYT4ahZ1qLCmQNuA9IeTtUZrZKFt4L-qQ1fiifX3wlVflL6Ukm_5HFo_dEhF0h5bYC_Bxi7fSdVDw==",
-     "rihoon": false
-    },
-    {
-     "domain": "instagram.com",
-     "n": 4,
-     "url": "https://www.instagram.com/reel/DRMqhJejmlP/",
-     "rihoon": false
-    },
-    {
-     "domain": "yes24.com",
-     "n": 4,
-     "url": "https://www.yes24.com/product/goods/159058597?utm_source=openai",
+     "domain": "darkerdum.com",
+     "n": 3,
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuzQ0Yvvxasp8a3FVZdrufYDt9elhomyKFG9K0JAIksB1ls-RVQyzNF6fZI9exr6fXSrD4gOVhOs9BhR2hmORO0CepaiFD2nbcYM94qJN4t6aysjsxRiktXrQIopYNmv8VQS_9GfsyxiRC-uu-wSMdPkecI2GkTsv8h8oD3YITPXeqAtSN41xeJkgQIY8CP_KN0naX63rNZSFGbZgWsx-F2zuH3MUDM29JY9g4xkO66gDaKU28HSFnd-BfRSseGtarT6J3x6GgDvwc-3X90mN4qGR_moo3LvvoYeIDtlUgVg==",
      "rihoon": false
     }
    ],
    "competitorRank": [
     {
      "name": "미도리",
-     "n": 17,
+     "n": 14,
      "kws": [
       "만년필노트",
       "만년필다이어리",
       "만년필종이",
       "안번지는만년필종이",
-      "만년다이어리",
       "필사노트"
      ]
     },
@@ -3199,82 +3797,86 @@
       "만년필노트",
       "만년필다이어리",
       "만년필종이",
-      "안번지는만년필종이"
-     ]
-    },
-    {
-     "name": "몰스킨",
-     "n": 9,
-     "kws": [
-      "만년필노트",
-      "만년필다이어리",
-      "만년필종이",
       "안번지는만년필종이",
-      "업무일지",
+      "독서기록장",
       "필사노트"
      ]
     },
     {
      "name": "라이프",
-     "n": 9,
+     "n": 10,
      "kws": [
       "만년필노트",
-      "만년필다이어리",
       "만년필종이",
       "안번지는만년필종이",
-      "만년다이어리"
-     ]
-    },
-    {
-     "name": "클레르퐁텐",
-     "n": 9,
-     "kws": [
-      "만년필노트",
-      "만년필다이어리",
-      "만년필종이",
-      "안번지는만년필종이"
-     ]
-    },
-    {
-     "name": "아피카",
-     "n": 4,
-     "kws": [
-      "만년필다이어리",
-      "만년필종이",
-      "안번지는만년필종이"
-     ]
-    },
-    {
-     "name": "모닝글로리",
-     "n": 4,
-     "kws": [
-      "만년필종이",
-      "안번지는만년필종이",
-      "수기가계부"
-     ]
-    },
-    {
-     "name": "양지사",
-     "n": 2,
-     "kws": [
-      "만년필다이어리",
-      "업무일지"
-     ]
-    },
-    {
-     "name": "무인양품",
-     "n": 2,
-     "kws": [
-      "만년필종이",
+      "수기가계부",
       "필사노트"
      ]
     },
     {
-     "name": "프랭클린",
+     "name": "클레르퐁텐",
+     "n": 7,
+     "kws": [
+      "만년필노트",
+      "만년필종이",
+      "안번지는만년필종이"
+     ]
+    },
+    {
+     "name": "몰스킨",
+     "n": 7,
+     "kws": [
+      "만년필노트",
+      "만년필다이어리",
+      "만년필종이",
+      "안번지는만년필종이",
+      "감사일기",
+      "독서기록장"
+     ]
+    },
+    {
+     "name": "아피카",
+     "n": 6,
+     "kws": [
+      "만년필노트",
+      "만년필종이",
+      "안번지는만년필종이",
+      "만년다이어리",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "무인양품",
+     "n": 4,
+     "kws": [
+      "만년필종이",
+      "안번지는만년필종이",
+      "감사일기",
+      "독서기록장"
+     ]
+    },
+    {
+     "name": "모닝글로리",
+     "n": 3,
+     "kws": [
+      "만년필종이",
+      "안번지는만년필종이",
+      "필사노트"
+     ]
+    },
+    {
+     "name": "옥스포드",
      "n": 2,
      "kws": [
-      "안번지는만년필종이",
-      "업무일지"
+      "만년필노트",
+      "안번지는만년필종이"
+     ]
+    },
+    {
+     "name": "프랭클린",
+     "n": 1,
+     "kws": [
+      "안번지는만년필종이"
      ]
     }
    ]
@@ -3283,10 +3885,10 @@
  "trend": [
   {
    "date": "2026-06-14",
-   "rate": 17,
+   "rate": 22,
    "byEngine": {
-    "Gemini": 21,
-    "Perplexity": 14,
+    "Gemini": 35,
+    "Perplexity": 17,
     "Claude": 14
    }
   },
@@ -3304,10 +3906,10 @@
    "date": "2026-06-22",
    "rate": 21,
    "byEngine": {
-    "Gemini": 29,
-    "Perplexity": 21,
+    "Gemini": 35,
+    "Perplexity": 20,
     "Claude": 21,
-    "ChatGPT": 14
+    "ChatGPT": 10
    }
   },
   {
@@ -3322,10 +3924,10 @@
   },
   {
    "date": "2026-07-05",
-   "rate": 12,
+   "rate": 19,
    "byEngine": {
-    "Gemini": 21,
-    "Perplexity": 7,
+    "Gemini": 33,
+    "Perplexity": 17,
     "Claude": 17,
     "ChatGPT": 7
    }

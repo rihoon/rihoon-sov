@@ -1,0 +1,61 @@
+===== Rihoon SOV weekly run 2026-07-05 13:56:39.70 =====
+[1/5] sov.py measure 
+↻ 오늘 이미 성공 1건은 스킵 → 실패/누락만 측정 (전체 재측정은 --force)
+측정 엔진: ChatGPT, Perplexity, Gemini, Claude | 질문 14개 | 2026-07-05
+· 만년필노트                  Chat:skip Perp:✗    Gemi:✗    Clau:✗   
+· 만년필다이어리                Chat:✗    Perp:✓1   Gemi:✗    Clau:✗   
+· 만년필종이                  Chat:✗    Perp:✗    Gemi:✗    Clau:✗   
+· 안번지는만년필종이              Chat:✗    Perp:✗    Gemi:✗    Clau:✗   
+· 5년일기장                  Chat:✓1   Perp:✗    Gemi:✓1   Clau:✓2  
+· 만년다이어리                 Chat:✗    Perp:✗    Gemi:✗    Clau:✗   
+· 감사일기                   Chat:✗    Perp:✗    Gemi:✓2   Clau:ERR
+· 수기가계부                  Chat:✗    Perp:✗    Gemi:✗    Clau:ERR
+· 초보가계부                  Chat:✗    Perp:✗    Gemi:✗    Clau:ERR
+· 초등스터디플래너               Chat:✗    Perp:✗    Gemi:✓1   Clau:ERR
+· 자기주도학습플래너              Chat:✗    Perp:✗    Gemi:✗    Clau:ERR
+· 업무일지                   Chat:✗    Perp:✗    Gemi:✗    Clau:ERR
+· 독서기록장                  Chat:✗    Perp:✗    Gemi:✗    Clau:ERR
+· 필사노트                   Chat:✗    Perp:✗    Gemi:✗    Clau:ERR
+(스킵 1건 — 이미 성공한 측정은 재호출 안 함)
+
+=== SOV 요약 (2026-07-05) — 오늘 전체 측정 합산 ===
+ChatGPT     언급률  1/14 (  7%)  1위 1회
+Perplexity  언급률  1/14 (  7%)  1위 1회
+Gemini      언급률  3/14 ( 21%)  1위 2회
+Claude      언급률  1/14 (  7%)  1위 0회
+
+네이버Cue: 공개API 없음 → 수기 측정 필요(12질문 직접 입력)
+상세결과: sov_results.jsonl
+[2/5] build_web_data 
+web/data.json 생성: 주5개 · 최신2026-07-05 질문14 · 추천4(1위3) · 공백10 · 엔진['ChatGPT', 'Claude', 'Gemini', 'Perplexity']
+[3/5] build_sources 
+만년필노트                  리훈✗ 출처8개
+만년필다이어리                리훈✓ 출처8개
+만년필종이                  리훈✗ 출처8개
+안번지는만년필종이              리훈✗ 출처8개
+5년일기장                  리훈✓ 출처8개
+만년다이어리                 리훈✓ 출처8개
+감사일기                   리훈✓ 출처8개
+수기가계부                  리훈✓ 출처6개
+초보가계부                  리훈✗ 출처8개
+초등스터디플래너               리훈✓ 출처8개
+자기주도학습플래너              리훈✓ 출처8개
+업무일지                   리훈✗ 출처8개
+독서기록장                  리훈✗ 출처8개
+필사노트                   리훈✗ 출처8개
+→ docs/sources.json 저장 (질문 14개)
+[4/5] build_answers 
+docs/answers/ 생성: 날짜 5개 — 2026-06-14(출처0), 2026-06-15(출처0), 2026-06-22(출처33), 2026-06-28(출처48), 2026-07-05(출처40)
+[5/5] git commit/push 
+[master c107620] weekly SOV auto-measure 2026-07-05
+ 4 files changed, 3140 insertions(+), 455 deletions(-)
+ create mode 100644 docs/answers/2026-07-05.json
+To https://github.com/rihoon/rihoon-sov.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/rihoon/rihoon-sov.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[ERROR] git push failed  

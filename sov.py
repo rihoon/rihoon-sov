@@ -53,9 +53,14 @@ def post(url, headers, body, timeout=90, retries=4):
         try:
             return json.loads(urllib.request.urlopen(req, timeout=timeout).read().decode())
         except urllib.error.HTTPError as e:
-            if e.code in (429, 500, 503) and attempt < retries - 1:
+            if e.code in (429, 500, 502, 503, 529) and attempt < retries - 1:
                 time.sleep(2 ** attempt * 3); continue   # 3,6,12초 백오프
-            raise
+            # 에러 본문까지 남겨야 원인 진단 가능 (예: Anthropic은 크레딧 부족도 400으로 옴)
+            try:
+                detail = e.read().decode('utf-8', 'replace')[:300]
+            except Exception:
+                detail = ''
+            raise urllib.error.HTTPError(e.url, e.code, '%s | %s' % (e.reason, detail), e.headers, None) from None
 
 # --- 엔진별 호출 (웹검색 켜기). 키 없으면 None 반환 → 자동 스킵 ---
 # 각 함수는 {'text': 답변전문, 'sources': [{url,title}], 'queries': [검색어]} 반환.
@@ -156,8 +161,8 @@ def analyze(text):
     return {'mentioned': bool(brand_hit), 'brand_hit': brand_hit, 'rank': rank, 'competitors': comps}
 
 def done_today(today):
-    # 같은 날 이미 '성공'(에러 아님)한 (엔진,질문) 집합 → 재측정 시 API 호출 스킵(중복 과금 방지)
-    done = set()
+    # 같은 날 이미 '성공'(에러 아님)한 (엔진,질문)별 샘플 수 → 부족분만 호출(중복 과금 방지)
+    done = {}
     if os.path.exists(OUT):
         for l in open(OUT, encoding='utf-8'):
             l = l.strip()
@@ -165,13 +170,13 @@ def done_today(today):
             try: r = json.loads(l)
             except Exception: continue
             if r.get('date') == today and r.get('mentioned') is not None and r.get('engine') and r.get('id'):
-                done.add((r['engine'], r['id']))
+                done[(r['engine'], r['id'])] = done.get((r['engine'], r['id']), 0) + 1
     return done
 
 def tally_today(today):
     # 오늘 성공 기록 '전체'를 (engine,id) 단위로 합쳐 엔진별 언급/1위 집계.
-    # → 측정이 여러 번(아침 스케줄+수동 재실행 등)으로 나뉘어도 항상 합산되어 정확.
-    latest = {}
+    # 다샘플이면 과반(≥절반)일 때 언급으로 침 — build_web_data의 집계 기준과 동일.
+    cells = {}
     if os.path.exists(OUT):
         for l in open(OUT, encoding='utf-8'):
             l = l.strip()
@@ -185,15 +190,41 @@ def tally_today(today):
                 continue
             if r.get('error') or r.get('mentioned') is None:
                 continue
-            latest[(r['engine'], r['id'])] = r   # 같은 칸 재측정 시 마지막 값 채택
+            cells.setdefault((r['engine'], r['id']), []).append(r)
     tal = {}
-    for (eng, _id), r in latest.items():
+    for (eng, _id), rs in cells.items():
         s = tal.setdefault(eng, {'mention': 0, 'top1': 0})
-        if r.get('mentioned'):
+        hits = [r for r in rs if r.get('mentioned')]
+        if len(hits) * 2 >= len(rs):
             s['mention'] += 1
-            if r.get('rank') == 1:
+            if any(r.get('rank') == 1 for r in hits):
                 s['top1'] += 1
     return tal
+
+
+def report_job(status, message):
+    """어드민 잡 모니터(job_runs)에 결과 보고. 어드민 .env 없으면 조용히 스킵."""
+    try:
+        env = {}
+        p = r'Z:/rihoon1/자동화/리훈 종합 어드민/.env'
+        if not os.path.exists(p): return
+        for line in open(p, encoding='utf-8-sig'):
+            if '=' in line and not line.strip().startswith('#'):
+                k, v = line.split('=', 1); env[k.strip()] = v.strip()
+        url = env.get('NEXT_PUBLIC_SUPABASE_URL', '').rstrip('/'); key = env.get('SUPABASE_SERVICE_ROLE_KEY', '')
+        if not (url and key): return
+        now = datetime.datetime.now(datetime.timezone.utc).isoformat()
+        body = {'job_name': 'sov_weekly', 'status': status, 'message': message[:2000], 'finished_at': now}
+        req = urllib.request.Request(url + '/rest/v1/job_runs', data=json.dumps(body).encode(),
+                                     headers={'apikey': key, 'Authorization': 'Bearer ' + key,
+                                              'Content-Type': 'application/json', 'Prefer': 'return=minimal'})
+        urllib.request.urlopen(req, timeout=15).read()
+    except Exception as e:
+        print('[job보고 실패(무시)]', e)
+
+
+# 크레딧 소진 등 회복 불가 에러 신호 — 보이면 그 엔진 잔여 호출을 전부 중단(헛과금·헛대기 방지)
+FATAL_SIGNS = ('credit balance', 'billing', 'quota exceeded', 'insufficient_quota', 'suspended')
 
 
 def main():
@@ -208,49 +239,74 @@ def main():
     if only: active = [(n, f) for n, f in active if n.lower() in only]
     if not active:
         print('⚠ 활성 엔진 없음 ([ai] 키 확인 or 인자로 준 엔진명 확인)'); return
-    done = set() if force else done_today(today)       # 기본: 오늘 이미 성공한 건 건너뜀(실패/누락만 호출)
-    if done: print('↻ 오늘 이미 성공 %d건은 스킵 → 실패/누락만 측정 (전체 재측정은 --force)' % len(done))
-    print('측정 엔진: %s | 질문 %d개 | %s' % (', '.join(n for n, _ in active), len(core['questions']), today))
+    samples = max(1, int(core.get('samples', 1)))      # 질문당 반복 측정 수(sov_core.json "samples") → 평균 집계
+    done = {} if force else done_today(today)          # 기본: 오늘 이미 채운 샘플만큼 건너뜀(부족분만 호출)
+    if done: print('↻ 오늘 이미 성공한 샘플은 스킵 → 부족분만 측정 (전체 재측정은 --force)')
+    print('측정 엔진: %s | 질문 %d개 × 샘플 %d회 | %s' % (', '.join(n for n, _ in active), len(core['questions']), samples, today))
     fout = open(OUT, 'a', encoding='utf-8')
-    summary = {n: {'mention': 0, 'top1': 0} for n, _ in active}
-    skipped = 0
+    dead = {}                                          # 엔진명 → 사망 사유(연속 에러·크레딧 소진)
+    errstreak = {}
+    errors = 0
     for qi in core['questions']:
         line = '· %-22s' % (qi['kw'])
         called = False
         for name, fn in active:
-            if (name, qi['id']) in done:               # 이미 성공 → API 호출 안 함(과금 0)
-                line += ' %s:skip' % name[:4]; skipped += 1; continue
-            called = True
-            try:
-                res = fn(qi['q'])
-                if isinstance(res, dict):
-                    ans = res.get('text', ''); srcs = res.get('sources', []); queries = res.get('queries', [])
-                else:
-                    ans = res or ''; srcs = []; queries = []
-                a = analyze(ans)
-                rec = {'date': today, 'engine': name, 'id': qi['id'], 'kw': qi['kw'], 'q': qi['q'],
-                       'mentioned': a['mentioned'], 'rank': a['rank'], 'competitors': a['competitors'],
-                       'answer': (ans or '')[:12000], 'sources': srcs, 'searchQueries': queries}
-                fout.write(json.dumps(rec, ensure_ascii=False) + '\n'); fout.flush()
-                if a['mentioned']: summary[name]['mention'] += 1
-                if a['rank'] == 1: summary[name]['top1'] += 1
-                mark = ('✓%s' % (a['rank'] or '?')) if a['mentioned'] else '✗'
-                line += ' %s:%-4s' % (name[:4], mark)
-            except Exception as e:
-                line += ' %s:ERR' % name[:4]
-                fout.write(json.dumps({'date': today, 'engine': name, 'id': qi['id'], 'error': str(e)[:200]}, ensure_ascii=False) + '\n'); fout.flush()
+            if name in dead:
+                line += ' %s:DEAD' % name[:4]; continue
+            need = samples - done.get((name, qi['id']), 0)
+            if need <= 0:                              # 샘플 충족 → API 호출 안 함(과금 0)
+                line += ' %s:skip' % name[:4]; continue
+            marks = []
+            for _ in range(need):
+                called = True
+                try:
+                    res = fn(qi['q'])
+                    if isinstance(res, dict):
+                        ans = res.get('text', ''); srcs = res.get('sources', []); queries = res.get('queries', [])
+                    else:
+                        ans = res or ''; srcs = []; queries = []
+                    a = analyze(ans)
+                    rec = {'date': today, 'engine': name, 'id': qi['id'], 'kw': qi['kw'], 'q': qi['q'],
+                           'mentioned': a['mentioned'], 'rank': a['rank'], 'competitors': a['competitors'],
+                           'answer': (ans or '')[:12000], 'sources': srcs, 'searchQueries': queries}
+                    fout.write(json.dumps(rec, ensure_ascii=False) + '\n'); fout.flush()
+                    marks.append(('✓%s' % (a['rank'] or '?')) if a['mentioned'] else '✗')
+                    errstreak[name] = 0
+                except Exception as e:
+                    errors += 1
+                    msg = str(e)
+                    marks.append('ERR')
+                    fout.write(json.dumps({'date': today, 'engine': name, 'id': qi['id'], 'error': msg[:300]}, ensure_ascii=False) + '\n'); fout.flush()
+                    errstreak[name] = errstreak.get(name, 0) + 1
+                    low = msg.lower()
+                    if any(s in low for s in FATAL_SIGNS):
+                        dead[name] = msg[:120]
+                    elif errstreak[name] >= 3:         # 연속 3회 에러 → 이번 실행에선 포기(다음 실행이 부족분 재측정)
+                        dead[name] = '연속 에러 3회: ' + msg[:100]
+                    if name in dead:
+                        print('\n⛔ %s 중단: %s' % (name, dead[name]))
+                        break
+                time.sleep(0.8)
+            line += ' %s:%-4s' % (name[:4], '/'.join(marks)[:9] if marks else '-')
         print(line)
-        if called: time.sleep(1.5)                     # 호출 없으면(전부 스킵) 대기도 생략
-    if skipped: print('(스킵 %d건 — 이미 성공한 측정은 재호출 안 함)' % skipped)
+        if called: time.sleep(1.0)
     n = len(core['questions'])
     tal = tally_today(today)   # 파일 전체 재집계 → 여러 번 나눠 측정해도 합산
-    print('\n=== SOV 요약 (%s) — 오늘 전체 측정 합산 ===' % today)
+    print('\n=== SOV 요약 (%s) — 오늘 전체 측정 합산 (샘플 과반 기준) ===' % today)
     for name, _ in active:
         s = tal.get(name, {'mention': 0, 'top1': 0})
         pct = round(100 * s['mention'] / n) if n else 0
         print('%-11s 언급률 %2d/%d (%3d%%)  1위 %d회' % (name, s['mention'], n, pct, s['top1']))
+    if dead:
+        print('\n⛔ 중단된 엔진:')
+        for k, v in dead.items(): print('  %s: %s' % (k, v))
     print('\n네이버Cue: 공개API 없음 → 수기 측정 필요(12질문 직접 입력)')
     print('상세결과: sov_results.jsonl')
+    # 어드민 잡 모니터 보고 — 에러/중단 있으면 fail로 남겨 신호등에 뜨게
+    if dead or errors:
+        report_job('fail', '에러 %d건, 중단 엔진: %s' % (errors, '; '.join('%s(%s)' % kv for kv in dead.items()) or '없음'))
+    else:
+        report_job('success', '측정 완료 — 질문 %d × 샘플 %d' % (n, samples))
 
 if __name__ == '__main__':
     main()

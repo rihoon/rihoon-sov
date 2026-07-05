@@ -14,12 +14,28 @@ for l in open(os.path.join(HERE, 'sov_results.jsonl'), encoding='utf-8'):
     try: rows.append(json.loads(l))
     except Exception: pass
 
-# (date,engine,id) 최신값, 에러 제외
-seen = {}
+# (date,engine,id)별 샘플 '전부' 수집, 에러 제외 — 다샘플이면 과반=언급, 언급률은 샘플 평균
+samples_by = {}
 for r in rows:
     if r.get('mentioned') is None: continue
-    seen[(r['date'], r['engine'], r['id'])] = r
-meas = list(seen.values())
+    samples_by.setdefault((r['date'], r['engine'], r['id']), []).append(r)
+
+def cell_agg(rs):
+    """샘플 목록 → 대표값. m=과반 언급, mrate=샘플 언급률(0~1), rank=언급 샘플 중 최선."""
+    hits = [r for r in rs if r.get('mentioned')]
+    ranks = [r['rank'] for r in hits if r.get('rank')]
+    return {
+        'm': len(hits) * 2 >= len(rs) and len(hits) > 0,
+        'mrate': len(hits) / len(rs),
+        'rank': min(ranks) if ranks else None,
+        'n': len(rs),
+        'hits': len(hits),
+        'last': rs[-1],   # 출처·경쟁사 추출용 대표 레코드(마지막 샘플)
+    }
+
+seen = {k: cell_agg(rs) for k, rs in samples_by.items()}
+meas = [{'date': k[0], 'engine': k[1], 'id': k[2], 'mentioned': v['m'], 'mrate': v['mrate']}
+        for k, v in seen.items()]
 dates = sorted({r['date'] for r in meas})
 if not dates:
     json.dump({'updated': None, 'questions': []}, open(os.path.join(WEB, 'data.json'), 'w', encoding='utf-8')); raise SystemExit('데이터 없음')
@@ -49,15 +65,16 @@ def build_week(date):
         eng = {}
         comps, won, ment, nmeas = [], False, False, 0
         for e in ENGINES:
-            r = seen.get((date, e, i))
-            if not r:
+            c = seen.get((date, e, i))
+            if not c:
                 eng[e] = None; continue
             nmeas += 1
-            m = bool(r['mentioned']); rk = r.get('rank')
-            eng[e] = {'m': m, 'rank': rk}
+            m = c['m']; rk = c['rank']
+            eng[e] = {'m': m, 'rank': rk, 'n': c['n'], 'hits': c['hits']}
             if m: ment = True
-            if rk == 1: won = True
-            doms = set()                                  # 출처: 답변당 도메인 1회 카운트
+            if rk == 1 and m: won = True
+            r = c['last']
+            doms = set()                                  # 출처: 셀당 도메인 1회 카운트(대표 샘플)
             for s in (r.get('sources') or []):
                 d = domain_of(s)
                 if d and d not in doms:
@@ -96,15 +113,15 @@ def build_week(date):
 weeks = {d: build_week(d) for d in dates}          # 모든 주의 질문별 상세
 questions = weeks[latest]['questions']             # 하위호환: 최상위는 최신 주
 
-# 추세: 날짜별 전체 언급률 + 엔진별
+# 추세: 날짜별 전체 언급률 + 엔진별 — 다샘플은 셀별 샘플 언급률(mrate)의 평균 = "2~3회 평균값"
 trend = []
 for d in dates:
     day = [r for r in meas if r['date'] == d]
-    rate = round(100 * sum(1 for r in day if r['mentioned']) / len(day)) if day else 0
+    rate = round(100 * sum(r['mrate'] for r in day) / len(day)) if day else 0
     by = {}
     for e in ENGINES:
         de = [r for r in day if r['engine'] == e]
-        if de: by[e] = round(100 * sum(1 for r in de if r['mentioned']) / len(de))
+        if de: by[e] = round(100 * sum(r['mrate'] for r in de) / len(de))
     trend.append({'date': d, 'rate': rate, 'byEngine': by})
 
 lw = weeks[latest]
