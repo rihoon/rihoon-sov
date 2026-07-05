@@ -1,5 +1,11 @@
 @echo off
 rem ASCII-only batch (Korean in .bat breaks cmd parsing on KR Windows -> weekly failures).
+rem [hidden-relaunch 2026-07-05] task opens a visible console and closing it killed runs
+rem (^C in sov_run.log). Hand off to a windowless child immediately, then this console exits.
+if "%~1"=="__hidden__" goto :main
+"C:\Users\rihoo\AppData\Local\Programs\Python\Launcher\pyw.exe" "C:\Users\rihoo\rihoon-tasks\run_hidden.pyw" - - C:\Windows\System32\cmd.exe /c ""%~f0" __hidden__"
+exit /b 0
+:main
 chcp 65001 >nul
 cd /d C:\Users\rihoo\projects\rihoon-keywords
 
