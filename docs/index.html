@@ -48,7 +48,10 @@
   .engs{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
   .eng{font-size:11px;padding:3px 8px;border-radius:7px;background:var(--soft);border:1px solid var(--line);
     display:flex;align-items:center;gap:4px;color:var(--sub)}
+  .eng{cursor:pointer;user-select:none} .eng:hover{border-color:var(--gray)} .eng.sel{border-color:var(--ink);background:#fff;box-shadow:0 0 0 1px var(--ink) inset}
   .eng .er{font-weight:700}
+  .smp-h{font-size:12px;font-weight:700;color:var(--sub);margin:12px 0 4px;padding-top:8px;border-top:1px dashed var(--line)}
+  .smp-h:first-child{border-top:0;margin-top:4px}
   .eng.m1 .er{color:var(--green)} .eng.m .er{color:var(--amber)} .eng.x{color:var(--gray)}
   .comp{font-size:12px;color:var(--sub);margin-top:9px}
   .comp b{color:var(--ink);font-weight:500}
@@ -126,13 +129,14 @@
 <script>
 const EABBR = {'Gemini':'제미나이','Perplexity':'Perplexity','Claude':'Claude','ChatGPT':'ChatGPT','네이버 AI브리핑':'네이버'};
 function engCell(name, v){
-  if(!v) return `<span class="eng x"><span class="dot" style="background:var(--gray)"></span>${EABBR[name]} —</span>`;
+  if(!v) return `<span class="eng x" data-eng="${name}" onclick="pickEng(this)"><span class="dot" style="background:var(--gray)"></span>${EABBR[name]} —</span>`;
   let cls='x', txt='✗';
   if(v.m && v.rank===1){cls='m1';txt='1위';}
   else if(v.m && v.rank){cls='m';txt=v.rank+'위';}
   else if(v.m){cls='m';txt='언급';}
   const dc = cls==='m1'?'var(--green)':cls==='m'?'var(--amber)':'var(--gray)';
-  return `<span class="eng ${cls}"><span class="dot" style="background:${dc}"></span>${EABBR[name]} <span class="er">${txt}</span></span>`;
+  const hit = v.n>1 ? ` <span style="font-weight:400;color:var(--gray)">${v.hits}/${v.n}</span>` : '';
+  return `<span class="eng ${cls}" data-eng="${name}" onclick="pickEng(this)" title="${EABBR[name]} 답변 보기"><span class="dot" style="background:${dc}"></span>${EABBR[name]} <span class="er">${txt}</span>${hit}</span>`;
 }
 const VB={win1:'badge win1',win:'badge win',hole:'badge hole',none:'badge none'};
 const VT={win1:'🟢 1위',win:'🟡 언급',hole:'🔴 안 나옴',none:'— 미측정'};
@@ -143,22 +147,36 @@ function ansBadge(a){
   if(!a.mentioned) return '🔴 안 나옴';
   return a.rank===1 ? '🟢 1위 추천' : (a.rank ? '🟡 '+a.rank+'위' : '🟡 언급됨');
 }
-function renderAns(qd){
-  let html='';
-  DATA.engines.forEach(e=>{
-    const a=qd[e]; if(!a) return;
-    const ans=(a.answer||'').trim()||'(답변 없음)';
+function renderOne(e,a){
+  const samples = a.samples || [a];
+  const inner = samples.map((sm,i)=>{
+    const ans=(sm.answer||'').trim()||'(답변 없음)';
     let srcs='';
-    if(a.sources&&a.sources.length){
-      srcs='<div class="anssrc-t">📄 이 답변이 읽은 페이지 '+a.sources.length+'개</div><div class="srclist">'
-        +a.sources.map(s=>{const label=(s.title||s.url.replace(/^https?:\/\/(www\.)?/,'')).slice(0,60);
-          return `<a class="src" href="${s.url}" target="_blank" rel="noopener"><span class="stitle">${escapeHtml(label)}</span></a>`;}).join('')
+    if(sm.sources&&sm.sources.length){
+      srcs='<div class="anssrc-t">📄 이 답변이 읽은 페이지 '+sm.sources.length+'개</div><div class="srclist">'
+        +sm.sources.map(x=>{const label=(x.title||x.url.replace(/^https?:\/\/(www\.)?/,'')).slice(0,60);
+          return `<a class="src" href="${x.url}" target="_blank" rel="noopener"><span class="stitle">${escapeHtml(label)}</span></a>`;}).join('')
         +'</div>';
     }
-    const qrs=a.searchQueries&&a.searchQueries.length?`<div class="sq">🔍 ${EABBR[e]}가 검색한 말: ${escapeHtml(a.searchQueries.join(' · '))}</div>`:'';
-    html+=`<div class="anseng"><div class="anseng-h">${EABBR[e]} <span class="anseng-b">${ansBadge(a)}</span></div>${qrs}<div class="anstext">${escapeHtml(ans)}</div>${srcs}</div>`;
-  });
-  return html||'<div class="sq">이 주에는 저장된 답변이 없어요.</div>';
+    const qrs=sm.searchQueries&&sm.searchQueries.length?`<div class="sq">🔍 ${EABBR[e]}가 검색한 말: ${escapeHtml(sm.searchQueries.join(' · '))}</div>`:'';
+    const h = samples.length>1 ? `<div class="smp-h">샘플 ${i+1}/${samples.length} · ${ansBadge(sm)}</div>` : '';
+    return `${h}${qrs}<div class="anstext">${escapeHtml(ans)}</div>${srcs}`;
+  }).join('');
+  const agg = samples.length>1 ? ` <span style="font-weight:400;color:var(--gray)">(${samples.length}번 중 ${a.hits??samples.filter(x=>x.mentioned).length}번 언급 · 카드는 과반·최선순위 기준)</span>` : '';
+  return `<div class="anseng"><div class="anseng-h">${EABBR[e]} <span class="anseng-b">${ansBadge(a)}</span>${agg}</div>${inner}</div>`;
+}
+function renderAns(qd, eng){
+  const engs = DATA.engines.filter(e=>qd[e] && (!eng || e===eng));
+  if(!engs.length) return eng ? `<div class="sq">${EABBR[eng]}는 이 주에 저장된 답변이 없어요.</div>` : '<div class="sq">이 주에는 저장된 답변이 없어요.</div>';
+  return engs.map(e=>renderOne(e,qd[e])).join('');
+}
+function pickEng(el){
+  const card = el.closest('.qcard'), box = card.querySelector('.ansbox'), eng = el.dataset.eng;
+  const already = el.classList.contains('sel');
+  card.querySelectorAll('.eng').forEach(x=>x.classList.remove('sel'));
+  if(already){ box.dataset.eng=''; box.dataset.loaded=''; box.open=false; return; }
+  el.classList.add('sel'); box.dataset.eng=eng; box.dataset.loaded='';
+  if(box.open) loadAns(box); else box.open=true;   // ontoggle → loadAns
 }
 async function loadAns(el){
   if(!el.open || el.dataset.loaded) return;
@@ -166,7 +184,7 @@ async function loadAns(el){
   const date=el.dataset.date, id=el.dataset.id, body=el.querySelector('.ansbody');
   try{
     if(!ANSCACHE[date]) ANSCACHE[date]=await fetch('./answers/'+date+'.json?'+Date.now()).then(r=>r.json());
-    body.innerHTML=renderAns(ANSCACHE[date][id]||{});
+    body.innerHTML=renderAns(ANSCACHE[date][id]||{}, el.dataset.eng||'');
   }catch(e){ body.innerHTML='<div class="sq">답변 데이터를 아직 못 불러왔어요(이 주는 저장 전일 수 있어요).</div>'; el.dataset.loaded=''; }
 }
 let DATA=null, SRCBYKW={}, SEL=null;
@@ -309,7 +327,7 @@ function paintWeek(date){
       const sq = src.searchQueries&&src.searchQueries.length ? `<div class="sq">🔍 AI가 구글에 친 검색어<br>${src.searchQueries.join(' · ')}</div>` : '';
       srcHtml = `<details class="srcbox"><summary>📄 AI가 읽은 출처 ${src.sources.length}개 — 눌러서 학습 ⌄</summary>${sq}<div class="srclist">${links}</div></details>`;
     }
-    const ansBox = `<details class="ansbox" data-date="${date}" data-id="${q.id}" ontoggle="loadAns(this)"><summary>🗨️ AI별 답변 전문 · 인용 페이지 보기 ⌄</summary><div class="ansbody"><div class="sq">불러오는 중…</div></div></details>`;
+    const ansBox = `<details class="ansbox" data-date="${date}" data-id="${q.id}" ontoggle="loadAns(this)"><summary onclick="const b=this.parentElement;if(!b.open){b.dataset.eng='';b.dataset.loaded='';b.closest('.qcard').querySelectorAll('.eng').forEach(x=>x.classList.remove('sel'))}">🗨️ AI별 답변 전문 · 인용 페이지 보기 ⌄ <span style="font-weight:400;color:var(--gray)">(위 엔진 칩을 누르면 그 AI만)</span></summary><div class="ansbody"><div class="sq">불러오는 중…</div></div></details>`;
     return `<div class="qcard ${q.verdict}">
       <div class="qhead"><div><div class="qtext">${q.q}</div><div class="qline">${q.line}</div></div>
         <span class="${VB[q.verdict]}">${VT[q.verdict]}</span></div>
