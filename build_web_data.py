@@ -52,6 +52,9 @@ def domain_of(s):
     try:
         net = urlparse(u).netloc.lower()
         if net.startswith('www.'): net = net[4:]
+        # 티스토리는 블로그별 서브도메인 → 남의 블로그는 플랫폼으로 묶고, 리훈 것만 따로(⭐) 표시
+        if net.endswith('.tistory.com') and net != 'rihoon.tistory.com':
+            net = 'tistory.com'
         return net or (t or u)[:50]
     except Exception:
         return (t or u)[:50]
