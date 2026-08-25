@@ -30,7 +30,7 @@ def cell_agg(rs):
         'rank': min(ranks) if ranks else None,
         'n': len(rs),
         'hits': len(hits),
-        'last': rs[-1],   # 출처·경쟁사 추출용 대표 레코드(마지막 샘플)
+        'rs': rs,   # 출처·경쟁사 추출용 전체 샘플(셀당 도메인 1회는 유지)
     }
 
 seen = {k: cell_agg(rs) for k, rs in samples_by.items()}
@@ -52,6 +52,7 @@ def domain_of(s):
     try:
         net = urlparse(u).netloc.lower()
         if net.startswith('www.'): net = net[4:]
+        if net.startswith('m.'): net = net[2:]
         # 티스토리는 블로그별 서브도메인 → 남의 블로그는 플랫폼으로 묶고, 리훈 것만 따로(⭐) 표시
         if net.endswith('.tistory.com') and net != 'rihoon.tistory.com':
             net = 'tistory.com'
@@ -76,15 +77,15 @@ def build_week(date):
             eng[e] = {'m': m, 'rank': rk, 'n': c['n'], 'hits': c['hits']}
             if m: ment = True
             if rk == 1 and m: won = True
-            r = c['last']
-            doms = set()                                  # 출처: 셀당 도메인 1회 카운트(대표 샘플)
-            for s in (r.get('sources') or []):
-                d = domain_of(s)
-                if d and d not in doms:
-                    doms.add(d); src_cnt[d] = src_cnt.get(d, 0) + 1
-                    src_samp.setdefault(d, s.get('url') or '')
+            doms = set()                                  # 출처: 셀당 도메인 1회 카운트(전 샘플)
+            for r in c['rs']:
+                for s in (r.get('sources') or []):
+                    d = domain_of(s)
+                    if d and d not in doms:
+                        doms.add(d); src_cnt[d] = src_cnt.get(d, 0) + 1
+                        src_samp.setdefault(d, s.get('url') or '')
             if not m:                                     # 경쟁사: 리훈 없을 때만, 답변원문에서 현재 용어로 재추출
-                atext = (r.get('answer') or '').lower()
+                atext = ' '.join((r.get('answer') or '') for r in c['rs']).lower()
                 cseen = set()
                 for c in COMP_TERMS:
                     if c.lower() not in atext: continue
