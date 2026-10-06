@@ -2,7 +2,7 @@ name: live-schedule-sync
 
 on:
   schedule:
-    - cron: '0 0 29 * *'   # 매월 29일 00:00 UTC = 한국 09:00 (다음 달 공개)
+    - cron: '0 0 * * *'     # 매일 09:00 KST — 노션 일정 바뀌면 다음날 자동 반영 (공개 구간 규칙은 스크립트가 담당)
   workflow_dispatch: {}      # 수동 실행 버튼 (중간에 일정 바뀌면 여기서 Run)
 
 permissions:
