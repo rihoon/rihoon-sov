@@ -1,43 +1,50 @@
 {
  "handle": "rihoon",
  "url": "https://www.instagram.com/rihoon/",
- "updated": "2026-10-06",
+ "updated": "2026-10-07",
  "items": [
   {
-   "img": "https://rihoon.co.kr/web/upload/NNEditor/20261006/ddbed67cb3532f3286c89d46e407536a.jpg",
+   "img": "https://rihoon.co.kr/web/upload/NNEditor/20261007/79eccc119ee5b3666061126fcfc94a80.jpg",
    "link": "https://www.instagram.com/reel/Dd34yaPTQi5/",
    "type": "REELS",
-   "date": "2026-09-29"
+   "date": "2026-09-29",
+   "ratio": "3:4"
   },
   {
-   "img": "https://rihoon.co.kr/web/upload/NNEditor/20261006/b86fecb6e1076e83b4b664f5bc0ee28c.jpg",
+   "img": "https://rihoon.co.kr/web/upload/NNEditor/20261007/c0b75d7929d2e7819ec3c6b90bf7bf76.jpg",
    "link": "https://www.instagram.com/p/Dd02tTXj_oD/",
    "type": "FEED",
-   "date": "2026-09-28"
+   "date": "2026-09-28",
+   "ratio": "3:4"
   },
   {
-   "img": "https://rihoon.co.kr/web/upload/NNEditor/20261006/dc7c518bc3408209d3137fb7f98a19b5.jpg",
+   "img": "https://rihoon.co.kr/web/upload/NNEditor/20261007/afdcce33a85f9b561175e3e582dd8c9d.jpg",
    "link": "https://www.instagram.com/p/Ddc3zqdTUWH/",
    "type": "FEED",
-   "date": "2026-09-18"
+   "date": "2026-09-18",
+   "ratio": "3:4"
   },
   {
-   "img": "https://rihoon.co.kr/web/upload/NNEditor/20261006/ef08c3faa7972ac372a4dcc0323d1571.jpg",
+   "img": "https://rihoon.co.kr/web/upload/NNEditor/20261007/1b7fb97f6f832cd33a4e73e68593302a.jpg",
    "link": "https://www.instagram.com/reel/DdTrbhoPEPQ/",
    "type": "REELS",
-   "date": "2026-09-15"
+   "date": "2026-09-15",
+   "ratio": "3:4"
   },
   {
-   "img": "https://rihoon.co.kr/web/upload/NNEditor/20261006/3f8fb32489d19c4917f45ed494d7f764.jpg",
+   "img": "https://rihoon.co.kr/web/upload/NNEditor/20261007/7fe282dc0297424b4993e4a37cc04cab.jpg",
    "link": "https://www.instagram.com/p/DdQyyrxDy9C/",
    "type": "FEED",
-   "date": "2026-09-14"
+   "date": "2026-09-14",
+   "ratio": "3:4"
   },
   {
-   "img": "https://rihoon.co.kr/web/upload/NNEditor/20261006/c4e7502500f9db843b7045fa3571d7af.jpg",
+   "img": "https://rihoon.co.kr/web/upload/NNEditor/20261007/1bd1c4854485e6a7e4ca2bc7739a406b.jpg",
    "link": "https://www.instagram.com/p/Dc_S5fYjhtd/",
    "type": "FEED",
-   "date": "2026-09-07"
+   "date": "2026-09-07",
+   "ratio": "3:4"
   }
- ]
+ ],
+ "ratio": "3:4"
 }
