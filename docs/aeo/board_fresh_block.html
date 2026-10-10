@@ -1,0 +1,15 @@
+<!-- RIHOON-BOARD-FRESH (1010) 고객센터 메인: 공지사항·쇼핑스토리에서 1년 넘은 글은 목록에서 숨김(글 자체는 그대로). 남는 글이 없으면 그 구역을 숨기고, 새 글이 올라오면 자동으로 다시 보임 -->
+<script>
+(function(run){ document.readyState==='loading'?document.addEventListener('DOMContentLoaded',run):run(); })(function(){
+  var limit=Date.now()-365*24*3600*1000;
+  ['.xans-board-listpackage-1','.xans-board-listpackage-7'].forEach(function(sel){
+    var box=document.querySelector('#contents '+sel); if(!box) return;
+    var rows=box.querySelectorAll('tbody tr'), left=0;
+    [].forEach.call(rows,function(tr){
+      var m=(tr.textContent||'').match(/(\d{4})-(\d{2})-(\d{2})/);
+      if(m && new Date(+m[1],+m[2]-1,+m[3]).getTime()<limit) tr.style.display='none'; else left++;
+    });
+    if(!left){ box.style.setProperty('display','none','important'); var wrap=box.closest('.boardMain'); if(wrap && !wrap.querySelector('.board:not([style*="display: none"])') && !wrap.querySelector('.rh-news')) wrap.style.setProperty('display','none','important'); }
+  });
+});
+</script>
