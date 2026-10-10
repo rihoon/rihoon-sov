@@ -1,0 +1,35 @@
+<!-- RIHOON-BOARD-TIDY (1010) 고객센터 메인 정돈: 한 폭(900px) 가운데 정렬, 좌우 어긋남 제거, 목록 줄 모양 통일 -->
+<style>
+html body #contents > .path{display:none !important;}
+html body #contents > .titleArea, html body #contents > .boardMain, html body #contents > .rh-faq{max-width:900px !important; margin-left:auto !important; margin-right:auto !important; padding-left:16px !important; padding-right:16px !important; box-sizing:border-box !important; float:none !important;}
+html body #contents > .titleArea{margin-top:48px !important; margin-bottom:40px !important; border:0 !important; text-align:left !important;}
+html body #contents > .titleArea h2{font-size:28px !important; font-weight:700 !important; color:#1a1a1a !important; padding:0 !important; font-family:"SUIT Variable","SUIT",sans-serif !important;}
+html body #contents > .boardMain{display:block !important; margin-bottom:0 !important; overflow:visible !important;}
+html body #contents .boardMain .leftArea, html body #contents .boardMain .rightArea{float:none !important; width:auto !important; display:block !important;}
+html body #contents .boardMain .board{position:relative !important; margin:0 0 56px !important; font-family:"SUIT Variable","SUIT",sans-serif !important;}
+html body #contents .boardMain .board h3, html body #contents .rh-news{height:auto !important; margin:0 !important; padding:0 0 14px !important; border-bottom:2px solid #1a1a1a !important; font-size:18px !important; font-weight:700 !important; color:#1a1a1a !important; line-height:1.3 !important;}
+html body #contents .rh-news{display:flex !important; justify-content:space-between !important; align-items:baseline !important;}
+html body #contents .rh-news b{font-size:18px !important; font-weight:700 !important;}
+html body #contents .rh-news a{font-size:12px !important; color:#8a8783 !important; text-decoration:none !important;}
+html body #contents .rh-news + p{margin:14px 0 56px !important; font-size:14px !important; color:#555 !important;}
+html body #contents .boardMain .board .btnLink{top:4px !important; right:0 !important;}
+html body #contents .boardMain .board .ec-base-table, html body #contents .boardMain .board .ec-base-table table{border:0 !important; margin:0 !important; width:100% !important;}
+html body #contents .boardMain .board .ec-base-table td{padding:15px 0 !important; border:0 !important; border-bottom:1px solid #eee !important; font-size:13px !important; color:#8a8783 !important; background:none !important;}
+html body #contents .boardMain .board .ec-base-table td.title{text-align:left !important;}
+html body #contents .boardMain .board .ec-base-table td.title a{font-size:14px !important; color:#1a1a1a !important;}
+html body #contents .boardMain .board .ec-base-table td.right{width:110px !important; text-align:right !important; white-space:nowrap !important;}
+html body #contents .boardMain .board .ec-base-table td.title img{display:none !important;}
+html body #contents .boardMain .board [class*="xans-board-list-"] ul{margin:0 !important; padding:0 !important; overflow:visible !important; list-style:none !important;}
+/* Q&A: 글 목록을 표와 같은 줄 모양으로 */
+html body #contents .xans-board-listpackage-6 ul li{float:none !important; width:auto !important; display:flex !important; justify-content:space-between !important; align-items:baseline !important; gap:16px !important; padding:15px 0 !important; border-bottom:1px solid #eee !important;}
+html body #contents .xans-board-listpackage-6 ul li .imgLink{margin:0 !important; font-size:14px !important; color:#1a1a1a !important; display:block !important;}
+html body #contents .xans-board-listpackage-6 ul li span{margin:0 !important; font-size:13px !important; color:#8a8783 !important; white-space:nowrap !important;}
+/* B2B: 사진 5칸 */
+html body #contents .xans-board-listpackage-8 ul{display:grid !important; grid-template-columns:repeat(5,minmax(0,1fr)) !important; gap:16px !important; padding-top:18px !important;}
+html body #contents .xans-board-listpackage-8 ul li{float:none !important; width:auto !important; padding:0 !important;}
+html body #contents .xans-board-listpackage-8 ul li .imgLink{margin:0 0 4px !important; font-size:13px !important; line-height:1.5 !important; color:#1a1a1a !important; display:block !important;}
+html body #contents .xans-board-listpackage-8 ul li .imgLink img{display:block !important; width:100% !important; aspect-ratio:4/3 !important; max-height:none !important; object-fit:cover !important; border:0 !important; margin:0 0 8px !important; background:#f4f2ee !important;}
+html body #contents .xans-board-listpackage-8 ul li span{margin:0 !important; font-size:12px !important; color:#8a8783 !important;}
+html body #contents > .rh-faq{margin-top:0 !important; margin-bottom:80px !important;}
+html body #contents > .rh-faq h3{font-size:18px !important;}
+</style>
