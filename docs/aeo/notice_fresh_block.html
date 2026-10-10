@@ -1,0 +1,21 @@
+<!-- RIHOON-NOTICE-FRESH (1010) 공지사항 게시판(1번) 목록에서 1년 넘은 글 숨김(글 자체는 그대로). 남는 글이 없으면 안내 문구 표시, 새 글이 올라오면 자동으로 보임 -->
+<script>
+(function(run){ document.readyState==='loading'?document.addEventListener('DOMContentLoaded',run):run(); })(function(){
+  var no=(location.search.match(/board_no=(\d+)/)||decodeURIComponent(location.pathname).match(/\/board\/[^\/]+\/(\d+)\/?/)||[])[1];
+  if(no!=='1') return;
+  var box=document.querySelector('#contents'); if(!box) return;
+  var limit=Date.now()-365*24*3600*1000, rows=box.querySelectorAll('li.xans-record-, tr.xans-record-'), seen=0, left=0, last=null;
+  [].forEach.call(rows,function(r){
+    if(!r.querySelector('a[href*="/article/"]')) return;
+    seen++; last=r;
+    var m=(r.textContent||'').match(/(\d{4})-(\d{2})-(\d{2})/);
+    if(m && new Date(+m[1],+m[2]-1,+m[3]).getTime()<limit) r.style.setProperty('display','none','important'); else left++;
+  });
+  if(seen && !left){
+    [].forEach.call(box.querySelectorAll('[class*="paging"], [class*="Paginate"]'),function(p){p.style.setProperty('display','none','important');});
+    var msg=document.createElement('p'); msg.className='rh-notice-empty'; msg.textContent='새로운 공지가 올라오면 이곳에서 알려드릴게요.';
+    msg.style.cssText='margin:0;padding:56px 16px;text-align:center;font-size:14px;color:#8a8783;';
+    var list=last.closest('ul,table'); list.parentNode.insertBefore(msg,list.nextSibling);
+  }
+});
+</script>
