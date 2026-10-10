@@ -1,0 +1,19 @@
+<!-- RIHOON-MO-BOARD-TIDY (1010) 모바일 고객센터 메인 정돈: 좌우 16px 한 줄 정렬, 상자·아이콘 제거, 자주 묻는 질문과 같은 줄 모양 -->
+<style>
+html body #contents #titleArea{padding:28px 0 20px !important; border:0 !important;}
+html body #contents .xans-board-mainpackage{margin:0 16px !important; padding:0 !important; border:0 !important; background:none !important; font-family:"SUIT Variable","SUIT",sans-serif !important;}
+html body #contents .xans-board-mainpackage .xans-layout-boardinfo{border:0 !important; background:none !important;}
+html body #contents .xans-board-mainpackage ul{margin:0 !important; padding:0 !important; border:0 !important; border-top:2px solid #1a1a1a !important; list-style:none !important; background:none !important;}
+html body #contents .xans-board-mainpackage li{margin:0 !important; padding:0 !important; border:0 !important; border-bottom:1px solid #eee !important; background:none !important;}
+html body #contents .xans-board-mainpackage li a{display:block !important; position:relative !important; padding:18px 28px 18px 0 !important; background:none !important; font-size:15px !important; font-weight:700 !important; color:#1a1a1a !important; text-decoration:none !important; line-height:1.4 !important;}
+html body #contents .xans-board-mainpackage li a::before{content:none !important; display:none !important;}
+html body #contents .xans-board-mainpackage li a::after{content:"" !important; position:absolute !important; right:6px !important; top:50% !important; width:7px !important; height:7px !important; margin-top:-5px !important; border-right:1.5px solid #8a8783 !important; border-top:1.5px solid #8a8783 !important; transform:rotate(45deg) !important; background:none !important;}
+html body #contents > .rh-faq{margin:44px 0 56px !important;}
+</style>
+<script>
+(function(run){ document.readyState==='loading'?document.addEventListener('DOMContentLoaded',run):run(); })(function(){
+  var h=document.querySelector('#contents #titleArea h2'); if(h&&/^\s*게시판\s*$/.test(h.textContent)) h.textContent='고객센터';
+  var ul=document.querySelector('#contents .xans-board-mainpackage ul');
+  if(ul&&!ul.querySelector('a[href*="b2b"]')){ var li=document.createElement('li'); li.innerHTML='<a href="/board/gallery/b2b.html">B2B·대량구매</a>'; ul.appendChild(li); }
+});
+</script>
