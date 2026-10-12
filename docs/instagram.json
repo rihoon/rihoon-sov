@@ -1,8 +1,15 @@
 {
  "handle": "rihoon",
  "url": "https://www.instagram.com/rihoon/",
- "updated": "2026-10-07",
+ "updated": "2026-10-12",
  "items": [
+  {
+   "img": "https://rihoon.co.kr/web/upload/NNEditor/20261012/c9af82c19cb1ae018d4a8d8560aa2d74.jpg",
+   "link": "https://www.instagram.com/p/DeV0mJJj5K6/",
+   "type": "FEED",
+   "date": "2026-10-11",
+   "ratio": "3:4"
+  },
   {
    "img": "https://rihoon.co.kr/web/upload/NNEditor/20261007/79eccc119ee5b3666061126fcfc94a80.jpg",
    "link": "https://www.instagram.com/reel/Dd34yaPTQi5/",
@@ -36,13 +43,6 @@
    "link": "https://www.instagram.com/p/DdQyyrxDy9C/",
    "type": "FEED",
    "date": "2026-09-14",
-   "ratio": "3:4"
-  },
-  {
-   "img": "https://rihoon.co.kr/web/upload/NNEditor/20261007/1bd1c4854485e6a7e4ca2bc7739a406b.jpg",
-   "link": "https://www.instagram.com/p/Dc_S5fYjhtd/",
-   "type": "FEED",
-   "date": "2026-09-07",
    "ratio": "3:4"
   }
  ],
