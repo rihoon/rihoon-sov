@@ -1,0 +1,30 @@
+# 자사몰 메인 인스타그램 미리보기 자동 갱신 (PC 가 꺼져 있어도 깃허브에서 실행)
+# 필요한 것: 저장소 Settings > Secrets and variables > Actions 의 IG_TOKEN
+name: insta-feed
+on:
+  schedule:
+    - cron: '7 */3 * * *'   # 3시간마다(UTC 기준, 한국 시간으로도 3시간 간격)
+  workflow_dispatch:         # Actions 화면에서 수동 실행
+permissions:
+  contents: write
+concurrency: insta-feed
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet pillow
+      - run: |
+          if [ -z "$IG_TOKEN" ]; then echo "IG_TOKEN 미등록 - 건너뜀"; exit 0; fi
+          python tools/insta_feed.py
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+      - name: 바뀐 것이 있으면 저장소에 반영
+        run: |
+          git config user.name "rihoon-bot"
+          git config user.email "rihoon79@gmail.com"
+          git add docs/instagram.json docs/insta
+          git diff --cached --quiet || (git commit -m "인스타 미리보기 자동 갱신" && git push)
