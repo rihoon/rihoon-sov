@@ -1,10 +1,16 @@
 {
  "282": {
-  "image": "https://rihoon.co.kr/web/upload/NNEditor/20261012/9ecd49119e988429f167a4ca644df795.jpg",
-  "image_m": "https://rihoon.co.kr/web/upload/NNEditor/20261012/4ebeab800342dd9bf81f1b6670b2aed5.jpg"
+  "image": "https://rihoon.co.kr/web/upload/NNEditor/20261012/b0df2d3f848121a07dc53292a83704a5.jpg",
+  "image_m": "https://rihoon.co.kr/web/upload/NNEditor/20261012/f0452a3449b065c2fc5ad89333d3f049.jpg",
+  "eyebrow": "NEW YEAR",
+  "title": "2027 다이어리 · 달력",
+  "sub": "새해를 준비하는 날짜형 다이어리와 달력"
  },
  "live": {
-  "image": "https://rihoon.co.kr/web/upload/NNEditor/20261006/e91faba11d89b9cfd9d741127f6df35e.jpg",
-  "image_m": "https://rihoon.co.kr/web/upload/NNEditor/20261006/17dfa8be83b7d83db4c1a8a3e4d52cb2.jpg"
+  "image": "https://rihoon.co.kr/web/upload/NNEditor/20261012/e3e601f7a678435af1668761782cb7ef.jpg",
+  "image_m": "https://rihoon.co.kr/web/upload/NNEditor/20261012/47caad6504786edc1dc9a6a9ea1cb8d6.jpg",
+  "eyebrow": "LIVE",
+  "title": "리훈 라이브 방송",
+  "sub": "매주 화요일 30% 할인 · 목요일 신제품 1+1"
  }
 }
